@@ -1,0 +1,1828 @@
+{
+  "contractVersion": "1.0.0",
+  "assetId": "arxnet.scene.company-world",
+  "assetVersion": "0.2.0",
+  "status": "review",
+  "source": "sources/scenes/company_world.blend",
+  "export": "exports/arxnet.scene.company-world/0.2.0/asset.glb",
+  "rootNode": "root_company_world",
+  "departmentIds": [
+    "shared.warehouse",
+    "shared.procurement",
+    "shared.human-resources",
+    "shared.administration",
+    "shared.operations",
+    "shared.sales"
+  ],
+  "nodes": [
+    {
+      "id": "root",
+      "name": "root_company_world",
+      "role": "root",
+      "parent": null
+    },
+    {
+      "id": "site",
+      "name": "group_company_world_site",
+      "role": "group",
+      "parent": "root"
+    },
+    {
+      "id": "site.podium",
+      "name": "geo_company_world_site_podium",
+      "role": "visual",
+      "parent": "site"
+    },
+    {
+      "id": "site.courts",
+      "name": "geo_company_world_site_courts",
+      "role": "visual",
+      "parent": "site"
+    },
+    {
+      "id": "site.stairs",
+      "name": "geo_company_world_site_stairs",
+      "role": "visual",
+      "parent": "site"
+    },
+    {
+      "id": "site.stairs-metal",
+      "name": "geo_company_world_site_stairs_metal",
+      "role": "visual",
+      "parent": "site"
+    },
+    {
+      "id": "site.stairs-structure",
+      "name": "geo_company_world_site_stairs_structure",
+      "role": "visual",
+      "parent": "site"
+    },
+    {
+      "id": "site.stairs-led",
+      "name": "geo_company_world_site_stairs_led",
+      "role": "visual",
+      "parent": "site"
+    },
+    {
+      "id": "site.walkways",
+      "name": "geo_company_world_site_walkways",
+      "role": "visual",
+      "parent": "site"
+    },
+    {
+      "id": "site.walkways-metal",
+      "name": "geo_company_world_site_walkways_metal",
+      "role": "visual",
+      "parent": "site"
+    },
+    {
+      "id": "site.walkways-podium",
+      "name": "geo_company_world_site_walkways_podium",
+      "role": "visual",
+      "parent": "site"
+    },
+    {
+      "id": "site.walkways-led",
+      "name": "geo_company_world_site_walkways_led",
+      "role": "visual",
+      "parent": "site"
+    },
+    {
+      "id": "site.railings",
+      "name": "geo_company_world_site_railings",
+      "role": "visual",
+      "parent": "site"
+    },
+    {
+      "id": "site.railings-metal",
+      "name": "geo_company_world_site_railings_metal",
+      "role": "visual",
+      "parent": "site"
+    },
+    {
+      "id": "site.led",
+      "name": "geo_company_world_site_led",
+      "role": "visual",
+      "parent": "site"
+    },
+    {
+      "id": "site.planters",
+      "name": "geo_company_world_site_planters",
+      "role": "visual",
+      "parent": "site"
+    },
+    {
+      "id": "site.planters-panel",
+      "name": "geo_company_world_site_planters_panel",
+      "role": "visual",
+      "parent": "site"
+    },
+    {
+      "id": "site.paving",
+      "name": "geo_company_world_site_paving",
+      "role": "visual",
+      "parent": "site"
+    },
+    {
+      "id": "site.paving-structure",
+      "name": "geo_company_world_site_paving_structure",
+      "role": "visual",
+      "parent": "site"
+    },
+    {
+      "id": "site.planting",
+      "name": "geo_company_world_site_planting",
+      "role": "visual",
+      "parent": "site"
+    },
+    {
+      "id": "site.entrance",
+      "name": "group_company_world_site_entrance",
+      "role": "group",
+      "parent": "site"
+    },
+    {
+      "id": "site.entrance.structure",
+      "name": "geo_company_world_site_entrance_structure",
+      "role": "visual",
+      "parent": "site.entrance"
+    },
+    {
+      "id": "site.entrance.structure-metal",
+      "name": "geo_company_world_site_entrance_structure_metal",
+      "role": "visual",
+      "parent": "site.entrance"
+    },
+    {
+      "id": "site.entrance.glass",
+      "name": "geo_company_world_site_entrance_glass",
+      "role": "visual",
+      "parent": "site.entrance"
+    },
+    {
+      "id": "site.entrance.sign",
+      "name": "geo_company_world_site_entrance_sign",
+      "role": "visual",
+      "parent": "site.entrance"
+    },
+    {
+      "id": "site.entrance.led",
+      "name": "geo_company_world_site_entrance_led",
+      "role": "visual",
+      "parent": "site.entrance"
+    },
+    {
+      "id": "site.entrance.sign-anchor",
+      "name": "anchor_company_world_site_entrance_sign",
+      "role": "label",
+      "parent": "site.entrance"
+    },
+    {
+      "id": "site.context",
+      "name": "geo_company_world_site_context",
+      "role": "visual",
+      "parent": "site"
+    },
+    {
+      "id": "site.ground",
+      "name": "geo_company_world_site_ground",
+      "role": "visual",
+      "parent": "site"
+    },
+    {
+      "id": "site.detail",
+      "name": "group_company_world_site_detail",
+      "role": "group",
+      "parent": "site"
+    },
+    {
+      "id": "warehouse",
+      "name": "group_company_world_warehouse",
+      "role": "group",
+      "parent": "root"
+    },
+    {
+      "id": "warehouse.structure",
+      "name": "geo_company_world_warehouse_structure",
+      "role": "visual",
+      "parent": "warehouse"
+    },
+    {
+      "id": "warehouse.structure-structure",
+      "name": "geo_company_world_warehouse_structure_structure",
+      "role": "visual",
+      "parent": "warehouse"
+    },
+    {
+      "id": "warehouse.facade-back-glass",
+      "name": "geo_company_world_warehouse_facade_back_glass",
+      "role": "visual",
+      "parent": "warehouse"
+    },
+    {
+      "id": "warehouse.facade-base",
+      "name": "geo_company_world_warehouse_facade_base",
+      "role": "visual",
+      "parent": "warehouse"
+    },
+    {
+      "id": "warehouse.facade-base-glass",
+      "name": "geo_company_world_warehouse_facade_base_glass",
+      "role": "visual",
+      "parent": "warehouse"
+    },
+    {
+      "id": "warehouse.facade-front",
+      "name": "group_company_world_warehouse_facade_front",
+      "role": "group",
+      "parent": "warehouse"
+    },
+    {
+      "id": "warehouse.facade-front-frame",
+      "name": "geo_company_world_warehouse_facade_front_frame",
+      "role": "visual",
+      "parent": "warehouse.facade-front"
+    },
+    {
+      "id": "warehouse.facade-front-frame-panel",
+      "name": "geo_company_world_warehouse_facade_front_frame_panel",
+      "role": "visual",
+      "parent": "warehouse.facade-front"
+    },
+    {
+      "id": "warehouse.facade-front-glass",
+      "name": "geo_company_world_warehouse_facade_front_glass",
+      "role": "visual",
+      "parent": "warehouse.facade-front"
+    },
+    {
+      "id": "warehouse.roof",
+      "name": "group_company_world_warehouse_roof",
+      "role": "group",
+      "parent": "warehouse"
+    },
+    {
+      "id": "warehouse.roof-slab",
+      "name": "geo_company_world_warehouse_roof_slab",
+      "role": "visual",
+      "parent": "warehouse.roof"
+    },
+    {
+      "id": "warehouse.roof-slab-structure",
+      "name": "geo_company_world_warehouse_roof_slab_structure",
+      "role": "visual",
+      "parent": "warehouse.roof"
+    },
+    {
+      "id": "warehouse.roof-parapet",
+      "name": "geo_company_world_warehouse_roof_parapet",
+      "role": "visual",
+      "parent": "warehouse.roof"
+    },
+    {
+      "id": "warehouse.roof-parapet-metal",
+      "name": "geo_company_world_warehouse_roof_parapet_metal",
+      "role": "visual",
+      "parent": "warehouse.roof"
+    },
+    {
+      "id": "warehouse.roof-parapet-led",
+      "name": "geo_company_world_warehouse_roof_parapet_led",
+      "role": "visual",
+      "parent": "warehouse.roof"
+    },
+    {
+      "id": "warehouse.roof-equipment",
+      "name": "geo_company_world_warehouse_roof_equipment",
+      "role": "visual",
+      "parent": "warehouse.roof"
+    },
+    {
+      "id": "warehouse.roof-equipment-metal",
+      "name": "geo_company_world_warehouse_roof_equipment_metal",
+      "role": "visual",
+      "parent": "warehouse.roof"
+    },
+    {
+      "id": "warehouse.roof-skylight",
+      "name": "geo_company_world_warehouse_roof_skylight",
+      "role": "visual",
+      "parent": "warehouse.roof"
+    },
+    {
+      "id": "warehouse.roof-skylight-glass",
+      "name": "geo_company_world_warehouse_roof_skylight_glass",
+      "role": "visual",
+      "parent": "warehouse.roof"
+    },
+    {
+      "id": "warehouse.roof-fixtures",
+      "name": "geo_company_world_warehouse_roof_fixtures",
+      "role": "visual",
+      "parent": "warehouse.roof"
+    },
+    {
+      "id": "warehouse.sign",
+      "name": "geo_company_world_warehouse_sign",
+      "role": "visual",
+      "parent": "warehouse"
+    },
+    {
+      "id": "warehouse.sign-metal",
+      "name": "geo_company_world_warehouse_sign_metal",
+      "role": "visual",
+      "parent": "warehouse"
+    },
+    {
+      "id": "warehouse.sign-anchor",
+      "name": "anchor_company_world_warehouse_sign",
+      "role": "label",
+      "parent": "warehouse"
+    },
+    {
+      "id": "warehouse.led",
+      "name": "geo_company_world_warehouse_led",
+      "role": "visual",
+      "parent": "warehouse"
+    },
+    {
+      "id": "warehouse.outline",
+      "name": "geo_company_world_warehouse_outline",
+      "role": "visual",
+      "parent": "warehouse"
+    },
+    {
+      "id": "warehouse.interior",
+      "name": "group_company_world_warehouse_interior",
+      "role": "group",
+      "parent": "warehouse"
+    },
+    {
+      "id": "warehouse.floor",
+      "name": "geo_company_world_warehouse_floor",
+      "role": "visual",
+      "parent": "warehouse.interior"
+    },
+    {
+      "id": "warehouse.floor-marking",
+      "name": "geo_company_world_warehouse_floor_marking",
+      "role": "visual",
+      "parent": "warehouse.interior"
+    },
+    {
+      "id": "warehouse.floor-structure",
+      "name": "geo_company_world_warehouse_floor_structure",
+      "role": "visual",
+      "parent": "warehouse.interior"
+    },
+    {
+      "id": "warehouse.partitions",
+      "name": "geo_company_world_warehouse_partitions",
+      "role": "visual",
+      "parent": "warehouse.interior"
+    },
+    {
+      "id": "warehouse.partitions-metal",
+      "name": "geo_company_world_warehouse_partitions_metal",
+      "role": "visual",
+      "parent": "warehouse.interior"
+    },
+    {
+      "id": "warehouse.partitions-marking",
+      "name": "geo_company_world_warehouse_partitions_marking",
+      "role": "visual",
+      "parent": "warehouse.interior"
+    },
+    {
+      "id": "warehouse.partitions-glass",
+      "name": "geo_company_world_warehouse_partitions_glass",
+      "role": "visual",
+      "parent": "warehouse.interior"
+    },
+    {
+      "id": "warehouse.partitions-panel",
+      "name": "geo_company_world_warehouse_partitions_panel",
+      "role": "visual",
+      "parent": "warehouse.interior"
+    },
+    {
+      "id": "warehouse.partitions-sign",
+      "name": "geo_company_world_warehouse_partitions_sign",
+      "role": "visual",
+      "parent": "warehouse.interior"
+    },
+    {
+      "id": "warehouse.fit-out",
+      "name": "geo_company_world_warehouse_fit_out",
+      "role": "visual",
+      "parent": "warehouse.interior"
+    },
+    {
+      "id": "warehouse.fit-out-goods",
+      "name": "geo_company_world_warehouse_fit_out_goods",
+      "role": "visual",
+      "parent": "warehouse.interior"
+    },
+    {
+      "id": "warehouse.fit-out-metal",
+      "name": "geo_company_world_warehouse_fit_out_metal",
+      "role": "visual",
+      "parent": "warehouse.interior"
+    },
+    {
+      "id": "warehouse.fit-out-marking",
+      "name": "geo_company_world_warehouse_fit_out_marking",
+      "role": "visual",
+      "parent": "warehouse.interior"
+    },
+    {
+      "id": "warehouse.fit-out-equipment",
+      "name": "geo_company_world_warehouse_fit_out_equipment",
+      "role": "visual",
+      "parent": "warehouse.interior"
+    },
+    {
+      "id": "warehouse.fit-out-sign",
+      "name": "geo_company_world_warehouse_fit_out_sign",
+      "role": "visual",
+      "parent": "warehouse.interior"
+    },
+    {
+      "id": "warehouse.fit-out-planting",
+      "name": "geo_company_world_warehouse_fit_out_planting",
+      "role": "visual",
+      "parent": "warehouse.interior"
+    },
+    {
+      "id": "warehouse.detail",
+      "name": "group_company_world_warehouse_detail",
+      "role": "group",
+      "parent": "warehouse"
+    },
+    {
+      "id": "warehouse.zones",
+      "name": "group_company_world_warehouse_zones",
+      "role": "group",
+      "parent": "warehouse"
+    },
+    {
+      "id": "warehouse.racks",
+      "name": "anchor_company_world_warehouse_racks",
+      "role": "label",
+      "parent": "warehouse.zones"
+    },
+    {
+      "id": "warehouse.receiving",
+      "name": "anchor_company_world_warehouse_receiving",
+      "role": "label",
+      "parent": "warehouse.zones"
+    },
+    {
+      "id": "warehouse.dispatch",
+      "name": "anchor_company_world_warehouse_dispatch",
+      "role": "label",
+      "parent": "warehouse.zones"
+    },
+    {
+      "id": "warehouse.logistics",
+      "name": "anchor_company_world_warehouse_logistics",
+      "role": "label",
+      "parent": "warehouse.zones"
+    },
+    {
+      "id": "warehouse.focus",
+      "name": "focus_company_world_warehouse",
+      "role": "focus",
+      "parent": "warehouse"
+    },
+    {
+      "id": "warehouse.label",
+      "name": "anchor_company_world_warehouse",
+      "role": "label",
+      "parent": "warehouse"
+    },
+    {
+      "id": "warehouse.hit",
+      "name": "hit_company_world_warehouse",
+      "role": "hit",
+      "parent": "warehouse"
+    },
+    {
+      "id": "procurement",
+      "name": "group_company_world_procurement",
+      "role": "group",
+      "parent": "root"
+    },
+    {
+      "id": "procurement.structure",
+      "name": "geo_company_world_procurement_structure",
+      "role": "visual",
+      "parent": "procurement"
+    },
+    {
+      "id": "procurement.structure-metal",
+      "name": "geo_company_world_procurement_structure_metal",
+      "role": "visual",
+      "parent": "procurement"
+    },
+    {
+      "id": "procurement.facade-back-glass",
+      "name": "geo_company_world_procurement_facade_back_glass",
+      "role": "visual",
+      "parent": "procurement"
+    },
+    {
+      "id": "procurement.facade-base",
+      "name": "geo_company_world_procurement_facade_base",
+      "role": "visual",
+      "parent": "procurement"
+    },
+    {
+      "id": "procurement.facade-base-glass",
+      "name": "geo_company_world_procurement_facade_base_glass",
+      "role": "visual",
+      "parent": "procurement"
+    },
+    {
+      "id": "procurement.facade-front",
+      "name": "group_company_world_procurement_facade_front",
+      "role": "group",
+      "parent": "procurement"
+    },
+    {
+      "id": "procurement.facade-front-frame",
+      "name": "geo_company_world_procurement_facade_front_frame",
+      "role": "visual",
+      "parent": "procurement.facade-front"
+    },
+    {
+      "id": "procurement.facade-front-glass",
+      "name": "geo_company_world_procurement_facade_front_glass",
+      "role": "visual",
+      "parent": "procurement.facade-front"
+    },
+    {
+      "id": "procurement.roof",
+      "name": "group_company_world_procurement_roof",
+      "role": "group",
+      "parent": "procurement"
+    },
+    {
+      "id": "procurement.roof-slab",
+      "name": "geo_company_world_procurement_roof_slab",
+      "role": "visual",
+      "parent": "procurement.roof"
+    },
+    {
+      "id": "procurement.roof-slab-structure",
+      "name": "geo_company_world_procurement_roof_slab_structure",
+      "role": "visual",
+      "parent": "procurement.roof"
+    },
+    {
+      "id": "procurement.roof-parapet",
+      "name": "geo_company_world_procurement_roof_parapet",
+      "role": "visual",
+      "parent": "procurement.roof"
+    },
+    {
+      "id": "procurement.roof-parapet-metal",
+      "name": "geo_company_world_procurement_roof_parapet_metal",
+      "role": "visual",
+      "parent": "procurement.roof"
+    },
+    {
+      "id": "procurement.roof-parapet-led",
+      "name": "geo_company_world_procurement_roof_parapet_led",
+      "role": "visual",
+      "parent": "procurement.roof"
+    },
+    {
+      "id": "procurement.roof-equipment",
+      "name": "geo_company_world_procurement_roof_equipment",
+      "role": "visual",
+      "parent": "procurement.roof"
+    },
+    {
+      "id": "procurement.roof-equipment-metal",
+      "name": "geo_company_world_procurement_roof_equipment_metal",
+      "role": "visual",
+      "parent": "procurement.roof"
+    },
+    {
+      "id": "procurement.roof-skylight",
+      "name": "geo_company_world_procurement_roof_skylight",
+      "role": "visual",
+      "parent": "procurement.roof"
+    },
+    {
+      "id": "procurement.roof-skylight-metal",
+      "name": "geo_company_world_procurement_roof_skylight_metal",
+      "role": "visual",
+      "parent": "procurement.roof"
+    },
+    {
+      "id": "procurement.roof-fixtures",
+      "name": "geo_company_world_procurement_roof_fixtures",
+      "role": "visual",
+      "parent": "procurement.roof"
+    },
+    {
+      "id": "procurement.sign",
+      "name": "geo_company_world_procurement_sign",
+      "role": "visual",
+      "parent": "procurement"
+    },
+    {
+      "id": "procurement.sign-metal",
+      "name": "geo_company_world_procurement_sign_metal",
+      "role": "visual",
+      "parent": "procurement"
+    },
+    {
+      "id": "procurement.sign-anchor",
+      "name": "anchor_company_world_procurement_sign",
+      "role": "label",
+      "parent": "procurement"
+    },
+    {
+      "id": "procurement.led",
+      "name": "geo_company_world_procurement_led",
+      "role": "visual",
+      "parent": "procurement"
+    },
+    {
+      "id": "procurement.outline",
+      "name": "geo_company_world_procurement_outline",
+      "role": "visual",
+      "parent": "procurement"
+    },
+    {
+      "id": "procurement.interior",
+      "name": "group_company_world_procurement_interior",
+      "role": "group",
+      "parent": "procurement"
+    },
+    {
+      "id": "procurement.floor",
+      "name": "geo_company_world_procurement_floor",
+      "role": "visual",
+      "parent": "procurement.interior"
+    },
+    {
+      "id": "procurement.floor-structure",
+      "name": "geo_company_world_procurement_floor_structure",
+      "role": "visual",
+      "parent": "procurement.interior"
+    },
+    {
+      "id": "procurement.partitions",
+      "name": "geo_company_world_procurement_partitions",
+      "role": "visual",
+      "parent": "procurement.interior"
+    },
+    {
+      "id": "procurement.partitions-metal",
+      "name": "geo_company_world_procurement_partitions_metal",
+      "role": "visual",
+      "parent": "procurement.interior"
+    },
+    {
+      "id": "procurement.partitions-glass",
+      "name": "geo_company_world_procurement_partitions_glass",
+      "role": "visual",
+      "parent": "procurement.interior"
+    },
+    {
+      "id": "procurement.partitions-sign",
+      "name": "geo_company_world_procurement_partitions_sign",
+      "role": "visual",
+      "parent": "procurement.interior"
+    },
+    {
+      "id": "procurement.fit-out",
+      "name": "geo_company_world_procurement_fit_out",
+      "role": "visual",
+      "parent": "procurement.interior"
+    },
+    {
+      "id": "procurement.fit-out-metal",
+      "name": "geo_company_world_procurement_fit_out_metal",
+      "role": "visual",
+      "parent": "procurement.interior"
+    },
+    {
+      "id": "procurement.fit-out-goods",
+      "name": "geo_company_world_procurement_fit_out_goods",
+      "role": "visual",
+      "parent": "procurement.interior"
+    },
+    {
+      "id": "procurement.fit-out-sign",
+      "name": "geo_company_world_procurement_fit_out_sign",
+      "role": "visual",
+      "parent": "procurement.interior"
+    },
+    {
+      "id": "procurement.fit-out-planting",
+      "name": "geo_company_world_procurement_fit_out_planting",
+      "role": "visual",
+      "parent": "procurement.interior"
+    },
+    {
+      "id": "procurement.fit-out-structure",
+      "name": "geo_company_world_procurement_fit_out_structure",
+      "role": "visual",
+      "parent": "procurement.interior"
+    },
+    {
+      "id": "procurement.detail",
+      "name": "group_company_world_procurement_detail",
+      "role": "group",
+      "parent": "procurement"
+    },
+    {
+      "id": "procurement.zones",
+      "name": "group_company_world_procurement_zones",
+      "role": "group",
+      "parent": "procurement"
+    },
+    {
+      "id": "procurement.office-furniture",
+      "name": "anchor_company_world_procurement_office_furniture",
+      "role": "label",
+      "parent": "procurement.zones"
+    },
+    {
+      "id": "procurement.storage-racks",
+      "name": "anchor_company_world_procurement_storage_racks",
+      "role": "label",
+      "parent": "procurement.zones"
+    },
+    {
+      "id": "procurement.dock",
+      "name": "anchor_company_world_procurement_dock",
+      "role": "label",
+      "parent": "procurement.zones"
+    },
+    {
+      "id": "procurement.reception",
+      "name": "anchor_company_world_procurement_reception",
+      "role": "label",
+      "parent": "procurement.zones"
+    },
+    {
+      "id": "procurement.meeting-room",
+      "name": "anchor_company_world_procurement_meeting_room",
+      "role": "label",
+      "parent": "procurement.zones"
+    },
+    {
+      "id": "procurement.focus",
+      "name": "focus_company_world_procurement",
+      "role": "focus",
+      "parent": "procurement"
+    },
+    {
+      "id": "procurement.label",
+      "name": "anchor_company_world_procurement",
+      "role": "label",
+      "parent": "procurement"
+    },
+    {
+      "id": "procurement.hit",
+      "name": "hit_company_world_procurement",
+      "role": "hit",
+      "parent": "procurement"
+    },
+    {
+      "id": "human-resources",
+      "name": "group_company_world_human_resources",
+      "role": "group",
+      "parent": "root"
+    },
+    {
+      "id": "human-resources.structure",
+      "name": "geo_company_world_human_resources_structure",
+      "role": "visual",
+      "parent": "human-resources"
+    },
+    {
+      "id": "human-resources.structure-panel",
+      "name": "geo_company_world_human_resources_structure_panel",
+      "role": "visual",
+      "parent": "human-resources"
+    },
+    {
+      "id": "human-resources.facade-back-glass",
+      "name": "geo_company_world_human_resources_facade_back_glass",
+      "role": "visual",
+      "parent": "human-resources"
+    },
+    {
+      "id": "human-resources.facade-base",
+      "name": "geo_company_world_human_resources_facade_base",
+      "role": "visual",
+      "parent": "human-resources"
+    },
+    {
+      "id": "human-resources.facade-base-structure",
+      "name": "geo_company_world_human_resources_facade_base_structure",
+      "role": "visual",
+      "parent": "human-resources"
+    },
+    {
+      "id": "human-resources.facade-base-glass",
+      "name": "geo_company_world_human_resources_facade_base_glass",
+      "role": "visual",
+      "parent": "human-resources"
+    },
+    {
+      "id": "human-resources.facade-front",
+      "name": "group_company_world_human_resources_facade_front",
+      "role": "group",
+      "parent": "human-resources"
+    },
+    {
+      "id": "human-resources.facade-front-frame",
+      "name": "geo_company_world_human_resources_facade_front_frame",
+      "role": "visual",
+      "parent": "human-resources.facade-front"
+    },
+    {
+      "id": "human-resources.facade-front-frame-structure",
+      "name": "geo_company_world_human_resources_facade_front_frame_structure",
+      "role": "visual",
+      "parent": "human-resources.facade-front"
+    },
+    {
+      "id": "human-resources.facade-front-glass",
+      "name": "geo_company_world_human_resources_facade_front_glass",
+      "role": "visual",
+      "parent": "human-resources.facade-front"
+    },
+    {
+      "id": "human-resources.roof",
+      "name": "group_company_world_human_resources_roof",
+      "role": "group",
+      "parent": "human-resources"
+    },
+    {
+      "id": "human-resources.roof-slab",
+      "name": "geo_company_world_human_resources_roof_slab",
+      "role": "visual",
+      "parent": "human-resources.roof"
+    },
+    {
+      "id": "human-resources.roof-parapet",
+      "name": "geo_company_world_human_resources_roof_parapet",
+      "role": "visual",
+      "parent": "human-resources.roof"
+    },
+    {
+      "id": "human-resources.roof-parapet-led",
+      "name": "geo_company_world_human_resources_roof_parapet_led",
+      "role": "visual",
+      "parent": "human-resources.roof"
+    },
+    {
+      "id": "human-resources.roof-equipment",
+      "name": "geo_company_world_human_resources_roof_equipment",
+      "role": "visual",
+      "parent": "human-resources.roof"
+    },
+    {
+      "id": "human-resources.sign",
+      "name": "geo_company_world_human_resources_sign",
+      "role": "visual",
+      "parent": "human-resources"
+    },
+    {
+      "id": "human-resources.sign-anchor",
+      "name": "anchor_company_world_human_resources_sign",
+      "role": "label",
+      "parent": "human-resources"
+    },
+    {
+      "id": "human-resources.led",
+      "name": "geo_company_world_human_resources_led",
+      "role": "visual",
+      "parent": "human-resources"
+    },
+    {
+      "id": "human-resources.outline",
+      "name": "geo_company_world_human_resources_outline",
+      "role": "visual",
+      "parent": "human-resources"
+    },
+    {
+      "id": "human-resources.interior",
+      "name": "group_company_world_human_resources_interior",
+      "role": "group",
+      "parent": "human-resources"
+    },
+    {
+      "id": "human-resources.floor",
+      "name": "geo_company_world_human_resources_floor",
+      "role": "visual",
+      "parent": "human-resources.interior"
+    },
+    {
+      "id": "human-resources.partitions",
+      "name": "geo_company_world_human_resources_partitions",
+      "role": "visual",
+      "parent": "human-resources.interior"
+    },
+    {
+      "id": "human-resources.fit-out",
+      "name": "geo_company_world_human_resources_fit_out",
+      "role": "visual",
+      "parent": "human-resources.interior"
+    },
+    {
+      "id": "human-resources.detail",
+      "name": "group_company_world_human_resources_detail",
+      "role": "group",
+      "parent": "human-resources"
+    },
+    {
+      "id": "human-resources.zones",
+      "name": "group_company_world_human_resources_zones",
+      "role": "group",
+      "parent": "human-resources"
+    },
+    {
+      "id": "human-resources.focus",
+      "name": "focus_company_world_human_resources",
+      "role": "focus",
+      "parent": "human-resources"
+    },
+    {
+      "id": "human-resources.label",
+      "name": "anchor_company_world_human_resources",
+      "role": "label",
+      "parent": "human-resources"
+    },
+    {
+      "id": "human-resources.hit",
+      "name": "hit_company_world_human_resources",
+      "role": "hit",
+      "parent": "human-resources"
+    },
+    {
+      "id": "administration",
+      "name": "group_company_world_administration",
+      "role": "group",
+      "parent": "root"
+    },
+    {
+      "id": "administration.structure",
+      "name": "geo_company_world_administration_structure",
+      "role": "visual",
+      "parent": "administration"
+    },
+    {
+      "id": "administration.structure-panel",
+      "name": "geo_company_world_administration_structure_panel",
+      "role": "visual",
+      "parent": "administration"
+    },
+    {
+      "id": "administration.facade-back-glass",
+      "name": "geo_company_world_administration_facade_back_glass",
+      "role": "visual",
+      "parent": "administration"
+    },
+    {
+      "id": "administration.facade-base",
+      "name": "geo_company_world_administration_facade_base",
+      "role": "visual",
+      "parent": "administration"
+    },
+    {
+      "id": "administration.facade-base-glass",
+      "name": "geo_company_world_administration_facade_base_glass",
+      "role": "visual",
+      "parent": "administration"
+    },
+    {
+      "id": "administration.facade-front",
+      "name": "group_company_world_administration_facade_front",
+      "role": "group",
+      "parent": "administration"
+    },
+    {
+      "id": "administration.facade-front-frame",
+      "name": "geo_company_world_administration_facade_front_frame",
+      "role": "visual",
+      "parent": "administration.facade-front"
+    },
+    {
+      "id": "administration.facade-front-glass",
+      "name": "geo_company_world_administration_facade_front_glass",
+      "role": "visual",
+      "parent": "administration.facade-front"
+    },
+    {
+      "id": "administration.roof",
+      "name": "group_company_world_administration_roof",
+      "role": "group",
+      "parent": "administration"
+    },
+    {
+      "id": "administration.roof-slab",
+      "name": "geo_company_world_administration_roof_slab",
+      "role": "visual",
+      "parent": "administration.roof"
+    },
+    {
+      "id": "administration.roof-parapet",
+      "name": "geo_company_world_administration_roof_parapet",
+      "role": "visual",
+      "parent": "administration.roof"
+    },
+    {
+      "id": "administration.roof-parapet-led",
+      "name": "geo_company_world_administration_roof_parapet_led",
+      "role": "visual",
+      "parent": "administration.roof"
+    },
+    {
+      "id": "administration.roof-equipment",
+      "name": "geo_company_world_administration_roof_equipment",
+      "role": "visual",
+      "parent": "administration.roof"
+    },
+    {
+      "id": "administration.roof-skylight",
+      "name": "geo_company_world_administration_roof_skylight",
+      "role": "visual",
+      "parent": "administration.roof"
+    },
+    {
+      "id": "administration.roof-skylight-metal",
+      "name": "geo_company_world_administration_roof_skylight_metal",
+      "role": "visual",
+      "parent": "administration.roof"
+    },
+    {
+      "id": "administration.sign",
+      "name": "geo_company_world_administration_sign",
+      "role": "visual",
+      "parent": "administration"
+    },
+    {
+      "id": "administration.sign-anchor",
+      "name": "anchor_company_world_administration_sign",
+      "role": "label",
+      "parent": "administration"
+    },
+    {
+      "id": "administration.led",
+      "name": "geo_company_world_administration_led",
+      "role": "visual",
+      "parent": "administration"
+    },
+    {
+      "id": "administration.outline",
+      "name": "geo_company_world_administration_outline",
+      "role": "visual",
+      "parent": "administration"
+    },
+    {
+      "id": "administration.interior",
+      "name": "group_company_world_administration_interior",
+      "role": "group",
+      "parent": "administration"
+    },
+    {
+      "id": "administration.floor",
+      "name": "geo_company_world_administration_floor",
+      "role": "visual",
+      "parent": "administration.interior"
+    },
+    {
+      "id": "administration.partitions",
+      "name": "geo_company_world_administration_partitions",
+      "role": "visual",
+      "parent": "administration.interior"
+    },
+    {
+      "id": "administration.fit-out",
+      "name": "geo_company_world_administration_fit_out",
+      "role": "visual",
+      "parent": "administration.interior"
+    },
+    {
+      "id": "administration.detail",
+      "name": "group_company_world_administration_detail",
+      "role": "group",
+      "parent": "administration"
+    },
+    {
+      "id": "administration.zones",
+      "name": "group_company_world_administration_zones",
+      "role": "group",
+      "parent": "administration"
+    },
+    {
+      "id": "administration.focus",
+      "name": "focus_company_world_administration",
+      "role": "focus",
+      "parent": "administration"
+    },
+    {
+      "id": "administration.label",
+      "name": "anchor_company_world_administration",
+      "role": "label",
+      "parent": "administration"
+    },
+    {
+      "id": "administration.hit",
+      "name": "hit_company_world_administration",
+      "role": "hit",
+      "parent": "administration"
+    },
+    {
+      "id": "operations",
+      "name": "group_company_world_operations",
+      "role": "group",
+      "parent": "root"
+    },
+    {
+      "id": "operations.structure",
+      "name": "geo_company_world_operations_structure",
+      "role": "visual",
+      "parent": "operations"
+    },
+    {
+      "id": "operations.structure-structure",
+      "name": "geo_company_world_operations_structure_structure",
+      "role": "visual",
+      "parent": "operations"
+    },
+    {
+      "id": "operations.facade-back-glass",
+      "name": "geo_company_world_operations_facade_back_glass",
+      "role": "visual",
+      "parent": "operations"
+    },
+    {
+      "id": "operations.facade-base",
+      "name": "geo_company_world_operations_facade_base",
+      "role": "visual",
+      "parent": "operations"
+    },
+    {
+      "id": "operations.facade-base-glass",
+      "name": "geo_company_world_operations_facade_base_glass",
+      "role": "visual",
+      "parent": "operations"
+    },
+    {
+      "id": "operations.facade-base-panel",
+      "name": "geo_company_world_operations_facade_base_panel",
+      "role": "visual",
+      "parent": "operations"
+    },
+    {
+      "id": "operations.facade-front",
+      "name": "group_company_world_operations_facade_front",
+      "role": "group",
+      "parent": "operations"
+    },
+    {
+      "id": "operations.facade-front-frame",
+      "name": "geo_company_world_operations_facade_front_frame",
+      "role": "visual",
+      "parent": "operations.facade-front"
+    },
+    {
+      "id": "operations.facade-front-frame-panel",
+      "name": "geo_company_world_operations_facade_front_frame_panel",
+      "role": "visual",
+      "parent": "operations.facade-front"
+    },
+    {
+      "id": "operations.facade-front-glass",
+      "name": "geo_company_world_operations_facade_front_glass",
+      "role": "visual",
+      "parent": "operations.facade-front"
+    },
+    {
+      "id": "operations.roof",
+      "name": "group_company_world_operations_roof",
+      "role": "group",
+      "parent": "operations"
+    },
+    {
+      "id": "operations.roof-slab",
+      "name": "geo_company_world_operations_roof_slab",
+      "role": "visual",
+      "parent": "operations.roof"
+    },
+    {
+      "id": "operations.roof-parapet",
+      "name": "geo_company_world_operations_roof_parapet",
+      "role": "visual",
+      "parent": "operations.roof"
+    },
+    {
+      "id": "operations.roof-parapet-led",
+      "name": "geo_company_world_operations_roof_parapet_led",
+      "role": "visual",
+      "parent": "operations.roof"
+    },
+    {
+      "id": "operations.roof-equipment",
+      "name": "geo_company_world_operations_roof_equipment",
+      "role": "visual",
+      "parent": "operations.roof"
+    },
+    {
+      "id": "operations.roof-skylight",
+      "name": "geo_company_world_operations_roof_skylight",
+      "role": "visual",
+      "parent": "operations.roof"
+    },
+    {
+      "id": "operations.roof-skylight-glass",
+      "name": "geo_company_world_operations_roof_skylight_glass",
+      "role": "visual",
+      "parent": "operations.roof"
+    },
+    {
+      "id": "operations.sign",
+      "name": "geo_company_world_operations_sign",
+      "role": "visual",
+      "parent": "operations"
+    },
+    {
+      "id": "operations.sign-anchor",
+      "name": "anchor_company_world_operations_sign",
+      "role": "label",
+      "parent": "operations"
+    },
+    {
+      "id": "operations.led",
+      "name": "geo_company_world_operations_led",
+      "role": "visual",
+      "parent": "operations"
+    },
+    {
+      "id": "operations.outline",
+      "name": "geo_company_world_operations_outline",
+      "role": "visual",
+      "parent": "operations"
+    },
+    {
+      "id": "operations.interior",
+      "name": "group_company_world_operations_interior",
+      "role": "group",
+      "parent": "operations"
+    },
+    {
+      "id": "operations.floor",
+      "name": "geo_company_world_operations_floor",
+      "role": "visual",
+      "parent": "operations.interior"
+    },
+    {
+      "id": "operations.partitions",
+      "name": "geo_company_world_operations_partitions",
+      "role": "visual",
+      "parent": "operations.interior"
+    },
+    {
+      "id": "operations.fit-out",
+      "name": "geo_company_world_operations_fit_out",
+      "role": "visual",
+      "parent": "operations.interior"
+    },
+    {
+      "id": "operations.detail",
+      "name": "group_company_world_operations_detail",
+      "role": "group",
+      "parent": "operations"
+    },
+    {
+      "id": "operations.zones",
+      "name": "group_company_world_operations_zones",
+      "role": "group",
+      "parent": "operations"
+    },
+    {
+      "id": "operations.focus",
+      "name": "focus_company_world_operations",
+      "role": "focus",
+      "parent": "operations"
+    },
+    {
+      "id": "operations.label",
+      "name": "anchor_company_world_operations",
+      "role": "label",
+      "parent": "operations"
+    },
+    {
+      "id": "operations.hit",
+      "name": "hit_company_world_operations",
+      "role": "hit",
+      "parent": "operations"
+    },
+    {
+      "id": "sales",
+      "name": "group_company_world_sales",
+      "role": "group",
+      "parent": "root"
+    },
+    {
+      "id": "sales.structure",
+      "name": "geo_company_world_sales_structure",
+      "role": "visual",
+      "parent": "sales"
+    },
+    {
+      "id": "sales.structure-metal",
+      "name": "geo_company_world_sales_structure_metal",
+      "role": "visual",
+      "parent": "sales"
+    },
+    {
+      "id": "sales.facade-back-glass",
+      "name": "geo_company_world_sales_facade_back_glass",
+      "role": "visual",
+      "parent": "sales"
+    },
+    {
+      "id": "sales.facade-base",
+      "name": "geo_company_world_sales_facade_base",
+      "role": "visual",
+      "parent": "sales"
+    },
+    {
+      "id": "sales.facade-base-glass",
+      "name": "geo_company_world_sales_facade_base_glass",
+      "role": "visual",
+      "parent": "sales"
+    },
+    {
+      "id": "sales.facade-front",
+      "name": "group_company_world_sales_facade_front",
+      "role": "group",
+      "parent": "sales"
+    },
+    {
+      "id": "sales.facade-front-frame",
+      "name": "geo_company_world_sales_facade_front_frame",
+      "role": "visual",
+      "parent": "sales.facade-front"
+    },
+    {
+      "id": "sales.facade-front-glass",
+      "name": "geo_company_world_sales_facade_front_glass",
+      "role": "visual",
+      "parent": "sales.facade-front"
+    },
+    {
+      "id": "sales.roof",
+      "name": "group_company_world_sales_roof",
+      "role": "group",
+      "parent": "sales"
+    },
+    {
+      "id": "sales.roof-slab",
+      "name": "geo_company_world_sales_roof_slab",
+      "role": "visual",
+      "parent": "sales.roof"
+    },
+    {
+      "id": "sales.roof-parapet",
+      "name": "geo_company_world_sales_roof_parapet",
+      "role": "visual",
+      "parent": "sales.roof"
+    },
+    {
+      "id": "sales.roof-parapet-led",
+      "name": "geo_company_world_sales_roof_parapet_led",
+      "role": "visual",
+      "parent": "sales.roof"
+    },
+    {
+      "id": "sales.roof-equipment",
+      "name": "geo_company_world_sales_roof_equipment",
+      "role": "visual",
+      "parent": "sales.roof"
+    },
+    {
+      "id": "sales.sign",
+      "name": "geo_company_world_sales_sign",
+      "role": "visual",
+      "parent": "sales"
+    },
+    {
+      "id": "sales.sign-anchor",
+      "name": "anchor_company_world_sales_sign",
+      "role": "label",
+      "parent": "sales"
+    },
+    {
+      "id": "sales.led",
+      "name": "geo_company_world_sales_led",
+      "role": "visual",
+      "parent": "sales"
+    },
+    {
+      "id": "sales.outline",
+      "name": "geo_company_world_sales_outline",
+      "role": "visual",
+      "parent": "sales"
+    },
+    {
+      "id": "sales.interior",
+      "name": "group_company_world_sales_interior",
+      "role": "group",
+      "parent": "sales"
+    },
+    {
+      "id": "sales.floor",
+      "name": "geo_company_world_sales_floor",
+      "role": "visual",
+      "parent": "sales.interior"
+    },
+    {
+      "id": "sales.partitions",
+      "name": "geo_company_world_sales_partitions",
+      "role": "visual",
+      "parent": "sales.interior"
+    },
+    {
+      "id": "sales.fit-out",
+      "name": "geo_company_world_sales_fit_out",
+      "role": "visual",
+      "parent": "sales.interior"
+    },
+    {
+      "id": "sales.detail",
+      "name": "group_company_world_sales_detail",
+      "role": "group",
+      "parent": "sales"
+    },
+    {
+      "id": "sales.zones",
+      "name": "group_company_world_sales_zones",
+      "role": "group",
+      "parent": "sales"
+    },
+    {
+      "id": "sales.focus",
+      "name": "focus_company_world_sales",
+      "role": "focus",
+      "parent": "sales"
+    },
+    {
+      "id": "sales.label",
+      "name": "anchor_company_world_sales",
+      "role": "label",
+      "parent": "sales"
+    },
+    {
+      "id": "sales.hit",
+      "name": "hit_company_world_sales",
+      "role": "hit",
+      "parent": "sales"
+    }
+  ],
+  "interactions": [
+    {
+      "id": "warehouse.open",
+      "hitNodeId": "warehouse.hit",
+      "focusNodeId": "warehouse.focus",
+      "labelNodeId": "warehouse.label",
+      "departmentId": "shared.warehouse",
+      "intent": "department.open"
+    },
+    {
+      "id": "procurement.open",
+      "hitNodeId": "procurement.hit",
+      "focusNodeId": "procurement.focus",
+      "labelNodeId": "procurement.label",
+      "departmentId": "shared.procurement",
+      "intent": "department.open"
+    },
+    {
+      "id": "human-resources.open",
+      "hitNodeId": "human-resources.hit",
+      "focusNodeId": "human-resources.focus",
+      "labelNodeId": "human-resources.label",
+      "departmentId": "shared.human-resources",
+      "intent": "department.open"
+    },
+    {
+      "id": "administration.open",
+      "hitNodeId": "administration.hit",
+      "focusNodeId": "administration.focus",
+      "labelNodeId": "administration.label",
+      "departmentId": "shared.administration",
+      "intent": "department.open"
+    },
+    {
+      "id": "operations.open",
+      "hitNodeId": "operations.hit",
+      "focusNodeId": "operations.focus",
+      "labelNodeId": "operations.label",
+      "departmentId": "shared.operations",
+      "intent": "department.open"
+    },
+    {
+      "id": "sales.open",
+      "hitNodeId": "sales.hit",
+      "focusNodeId": "sales.focus",
+      "labelNodeId": "sales.label",
+      "departmentId": "shared.sales",
+      "intent": "department.open"
+    }
+  ],
+  "provenance": {
+    "author": null,
+    "license": null
+  },
+  "build": null,
+  "environmentNodeIds": [
+    "site.context",
+    "site.ground"
+  ],
+  "detailNodeIds": [
+    "site.detail",
+    "warehouse.detail",
+    "procurement.detail",
+    "human-resources.detail",
+    "administration.detail",
+    "operations.detail",
+    "sales.detail"
+  ],
+  "revealLayers": {
+    "warehouse": {
+      "roof": [
+        "warehouse.roof"
+      ],
+      "facadeFront": [
+        "warehouse.facade-front"
+      ],
+      "interior": [
+        "warehouse.interior"
+      ],
+      "detail": [
+        "warehouse.detail"
+      ],
+      "zones": [
+        "warehouse.zones"
+      ],
+      "outline": [
+        "warehouse.outline"
+      ]
+    },
+    "procurement": {
+      "roof": [
+        "procurement.roof"
+      ],
+      "facadeFront": [
+        "procurement.facade-front"
+      ],
+      "interior": [
+        "procurement.interior"
+      ],
+      "detail": [
+        "procurement.detail"
+      ],
+      "zones": [
+        "procurement.zones"
+      ],
+      "outline": [
+        "procurement.outline"
+      ]
+    },
+    "human-resources": {
+      "roof": [
+        "human-resources.roof"
+      ],
+      "facadeFront": [
+        "human-resources.facade-front"
+      ],
+      "interior": [
+        "human-resources.interior"
+      ],
+      "detail": [
+        "human-resources.detail"
+      ],
+      "zones": [
+        "human-resources.zones"
+      ],
+      "outline": [
+        "human-resources.outline"
+      ]
+    },
+    "administration": {
+      "roof": [
+        "administration.roof"
+      ],
+      "facadeFront": [
+        "administration.facade-front"
+      ],
+      "interior": [
+        "administration.interior"
+      ],
+      "detail": [
+        "administration.detail"
+      ],
+      "zones": [
+        "administration.zones"
+      ],
+      "outline": [
+        "administration.outline"
+      ]
+    },
+    "operations": {
+      "roof": [
+        "operations.roof"
+      ],
+      "facadeFront": [
+        "operations.facade-front"
+      ],
+      "interior": [
+        "operations.interior"
+      ],
+      "detail": [
+        "operations.detail"
+      ],
+      "zones": [
+        "operations.zones"
+      ],
+      "outline": [
+        "operations.outline"
+      ]
+    },
+    "sales": {
+      "roof": [
+        "sales.roof"
+      ],
+      "facadeFront": [
+        "sales.facade-front"
+      ],
+      "interior": [
+        "sales.interior"
+      ],
+      "detail": [
+        "sales.detail"
+      ],
+      "zones": [
+        "sales.zones"
+      ],
+      "outline": [
+        "sales.outline"
+      ]
+    }
+  },
+  "defaultHiddenNodeIds": [
+    "warehouse.outline",
+    "procurement.outline",
+    "human-resources.outline",
+    "administration.outline",
+    "operations.outline",
+    "sales.outline"
+  ],
+  "accentMaterials": [
+    "mat_accent_led",
+    "mat_accent_outline"
+  ],
+  "signs": {
+    "warehouse": {
+      "panel": "warehouse.sign",
+      "anchor": "warehouse.sign-anchor"
+    },
+    "procurement": {
+      "panel": "procurement.sign",
+      "anchor": "procurement.sign-anchor"
+    },
+    "human-resources": {
+      "panel": "human-resources.sign",
+      "anchor": "human-resources.sign-anchor"
+    },
+    "administration": {
+      "panel": "administration.sign",
+      "anchor": "administration.sign-anchor"
+    },
+    "operations": {
+      "panel": "operations.sign",
+      "anchor": "operations.sign-anchor"
+    },
+    "sales": {
+      "panel": "sales.sign",
+      "anchor": "sales.sign-anchor"
+    },
+    "site.entrance": {
+      "panel": "site.entrance.sign",
+      "anchor": "site.entrance.sign-anchor"
+    }
+  },
+  "landmarks": [
+    {
+      "nodeId": "site.entrance",
+      "interactive": false
+    }
+  ],
+  "zoneAnchors": {
+    "warehouse": [
+      "warehouse.racks",
+      "warehouse.receiving",
+      "warehouse.dispatch",
+      "warehouse.logistics"
+    ],
+    "procurement": [
+      "procurement.office-furniture",
+      "procurement.storage-racks",
+      "procurement.dock",
+      "procurement.reception",
+      "procurement.meeting-room"
+    ]
+  },
+  "refinedDepartments": [
+    "procurement",
+    "warehouse"
+  ],
+  "overviewFramingNodeIds": [
+    "warehouse.hit",
+    "procurement.hit",
+    "human-resources.hit",
+    "administration.hit",
+    "operations.hit",
+    "sales.hit",
+    "site.entrance"
+  ],
+  "visibilityStates": {
+    "note": "Visibilidad por capa de revealLayers. focused/explore se aplican al departamento seleccionado; others al resto. El consumidor decide transiciones y atenuación; ningún estado cambia transformaciones de grupo.",
+    "overview": {
+      "roof": true,
+      "facadeFront": true,
+      "interior": true,
+      "detail": false,
+      "zones": false,
+      "outline": false
+    },
+    "focused": {
+      "selected": {
+        "roof": false,
+        "facadeFront": false,
+        "interior": true,
+        "detail": true,
+        "zones": false,
+        "outline": true
+      },
+      "others": {
+        "roof": true,
+        "facadeFront": true,
+        "interior": true,
+        "detail": false,
+        "zones": false,
+        "outline": false
+      }
+    },
+    "explore": {
+      "selected": {
+        "roof": false,
+        "facadeFront": false,
+        "interior": true,
+        "detail": true,
+        "zones": true,
+        "outline": true
+      },
+      "others": {
+        "roof": true,
+        "facadeFront": true,
+        "interior": true,
+        "detail": false,
+        "zones": false,
+        "outline": false
+      }
+    },
+    "lowQuality": {
+      "interior": false,
+      "detail": false,
+      "environment": false
+    }
+  },
+  "themeProfile": "validation/reports/phase-4d/candidate-d2/themes.b.json",
+  "candidate": {
+    "phase": "D.2",
+    "id": "d2",
+    "basedOn": "c1 (variante B) + dirección artística B (D.1)",
+    "variant": "b",
+    "label": "Variante B: Almacén más alto como núcleo",
+    "published": false,
+    "experimental": true,
+    "layout": "docs/concepts/company-world/layout.proposal.json",
+    "layoutRevision": "r3: r2 + rellanos que cierran huecos del podio detectados al construir el blockout (Fase B)",
+    "blend": "validation/reports/phase-4d/candidate-d2/company_world_b.blend",
+    "glb": "validation/reports/phase-4d/candidate-d2/b/asset.glb"
+  },
+  "notes": "Candidato experimental d2 (no publicado). Materiales mat_ad_* (dirección artística B con grafito) en todo el mundo; Compras y Almacén construidos (fachadas, cubierta, rótulo e interior reconocible); el resto conserva la geometría del blockout. Se conservan todos los IDs de c1. revealLayers, visibilityStates, overviewFramingNodeIds y defaultHiddenNodeIds funcionan igual que en c1. Las luminarias (<dep>.roof-fixtures) son hijas de la cubierta y se ocultan con ella. zoneAnchors: anclas (rol label) de las zonas interiores; procurement.office-furniture, procurement.storage-racks y procurement.dock usan los IDs de los hotspots de 0.4.0. Un nodo visual por material: los sufijos -<material> son hermanos del nodo base."
+}

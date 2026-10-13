@@ -1,0 +1,215 @@
+{
+    "kind": "Visible geometry statistics; not GPU measurements",
+    "results": [
+        {
+            "version": "0.1.0",
+            "quality": "high",
+            "view": "overview",
+            "primitives": 128,
+            "triangles": 10728
+        },
+        {
+            "version": "0.1.0",
+            "quality": "high",
+            "view": "procurement-closed",
+            "primitives": 129,
+            "triangles": 10824
+        },
+        {
+            "version": "0.1.0",
+            "quality": "high",
+            "view": "procurement-open",
+            "primitives": 121,
+            "triangles": 10386
+        },
+        {
+            "version": "0.1.0",
+            "quality": "high",
+            "view": "warehouse-closed",
+            "primitives": 129,
+            "triangles": 10824
+        },
+        {
+            "version": "0.1.0",
+            "quality": "high",
+            "view": "warehouse-open",
+            "primitives": 120,
+            "triangles": 10344
+        },
+        {
+            "version": "0.1.0",
+            "quality": "balanced",
+            "view": "overview",
+            "primitives": 128,
+            "triangles": 10728
+        },
+        {
+            "version": "0.1.0",
+            "quality": "balanced",
+            "view": "procurement-closed",
+            "primitives": 129,
+            "triangles": 10824
+        },
+        {
+            "version": "0.1.0",
+            "quality": "balanced",
+            "view": "procurement-open",
+            "primitives": 121,
+            "triangles": 10386
+        },
+        {
+            "version": "0.1.0",
+            "quality": "balanced",
+            "view": "warehouse-closed",
+            "primitives": 129,
+            "triangles": 10824
+        },
+        {
+            "version": "0.1.0",
+            "quality": "balanced",
+            "view": "warehouse-open",
+            "primitives": 120,
+            "triangles": 10344
+        },
+        {
+            "version": "0.1.0",
+            "quality": "low",
+            "view": "overview",
+            "primitives": 110,
+            "triangles": 9996
+        },
+        {
+            "version": "0.1.0",
+            "quality": "low",
+            "view": "procurement-closed",
+            "primitives": 114,
+            "triangles": 10212
+        },
+        {
+            "version": "0.1.0",
+            "quality": "low",
+            "view": "procurement-open",
+            "primitives": 106,
+            "triangles": 9774
+        },
+        {
+            "version": "0.1.0",
+            "quality": "low",
+            "view": "warehouse-closed",
+            "primitives": 114,
+            "triangles": 10164
+        },
+        {
+            "version": "0.1.0",
+            "quality": "low",
+            "view": "warehouse-open",
+            "primitives": 105,
+            "triangles": 9684
+        },
+        {
+            "version": "0.2.0",
+            "quality": "high",
+            "view": "overview",
+            "primitives": 166,
+            "triangles": 30656
+        },
+        {
+            "version": "0.2.0",
+            "quality": "high",
+            "view": "procurement-closed",
+            "primitives": 167,
+            "triangles": 30752
+        },
+        {
+            "version": "0.2.0",
+            "quality": "high",
+            "view": "procurement-open",
+            "primitives": 155,
+            "triangles": 29796
+        },
+        {
+            "version": "0.2.0",
+            "quality": "high",
+            "view": "warehouse-closed",
+            "primitives": 167,
+            "triangles": 30752
+        },
+        {
+            "version": "0.2.0",
+            "quality": "high",
+            "view": "warehouse-open",
+            "primitives": 154,
+            "triangles": 29572
+        },
+        {
+            "version": "0.2.0",
+            "quality": "balanced",
+            "view": "overview",
+            "primitives": 166,
+            "triangles": 30656
+        },
+        {
+            "version": "0.2.0",
+            "quality": "balanced",
+            "view": "procurement-closed",
+            "primitives": 167,
+            "triangles": 30752
+        },
+        {
+            "version": "0.2.0",
+            "quality": "balanced",
+            "view": "procurement-open",
+            "primitives": 155,
+            "triangles": 29796
+        },
+        {
+            "version": "0.2.0",
+            "quality": "balanced",
+            "view": "warehouse-closed",
+            "primitives": 167,
+            "triangles": 30752
+        },
+        {
+            "version": "0.2.0",
+            "quality": "balanced",
+            "view": "warehouse-open",
+            "primitives": 154,
+            "triangles": 29572
+        },
+        {
+            "version": "0.2.0",
+            "quality": "low",
+            "view": "overview",
+            "primitives": 126,
+            "triangles": 20100
+        },
+        {
+            "version": "0.2.0",
+            "quality": "low",
+            "view": "procurement-closed",
+            "primitives": 139,
+            "triangles": 23388
+        },
+        {
+            "version": "0.2.0",
+            "quality": "low",
+            "view": "procurement-open",
+            "primitives": 127,
+            "triangles": 22432
+        },
+        {
+            "version": "0.2.0",
+            "quality": "low",
+            "view": "warehouse-closed",
+            "primitives": 143,
+            "triangles": 27020
+        },
+        {
+            "version": "0.2.0",
+            "quality": "low",
+            "view": "warehouse-open",
+            "primitives": 130,
+            "triangles": 25840
+        }
+    ]
+}

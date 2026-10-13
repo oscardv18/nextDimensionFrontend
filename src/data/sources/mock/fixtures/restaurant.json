@@ -1,0 +1,263 @@
+{
+  "sector": "restaurant",
+  "organizationName": "Fogón Siete",
+  "branchName": "Las Mercedes",
+  "zones": [
+    {
+      "key": "sal",
+      "name": "Salón y atención"
+    },
+    {
+      "key": "pro",
+      "name": "Producción"
+    },
+    {
+      "key": "ofi",
+      "name": "Oficina"
+    }
+  ],
+  "departments": [
+    {
+      "key": "dining_room",
+      "publicId": "01a0f755-f200-7f07-b8d7-70814665d646",
+      "name": "Salón",
+      "zoneKey": "sal",
+      "summary": "14 de 20 mesas ocupadas",
+      "icon": "dining",
+      "hue": "green",
+      "pending": {
+        "total": 2,
+        "worst": "warning",
+        "byTone": [
+          {
+            "tone": "warning",
+            "count": 2
+          }
+        ]
+      },
+      "people": {
+        "assigned": 8,
+        "connected": 3
+      },
+      "trend": [
+        4,
+        4,
+        1,
+        5,
+        3,
+        0,
+        3,
+        2,
+        4,
+        1,
+        3,
+        5,
+        0,
+        2
+      ]
+    },
+    {
+      "key": "cashier",
+      "publicId": "01a0f755-f200-7b53-9047-0c7d8ce2a306",
+      "name": "Caja",
+      "zoneKey": "sal",
+      "summary": "3 cuentas por cobrar",
+      "icon": "receipt",
+      "hue": "yellow",
+      "pending": {
+        "total": 2,
+        "worst": "warning",
+        "byTone": [
+          {
+            "tone": "warning",
+            "count": 2
+          }
+        ]
+      },
+      "people": {
+        "assigned": 2,
+        "connected": 1
+      },
+      "trend": [
+        4,
+        4,
+        1,
+        5,
+        3,
+        0,
+        3,
+        2,
+        4,
+        1,
+        3,
+        5,
+        0,
+        2
+      ]
+    },
+    {
+      "key": "administration",
+      "publicId": "01a0f755-f200-74ea-af1a-af62ddcc6dd2",
+      "name": "Administración",
+      "zoneKey": "ofi",
+      "summary": "Cierre del turno anterior pendiente",
+      "icon": "landmark",
+      "hue": "blue",
+      "pending": {
+        "total": 1,
+        "worst": "warning",
+        "byTone": [
+          {
+            "tone": "warning",
+            "count": 1
+          }
+        ]
+      },
+      "people": {
+        "assigned": 2,
+        "connected": 1
+      },
+      "trend": [
+        3,
+        3,
+        0,
+        4,
+        2,
+        0,
+        2,
+        1,
+        3,
+        0,
+        2,
+        4,
+        0,
+        1
+      ]
+    },
+    {
+      "key": "kitchen",
+      "publicId": "01a0f755-f200-7503-9f1b-de2a26bcb082",
+      "name": "Cocina",
+      "zoneKey": "pro",
+      "summary": "12 comandas en fuego",
+      "icon": "chef",
+      "hue": "orange",
+      "pending": {
+        "total": 7,
+        "worst": "waiting",
+        "byTone": [
+          {
+            "tone": "waiting",
+            "count": 7
+          }
+        ]
+      },
+      "people": {
+        "assigned": 6,
+        "connected": 2
+      },
+      "trend": [
+        9,
+        9,
+        6,
+        10,
+        8,
+        5,
+        8,
+        7,
+        9,
+        6,
+        8,
+        10,
+        5,
+        7
+      ]
+    },
+    {
+      "key": "warehouse",
+      "publicId": "01a0f755-f200-7a6c-b44c-6741f3a683d4",
+      "name": "Almacén",
+      "zoneKey": "pro",
+      "summary": "2 insumos bajo mínimo",
+      "icon": "package",
+      "hue": "violet",
+      "pending": {
+        "total": 2,
+        "worst": "warning",
+        "byTone": [
+          {
+            "tone": "warning",
+            "count": 2
+          }
+        ]
+      },
+      "people": {
+        "assigned": 1,
+        "connected": 0
+      },
+      "trend": [
+        4,
+        4,
+        1,
+        5,
+        3,
+        0,
+        3,
+        2,
+        4,
+        1,
+        3,
+        5,
+        0,
+        2
+      ]
+    }
+  ],
+  "links": [
+    {
+      "publicId": "01a0f755-f200-734c-a2d5-adb2a45cd116",
+      "from": "01a0f755-f200-7f07-b8d7-70814665d646",
+      "to": "01a0f755-f200-7503-9f1b-de2a26bcb082",
+      "name": "Comandas",
+      "openOperations": 9,
+      "operationRefs": [],
+      "color": "slate"
+    },
+    {
+      "publicId": "01a0f755-f200-7f0c-8149-410c272ba333",
+      "from": "01a0f755-f200-7503-9f1b-de2a26bcb082",
+      "to": "01a0f755-f200-7f07-b8d7-70814665d646",
+      "name": "Platos listos",
+      "openOperations": 1,
+      "operationRefs": [],
+      "color": "teal"
+    },
+    {
+      "publicId": "01a0f755-f200-76d1-94d0-27946ba9f3dd",
+      "from": "01a0f755-f200-7f07-b8d7-70814665d646",
+      "to": "01a0f755-f200-7b53-9047-0c7d8ce2a306",
+      "name": "Cuentas por cobrar",
+      "openOperations": 3,
+      "operationRefs": [],
+      "color": "orange"
+    },
+    {
+      "publicId": "01a0f755-f200-7681-97ca-0be74cc3a0f4",
+      "from": "01a0f755-f200-7a6c-b44c-6741f3a683d4",
+      "to": "01a0f755-f200-7503-9f1b-de2a26bcb082",
+      "name": "Reposición de insumos",
+      "openOperations": 2,
+      "operationRefs": [],
+      "color": "slate"
+    },
+    {
+      "publicId": "01a0f755-f200-7bfc-92f0-f2c361fed372",
+      "from": "01a0f755-f200-7b53-9047-0c7d8ce2a306",
+      "to": "01a0f755-f200-74ea-af1a-af62ddcc6dd2",
+      "name": "Cierre de turno",
+      "openOperations": 1,
+      "operationRefs": [],
+      "color": "slate"
+    }
+  ]
+}

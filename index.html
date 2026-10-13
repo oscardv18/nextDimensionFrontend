@@ -1,0 +1,81 @@
+<!doctype html>
+<html
+    lang="es"
+    data-theme="light"
+    data-appearance="system"
+    data-accent="purple"
+>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Arxnet</title>
+
+        <!--
+            Tema, acento, cristal, movimiento y carril salen de localStorage y se aplican a <html> antes del
+            primer pintado, con los mismos atributos y clases que usa el CSS (sin destello al recargar).
+            Valores no válidos o sin almacenamiento: los de fábrica. Con «sistema», se resuelve aquí el tema.
+        -->
+        <script>
+            (function () {
+                var root = document.documentElement;
+                function pref(name, allowed, fallback) {
+                    var value = null;
+                    try {
+                        value = localStorage.getItem(name);
+                    } catch (e) {}
+                    return allowed.indexOf(value) !== -1 ? value : fallback;
+                }
+                var appearance = pref(
+                    'appearance',
+                    ['light', 'dark', 'system'],
+                    'system',
+                );
+                var dark =
+                    appearance === 'dark' ||
+                    (appearance === 'system' &&
+                        window.matchMedia('(prefers-color-scheme: dark)')
+                            .matches);
+                root.dataset.appearance = appearance;
+                root.dataset.theme = dark ? 'dark' : 'light';
+                root.dataset.accent = pref(
+                    'accent',
+                    ['purple', 'red', 'blue'],
+                    'purple',
+                );
+                root.lang = pref('locale', ['es', 'en'], 'es');
+                if (pref('glass', ['on', 'off'], 'on') === 'off') {
+                    root.classList.add('sin-vidrio');
+                }
+                if (
+                    pref('motion', ['reduced', 'full'], 'full') === 'reduced' ||
+                    window.matchMedia('(prefers-reduced-motion: reduce)')
+                        .matches
+                ) {
+                    root.classList.add('reducido');
+                }
+                if (pref('rail', ['wide', 'narrow'], 'narrow') === 'wide') {
+                    root.classList.add('carril-amplio');
+                }
+                root.style.colorScheme = root.dataset.theme;
+            })();
+        </script>
+
+        <!-- Fondo inmediato del tema (mismos valores que --fondo en src/design/styles/arxnet/tokens.css) -->
+        <style>
+            html {
+                background-color: #dde0e9;
+            }
+            html[data-theme='dark'] {
+                background-color: #000000;
+            }
+        </style>
+
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    </head>
+    <body class="font-sans antialiased">
+        <div id="root"></div>
+        <script type="module" src="/src/app/main.tsx"></script>
+    </body>
+</html>

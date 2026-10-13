@@ -1,0 +1,1891 @@
+/* ════════ Centro de control espacial · Fase 3.0 ════════
+   Dirección: noche cinematográfica (negro y grafito), luz arquitectónica cálida como complemento y un
+   único acento azul controlado. Todo vive bajo .cc-root para no alterar el sistema del resto de la app
+   (tokens.css). Referencia: references/arxnet-approved-mockup.png. */
+
+/* ── Tokens ──
+   Fase 3.4: ningún componente fija colores de un solo modo. Cada valor que cambia entre oscuro y claro es
+   un token; el bloque claro solo redefine tokens. Contrastes medidos en docs/campus/modo-claro-3.4.md. */
+.cc-root {
+    /* Superficie */
+    --cc-bg: #07090d;
+    --cc-surface: rgba(13, 15, 20, 0.66);
+    --cc-surface-strong: rgba(14, 16, 22, 0.84);
+    /* Menús: casi opacos, porque dentro de una barra con desenfoque no pueden difuminar la escena */
+    --cc-surface-menu: rgba(16, 18, 24, 0.99);
+    --cc-surface-solid: #0f1116; /* rellenos opacos (etapas, recorte del logotipo) */
+    --cc-raised: rgba(255, 255, 255, 0.045);
+    --cc-card: rgba(
+        255,
+        255,
+        255,
+        0.045
+    ); /* segundo nivel dentro de un panel */
+    --cc-card-shadow: none;
+    --cc-track: rgba(255, 255, 255, 0.045); /* carril de pestañas */
+    --cc-ghost: rgba(13, 15, 20, 0.5);
+    --cc-hover: rgba(255, 255, 255, 0.07);
+    --cc-line: rgba(255, 255, 255, 0.09);
+    --cc-line-strong: rgba(255, 255, 255, 0.16);
+    --cc-highlight: rgba(255, 255, 255, 0.06); /* filo superior del cristal */
+    --cc-saturate: 1.2;
+    /* Texto */
+    --cc-text: #eef1f6;
+    --cc-text-2: #b9c0cd;
+    --cc-text-3: #959eae;
+    /* Halo del texto que va directamente sobre la escena (títulos, pie) */
+    --cc-halo: 0 1px 12px rgba(0, 0, 0, 0.7);
+    --cc-halo-soft: 0 1px 8px rgba(0, 0, 0, 0.8);
+    /* Avisos emergentes: invertidos respecto a la superficie */
+    --cc-hint-bg: rgba(10, 12, 16, 0.96);
+    --cc-hint-text: #eef1f6;
+    --cc-hint-line: rgba(255, 255, 255, 0.16);
+    /* Acento: se define con cuatro valores y el resto se deriva (ver presets más abajo) */
+    --cc-accent: #4d8dff; /* contornos, progreso, puntos */
+    --cc-accent-fill: #2563eb; /* rellenos con texto blanco (≥ 4,5:1) */
+    --cc-accent-text: #9cc0ff; /* texto y iconos sobre la superficie */
+    --cc-on-accent: #ffffff;
+    --cc-accent-soft: color-mix(in srgb, var(--cc-accent) 16%, transparent);
+    --cc-accent-line: color-mix(in srgb, var(--cc-accent) 60%, transparent);
+    --cc-accent-glow: color-mix(in srgb, var(--cc-accent) 36%, transparent);
+    --cc-accent-gradient: linear-gradient(
+        180deg,
+        color-mix(in srgb, var(--cc-accent-fill) 86%, #fff),
+        var(--cc-accent-fill)
+    );
+    /* Estados (independientes del acento; sin verde como color principal) */
+    --cc-attention: #f2b04f;
+    --cc-attention-text: #f2b04f;
+    --cc-info: #58c2e8;
+    --cc-neutral: #7f8898;
+    --cc-disabled: 0.5; /* «próxima entrega»: atenuado pero legible */
+    /* Etiquetas espaciales (fuera de la jerarquía de paneles: su fondo es siempre la escena) */
+    --cc-label-surface: rgba(12, 14, 19, 0.72);
+    --cc-label-surface-hover: rgba(16, 20, 30, 0.85);
+    --cc-label-line: rgba(255, 255, 255, 0.12);
+    --cc-label-text: #eef1f6;
+    --cc-label-text-2: #c4cad6;
+    --cc-label-icon: #dfe6f3;
+    --cc-label-icon-bg: rgba(255, 255, 255, 0.06);
+    --cc-label-shadow: 0 10px 24px -12px rgba(0, 0, 0, 0.9);
+    --cc-stem-top: rgba(255, 255, 255, 0.35);
+    /* Forma y material */
+    --cc-r-s: 10px;
+    --cc-r-m: 14px;
+    --cc-r-l: 20px;
+    --cc-blur: 18px;
+    --cc-shadow:
+        0 1px 1px rgba(0, 0, 0, 0.4), 0 18px 40px -18px rgba(0, 0, 0, 0.9);
+    --cc-gutter: 14px;
+    --cc-bar-h: 44px;
+    /* Movimiento */
+    --cc-ease: cubic-bezier(0.22, 0.8, 0.24, 1);
+    --cc-fast: 160ms;
+    --cc-base: 240ms;
+    --cc-slow: 520ms;
+
+    font-family: 'Figtree Variable', 'Figtree', system-ui, sans-serif;
+    color-scheme: dark;
+    -webkit-font-smoothing: antialiased;
+}
+/* Modo claro (Fase 3.3 lo activa, Fase 3.4 lo refina). No es una inversión: el cristal es blanco cálido-
+   neutro algo más opaco que el oscuro (la escena clara compite más con el texto), el segundo nivel es una
+   tarjeta más blanca en lugar de un velo gris, las sombras son frías y cortas y el texto sobre la escena
+   lleva un halo claro. Los tonos de acento y de estado bajan de luminosidad para mantener AA. */
+.cc-root[data-tone='light'] {
+    color-scheme: light;
+    --cc-bg: #dfe3ea;
+    --cc-surface: rgba(248, 249, 252, 0.82);
+    --cc-surface-strong: rgba(250, 251, 253, 0.92);
+    --cc-surface-menu: #fbfbfd;
+    --cc-surface-solid: #ffffff;
+    --cc-raised: rgba(20, 24, 40, 0.045);
+    --cc-card: rgba(255, 255, 255, 0.66);
+    --cc-card-shadow: 0 1px 2px rgba(20, 24, 40, 0.05);
+    --cc-track: rgba(20, 24, 40, 0.05);
+    --cc-ghost: rgba(255, 255, 255, 0.68);
+    --cc-hover: rgba(20, 24, 40, 0.06);
+    --cc-line: rgba(20, 24, 40, 0.1);
+    --cc-line-strong: rgba(20, 24, 40, 0.18);
+    --cc-highlight: rgba(255, 255, 255, 0.9);
+    --cc-saturate: 1.5;
+    --cc-text: #14161c;
+    --cc-text-2: #3f4555;
+    --cc-text-3: #555c6d;
+    --cc-halo:
+        0 0 14px rgba(255, 255, 255, 0.75), 0 1px 1px rgba(255, 255, 255, 0.6);
+    --cc-halo-soft: 0 0 10px rgba(255, 255, 255, 0.85);
+    --cc-hint-bg: #1b1e27;
+    --cc-hint-text: #f4f5f8;
+    --cc-hint-line: transparent;
+    --cc-accent: #2563eb;
+    --cc-accent-fill: #2563eb;
+    --cc-accent-text: #1d4ed8;
+    --cc-accent-soft: color-mix(in srgb, var(--cc-accent) 10%, transparent);
+    --cc-accent-line: color-mix(in srgb, var(--cc-accent) 45%, transparent);
+    --cc-accent-glow: color-mix(in srgb, var(--cc-accent) 24%, transparent);
+    --cc-attention: #e89a1c;
+    --cc-attention-text: #8f5200;
+    --cc-info: #1f9ccc;
+    --cc-neutral: #8a92a1;
+    --cc-disabled: 0.6;
+    --cc-label-surface: rgba(250, 251, 253, 0.86);
+    --cc-label-surface-hover: rgba(255, 255, 255, 0.95);
+    --cc-label-line: rgba(20, 24, 40, 0.12);
+    --cc-label-text: #14161c;
+    --cc-label-text-2: #3f4555;
+    --cc-label-icon: #3f4555;
+    --cc-label-icon-bg: rgba(20, 24, 40, 0.06);
+    --cc-label-shadow:
+        0 1px 2px rgba(20, 24, 40, 0.08),
+        0 10px 22px -12px rgba(20, 30, 60, 0.35);
+    --cc-stem-top: rgba(20, 24, 40, 0.35);
+    --cc-shadow:
+        0 1px 2px rgba(20, 24, 40, 0.06),
+        0 14px 34px -16px rgba(24, 32, 56, 0.32);
+}
+/* Acentos configurables (preparados, sin activar: nada fija aún data-accent en .cc-root y el menú los
+   muestra como «próxima entrega»). Mismos tonos que los acentos globales de tokens.css, con el relleno
+   elegido para que el texto blanco cumpla AA en ambos modos. */
+.cc-root[data-accent='purple'] {
+    --cc-accent: #8b5cf6;
+    --cc-accent-fill: #6d28d9;
+    --cc-accent-text: #c9a8ff;
+}
+.cc-root[data-accent='red'] {
+    --cc-accent: #f0476c;
+    --cc-accent-fill: #c81e4a;
+    --cc-accent-text: #ff9fb4;
+}
+.cc-root[data-tone='light'][data-accent='purple'] {
+    --cc-accent: #6d28d9;
+    --cc-accent-text: #5b21b6;
+}
+.cc-root[data-tone='light'][data-accent='red'] {
+    --cc-accent: #c81e4a;
+    --cc-accent-text: #a3163b;
+}
+
+/* ── Material: cristal ── */
+.cc-island,
+.cc-panel,
+.cc-menu,
+.cc-search-results {
+    background: var(--cc-surface);
+    border: 1px solid var(--cc-line);
+    box-shadow:
+        inset 0 1px 0 var(--cc-highlight),
+        var(--cc-shadow);
+    backdrop-filter: blur(var(--cc-blur)) saturate(var(--cc-saturate));
+    -webkit-backdrop-filter: blur(var(--cc-blur)) saturate(var(--cc-saturate));
+}
+html.sin-vidrio .cc-root {
+    --cc-surface: rgba(13, 15, 20, 0.94);
+    --cc-label-surface: rgba(12, 14, 19, 0.94);
+    --cc-blur: 0px;
+}
+
+/* Especificidad nula: los componentes fijan su color sin competir con el reinicio. */
+:where(.cc-root) :where(button, a, input) {
+    font: inherit;
+    color: inherit;
+}
+:where(.cc-root) :where(button) {
+    cursor: pointer;
+}
+.cc-root :focus-visible {
+    outline: 2px solid var(--cc-accent-text);
+    outline-offset: 2px;
+}
+.cc-sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+.cc-end {
+    margin-left: auto;
+}
+
+/* ── Profundidad sobre la escena ── */
+.cc-vignette {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background:
+        radial-gradient(
+            120% 90% at 50% 45%,
+            transparent 55%,
+            rgba(3, 4, 7, 0.55) 100%
+        ),
+        linear-gradient(
+            to bottom,
+            rgba(3, 4, 7, 0.45),
+            transparent 16%,
+            transparent 82%,
+            rgba(3, 4, 7, 0.5)
+        );
+}
+
+/* ── Ranuras del Shell (posición; las mide la cámara) ── */
+.cc-slot-top,
+.cc-slot-rail,
+.cc-slot-heading,
+.cc-slot-panel,
+.cc-slot-dock,
+.cc-slot-status {
+    position: absolute;
+    z-index: 20;
+    pointer-events: none;
+}
+.cc-slot-top > *,
+.cc-slot-rail > *,
+.cc-slot-heading > *,
+.cc-slot-dock > * {
+    pointer-events: auto;
+}
+.cc-slot-top {
+    top: max(var(--cc-gutter), env(safe-area-inset-top));
+    left: max(var(--cc-gutter), env(safe-area-inset-left));
+    right: max(var(--cc-gutter), env(safe-area-inset-right));
+    z-index: 40;
+}
+.cc-slot-rail {
+    top: calc(var(--cc-gutter) + var(--cc-bar-h) + 22px);
+    left: max(var(--cc-gutter), env(safe-area-inset-left));
+}
+.cc-slot-heading {
+    top: calc(var(--cc-gutter) + var(--cc-bar-h) + 12px);
+    left: calc(var(--cc-gutter) + 44px + 26px);
+    max-width: min(460px, 40vw);
+}
+.cc-slot-panel {
+    top: calc(var(--cc-gutter) + var(--cc-bar-h) + 12px);
+    right: max(var(--cc-gutter), env(safe-area-inset-right));
+    width: 300px;
+    max-height: calc(
+        100dvh - var(--cc-gutter) * 2 - var(--cc-bar-h) - 12px - 76px
+    );
+    display: flex;
+    flex-direction: column;
+}
+.cc-slot-panel[data-view='procurement'],
+.cc-slot-panel[data-view='department'] {
+    width: min(440px, 34vw);
+}
+/* «Atención ahora» cae sobre el cielo de la escena: no aleja la cámara (use-overlay-insets.ts).
+   Por debajo de 1280 px se pliega a su cabecera para no tapar etiquetas; en móvil sí reserva. */
+@media (min-width: 760px) {
+    .cc-slot-panel[data-view='overview'] {
+        --cc-inset: none;
+    }
+}
+@media (min-width: 760px) and (max-width: 1279px) {
+    .cc-panel[data-variant='overview'] .cc-panel-toggle {
+        display: grid;
+    }
+    .cc-panel[data-variant='overview'][data-collapsed='true'] .cc-panel-body {
+        display: none;
+    }
+    .cc-panel[data-variant='overview'] .cc-panel-header {
+        padding-bottom: 12px;
+    }
+    /* Panel superior: se despliega hacia abajo (al revés que la franja inferior móvil). */
+    .cc-panel[data-variant='overview'] .cc-panel-toggle {
+        rotate: 180deg;
+    }
+    .cc-panel[data-variant='overview'] .cc-panel-toggle[aria-expanded='false'] {
+        rotate: 0deg;
+    }
+}
+.cc-slot-dock {
+    bottom: max(var(--cc-gutter), env(safe-area-inset-bottom));
+    left: 50%;
+    translate: -50% 0;
+}
+.cc-slot-status {
+    bottom: max(var(--cc-gutter), env(safe-area-inset-bottom));
+    left: max(var(--cc-gutter), env(safe-area-inset-left));
+    right: max(var(--cc-gutter), env(safe-area-inset-right));
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 12px;
+    /* Por debajo del dock: comparte franja, no lo tapa. */
+    z-index: 15;
+}
+
+/* ── Barra superior ── */
+.cc-command {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+.cc-command > .cc-island {
+    height: var(--cc-bar-h);
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+}
+.cc-brand-island {
+    padding: 0 6px 0 14px;
+    gap: 8px;
+}
+.cc-brand {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding-right: 12px;
+    border-right: 1px solid var(--cc-line);
+    height: 26px;
+}
+.cc-brand-mark {
+    width: 22px;
+    height: 22px;
+    color: var(--cc-accent);
+    /* El logotipo recorta su interior con --fondo: el color opaco de la isla en cada modo. */
+    --fondo: var(--cc-surface-solid);
+    filter: drop-shadow(0 0 6px var(--cc-accent-glow));
+}
+.cc-brand-name {
+    font-weight: 650;
+    letter-spacing: 0.2em;
+    font-size: 14px;
+}
+.cc-company {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    height: 32px;
+    padding: 0 10px;
+    border: 0;
+    background: none;
+    border-radius: 999px;
+    font-size: 13px;
+    color: var(--cc-text-2);
+    transition: background var(--cc-fast) var(--cc-ease);
+}
+.cc-company:hover,
+.cc-company[aria-expanded='true'] {
+    background: var(--cc-hover);
+}
+.cc-company-name {
+    max-width: 22ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.cc-search {
+    position: relative;
+    flex: 0 1 340px;
+    padding: 0 12px 0 14px;
+    gap: 10px;
+    transition:
+        border-color var(--cc-fast) var(--cc-ease),
+        box-shadow var(--cc-fast) var(--cc-ease);
+}
+.cc-search:focus-within {
+    border-color: var(--cc-accent-line);
+    box-shadow:
+        0 0 0 3px var(--cc-accent-soft),
+        var(--cc-shadow);
+}
+.cc-search-icon {
+    color: var(--cc-text-3);
+    flex: none;
+}
+.cc-search input {
+    flex: 1;
+    min-width: 0;
+    height: 100%;
+    border: 0;
+    background: none;
+    font-size: 13px;
+    outline: none;
+}
+.cc-search input::placeholder {
+    color: var(--cc-text-3);
+}
+.cc-search input::-webkit-search-cancel-button {
+    display: none;
+}
+.cc-kbd {
+    font: inherit;
+    font-size: 11px;
+    color: var(--cc-text-3);
+    padding: 2px 6px;
+    border: 1px solid var(--cc-line);
+    border-radius: 6px;
+    white-space: nowrap;
+}
+.cc-actions {
+    padding: 0 5px;
+    gap: 2px;
+}
+.cc-icon-button,
+.cc-profile {
+    position: relative;
+    display: grid;
+    place-items: center;
+    height: 34px;
+    min-width: 34px;
+    border: 0;
+    background: none;
+    border-radius: 999px;
+    color: var(--cc-text-2);
+    transition:
+        background var(--cc-fast) var(--cc-ease),
+        color var(--cc-fast) var(--cc-ease);
+}
+.cc-profile {
+    display: flex;
+    gap: 4px;
+    padding: 0 6px 0 3px;
+}
+.cc-icon-button:hover,
+.cc-icon-button[aria-expanded='true'],
+.cc-profile:hover,
+.cc-profile[aria-expanded='true'] {
+    background: var(--cc-hover);
+    color: var(--cc-text);
+}
+.cc-badge-dot {
+    position: absolute;
+    top: 7px;
+    right: 8px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--cc-attention);
+    box-shadow: 0 0 0 2px var(--cc-surface-solid);
+}
+.cc-avatar {
+    display: grid;
+    place-items: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    font-size: 11px;
+    font-weight: 650;
+    color: var(--cc-avatar-text, var(--cc-text));
+    background: var(--cc-avatar-bg, linear-gradient(160deg, #2a3a5c, #161c2a));
+    box-shadow:
+        inset 0 0 0 1px var(--cc-accent-line),
+        0 0 10px -2px var(--cc-accent-glow);
+}
+
+/* ── Menús ── */
+.cc-menu-anchor {
+    position: relative;
+}
+.cc-menu,
+.cc-search-results {
+    /* Casi opaco: dentro de la barra (con su propio desenfoque) no puede difuminar la escena. */
+    --cc-surface: var(--cc-surface-menu);
+    position: absolute;
+    top: calc(100% + 10px);
+    z-index: 50;
+    min-width: 230px;
+    padding: 6px;
+    margin: 0;
+    list-style: none;
+    border-radius: var(--cc-r-m);
+    animation: cc-pop var(--cc-fast) var(--cc-ease);
+    transform-origin: top;
+}
+.cc-menu[data-align='start'] {
+    left: -6px;
+}
+.cc-menu[data-align='end'] {
+    right: -5px;
+}
+.cc-search-results {
+    left: 0;
+    right: 0;
+}
+.cc-menu-label {
+    margin: 4px 8px 6px;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--cc-text-3);
+}
+.cc-menu-note {
+    margin: 6px 8px 2px;
+    font-size: 11px;
+    color: var(--cc-text-3);
+}
+.cc-menu-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    min-height: 34px;
+    padding: 0 10px;
+    border: 0;
+    border-radius: 8px;
+    background: none;
+    font-size: 13px;
+    text-align: left;
+    text-decoration: none;
+    color: var(--cc-text-2);
+    cursor: pointer;
+    transition: background var(--cc-fast) var(--cc-ease);
+}
+.cc-menu-item:hover,
+.cc-menu-item:focus-visible,
+.cc-menu-item[aria-selected='true'] {
+    background: var(--cc-hover);
+    color: var(--cc-text);
+}
+/* Foco por teclado dentro del menú: anillo interior para no salirse del borde redondeado. */
+.cc-menu-item:focus-visible {
+    outline-offset: -2px;
+}
+.cc-menu-item[aria-checked='true'] {
+    color: var(--cc-text);
+    font-weight: 550;
+}
+.cc-menu-item[aria-checked='true'] > .cc-end {
+    color: var(--cc-accent-text);
+}
+.cc-menu-item:disabled {
+    opacity: 0.55;
+    cursor: default;
+}
+.cc-menu-gap {
+    width: 14px;
+}
+.cc-menu-sep {
+    display: block;
+    height: 1px;
+    margin: 6px 4px;
+    background: var(--cc-line);
+}
+.cc-menu-user {
+    display: grid;
+    gap: 2px;
+    padding: 6px 10px;
+    font-size: 13px;
+}
+.cc-menu-user span {
+    color: var(--cc-text-3);
+    font-size: 12px;
+}
+.cc-switch {
+    position: relative;
+    width: 26px;
+    height: 15px;
+    border-radius: 999px;
+    background: var(--cc-line-strong);
+    transition: background var(--cc-fast) var(--cc-ease);
+}
+.cc-switch::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: var(--cc-text);
+    transition: translate var(--cc-fast) var(--cc-ease);
+}
+[aria-checked='true'] > .cc-switch {
+    background: var(--cc-accent);
+}
+[aria-checked='true'] > .cc-switch::after {
+    translate: 11px 0;
+}
+
+/* ── Prototipo («próxima entrega») ── */
+.cc-root [data-prototype='true'] {
+    opacity: var(--cc-disabled);
+    cursor: not-allowed;
+}
+.cc-root [data-prototype='true']:hover,
+.cc-root [data-prototype='true']:focus-visible {
+    opacity: 0.78;
+}
+/* Aviso propio, invertido respecto a la superficie (también nombra destinos reales del carril). */
+.cc-root [data-hint] {
+    position: relative;
+}
+.cc-root [data-hint]::after {
+    content: attr(data-hint);
+    position: absolute;
+    z-index: 60;
+    width: max-content;
+    max-width: 240px;
+    padding: 6px 9px;
+    border-radius: 8px;
+    font-size: 12px;
+    line-height: 1.35;
+    font-weight: 450;
+    letter-spacing: 0;
+    text-transform: none;
+    color: var(--cc-hint-text);
+    background: var(--cc-hint-bg);
+    border: 1px solid var(--cc-hint-line);
+    box-shadow: 0 6px 16px -8px rgba(0, 0, 0, 0.45);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--cc-fast) var(--cc-ease);
+}
+.cc-root [data-hint]:hover::after,
+.cc-root [data-hint]:focus-visible::after {
+    opacity: 1;
+    transition-delay: 250ms;
+}
+.cc-root [data-hint-side='top']::after {
+    bottom: calc(100% + 10px);
+    left: 50%;
+    translate: -50% 0;
+}
+.cc-root [data-hint-side='right']::after {
+    left: calc(100% + 12px);
+    top: 50%;
+    translate: 0 -50%;
+}
+.cc-root [data-hint-side='bottom']::after {
+    top: calc(100% + 8px);
+    right: 0;
+}
+
+/* ── Carril lateral ── */
+.cc-rail {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 6px;
+    border-radius: 999px;
+}
+.cc-rail-item {
+    display: grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: none;
+    color: var(--cc-text-2);
+    transition:
+        background var(--cc-fast) var(--cc-ease),
+        color var(--cc-fast) var(--cc-ease),
+        box-shadow var(--cc-fast) var(--cc-ease);
+}
+.cc-rail-item:not([data-prototype]):hover {
+    background: var(--cc-hover);
+    color: var(--cc-text);
+}
+.cc-rail-item[aria-current='page'] {
+    color: var(--cc-accent-text);
+    background: var(--cc-accent-soft);
+    box-shadow:
+        inset 0 0 0 1px var(--cc-accent-line),
+        0 0 14px -4px var(--cc-accent-glow);
+}
+
+/* ── Título contextual ── */
+.cc-heading {
+    text-shadow: var(--cc-halo);
+}
+.cc-heading h1 {
+    margin: 0;
+    font-size: clamp(22px, 2.1vw, 30px);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+}
+.cc-root[data-view='procurement'] .cc-heading h1,
+.cc-root[data-view='department'] .cc-heading h1 {
+    font-size: clamp(26px, 2.8vw, 40px);
+}
+.cc-heading > p {
+    margin: 4px 0 0;
+    color: var(--cc-text-2);
+    font-size: 14px;
+}
+.cc-crumbs {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 6px;
+    font-size: 13px;
+    color: var(--cc-text-3);
+}
+.cc-crumbs button {
+    padding: 0;
+    border: 0;
+    background: none;
+    color: var(--cc-text-2);
+}
+.cc-crumbs button:hover {
+    color: var(--cc-text);
+}
+.cc-crumbs [aria-current] {
+    color: var(--cc-text-2);
+}
+.cc-heading-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+}
+.cc-pill,
+.cc-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    height: 34px;
+    padding: 0 14px;
+    border-radius: 999px;
+    font-size: 13px;
+    border: 1px solid var(--cc-line-strong);
+    background: var(--cc-surface);
+    backdrop-filter: blur(var(--cc-blur)) saturate(var(--cc-saturate));
+    -webkit-backdrop-filter: blur(var(--cc-blur)) saturate(var(--cc-saturate));
+    box-shadow: var(--cc-card-shadow);
+    text-shadow: none;
+    transition:
+        background var(--cc-fast) var(--cc-ease),
+        border-color var(--cc-fast) var(--cc-ease);
+}
+.cc-pill:hover,
+.cc-ghost:hover {
+    background: var(--cc-hover);
+    border-color: var(--cc-accent-line);
+}
+.cc-pill[aria-pressed='true'] {
+    border-color: var(--cc-accent-line);
+    /* El tinte se superpone al cristal; solo, dejaría ver la escena a través del texto. */
+    background:
+        linear-gradient(var(--cc-accent-soft), var(--cc-accent-soft)),
+        var(--cc-surface);
+    color: var(--cc-accent-text);
+}
+.cc-pill:disabled {
+    opacity: 0.45;
+    cursor: default;
+}
+.cc-ghost {
+    height: 28px;
+    padding: 0 10px;
+    font-size: 12px;
+    color: var(--cc-text-2);
+    background: var(--cc-ghost);
+}
+
+/* ── Panel contextual ── */
+.cc-panel {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    border-radius: var(--cc-r-l);
+    pointer-events: auto;
+    overflow: hidden;
+    animation: cc-panel-in var(--cc-slow) var(--cc-ease) both;
+    transition:
+        opacity var(--cc-fast) ease,
+        translate var(--cc-fast) ease;
+}
+.cc-panel[data-leaving='true'] {
+    opacity: 0;
+    translate: 18px 0;
+}
+.cc-panel[data-variant='overview'] {
+    border-radius: var(--cc-r-m);
+}
+.cc-panel-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 16px 6px;
+}
+.cc-panel-header[data-large='true'] {
+    gap: 16px;
+    padding: 22px 22px 12px;
+}
+.cc-panel-icon {
+    display: grid;
+    place-items: center;
+    color: var(--cc-accent-text);
+}
+.cc-panel-header[data-large='true'] .cc-panel-icon {
+    color: var(--cc-text);
+    width: 48px;
+    height: 48px;
+    filter: drop-shadow(0 0 10px var(--cc-accent-glow));
+}
+.cc-panel-titles {
+    min-width: 0;
+}
+.cc-panel-titles h2 {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 550;
+}
+.cc-panel-header[data-large='true'] h2 {
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+.cc-panel-titles p {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 2px 0 0;
+    font-size: 14px;
+    color: var(--cc-text-2);
+}
+.cc-panel-titles strong {
+    color: var(--cc-attention-text);
+    font-weight: 600;
+}
+.cc-panel-toggle {
+    display: none;
+    margin-left: auto;
+    width: 34px;
+    height: 34px;
+    border: 0;
+    border-radius: 50%;
+    background: var(--cc-raised);
+    place-items: center;
+    transition: rotate var(--cc-base) var(--cc-ease);
+}
+.cc-panel-toggle[aria-expanded='false'] {
+    rotate: 180deg;
+}
+.cc-panel-body {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 4px 16px 16px;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    min-height: 0;
+    scrollbar-width: thin;
+    scrollbar-color: var(--cc-line-strong) transparent;
+}
+.cc-panel[data-variant='procurement'] .cc-panel-body,
+.cc-panel[data-variant='department'] .cc-panel-body {
+    padding: 4px 20px 20px;
+}
+.cc-demo-tag {
+    font-size: 11px;
+    color: var(--cc-text-3);
+    letter-spacing: 0.02em;
+}
+.cc-panel-body > .cc-demo-tag {
+    align-self: flex-end;
+}
+.cc-updated .cc-demo-tag {
+    margin-left: 6px;
+    padding: 2px 7px;
+    border: 1px solid var(--cc-line);
+    border-radius: 999px;
+    color: var(--cc-text-2);
+    background: var(--cc-ghost);
+    text-shadow: none;
+}
+
+/* Puntos de estado */
+.cc-dot {
+    flex: none;
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--cc-neutral);
+}
+.cc-dot[data-tone='attention'] {
+    background: var(--cc-attention);
+    box-shadow: 0 0 8px -1px
+        color-mix(in srgb, var(--cc-attention) 70%, transparent);
+}
+.cc-dot[data-tone='info'] {
+    background: var(--cc-info);
+    box-shadow: 0 0 8px -1px color-mix(in srgb, var(--cc-info) 70%, transparent);
+}
+
+/* Atención ahora */
+.cc-attention {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.cc-attention-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    min-height: 40px;
+    padding: 0 8px;
+    border: 0;
+    border-radius: var(--cc-r-s);
+    background: none;
+    font-size: 13px;
+    text-align: left;
+    color: var(--cc-text-2);
+    transition:
+        background var(--cc-fast) var(--cc-ease),
+        color var(--cc-fast) var(--cc-ease);
+}
+.cc-attention-item:hover {
+    background: var(--cc-hover);
+    color: var(--cc-text);
+}
+.cc-attention-item .cc-end {
+    opacity: 0;
+    translate: -4px 0;
+    transition:
+        opacity var(--cc-fast) var(--cc-ease),
+        translate var(--cc-fast) var(--cc-ease);
+}
+.cc-attention-item:hover .cc-end,
+.cc-attention-item:focus-visible .cc-end {
+    opacity: 1;
+    translate: 0 0;
+}
+.cc-panel-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+    border-top: 1px solid var(--cc-line);
+}
+.cc-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 2px;
+    border: 0;
+    background: none;
+    font-size: 13px;
+    color: var(--cc-accent-text);
+}
+
+/* Pestañas */
+.cc-tabs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+    padding: 4px;
+    border-radius: var(--cc-r-s);
+    background: var(--cc-track);
+    border: 1px solid var(--cc-line);
+}
+.cc-tabs [role='tab'] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    height: 34px;
+    border: 0;
+    border-radius: 8px;
+    background: none;
+    font-size: 13px;
+    color: var(--cc-text-2);
+    transition:
+        background var(--cc-base) var(--cc-ease),
+        color var(--cc-base) var(--cc-ease),
+        box-shadow var(--cc-base) var(--cc-ease);
+}
+.cc-tabs [role='tab']:hover {
+    background: var(--cc-hover);
+}
+.cc-tabs [role='tab']:not([aria-selected='true']):hover {
+    color: var(--cc-text);
+}
+.cc-tabs [role='tab'][aria-selected='true'] {
+    color: var(--cc-on-accent);
+    background: var(--cc-accent-gradient);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.25),
+        0 6px 18px -8px var(--cc-accent-glow);
+}
+.cc-tab-count {
+    font-size: 11px;
+    font-variant-numeric: tabular-nums;
+    color: var(--cc-text-3);
+}
+[aria-selected='true'] > .cc-tab-count {
+    color: inherit;
+    opacity: 0.85;
+}
+.cc-tabpanel {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    animation: cc-fade-up var(--cc-base) var(--cc-ease);
+}
+
+/* Registros */
+.cc-records {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 2px;
+}
+.cc-record {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    min-height: 44px;
+    padding: 0 12px;
+    border: 1px solid transparent;
+    border-radius: var(--cc-r-s);
+    background: none;
+    text-align: left;
+    font-size: 13px;
+    color: var(--cc-text-2);
+    transition:
+        background var(--cc-fast) var(--cc-ease),
+        border-color var(--cc-base) var(--cc-ease),
+        box-shadow var(--cc-base) var(--cc-ease);
+}
+.cc-record:hover {
+    background: var(--cc-hover);
+    color: var(--cc-text);
+}
+.cc-record[aria-current='true'] {
+    color: var(--cc-text);
+    border-color: var(--cc-accent-line);
+    background: linear-gradient(
+        90deg,
+        var(--cc-accent-soft),
+        color-mix(in srgb, var(--cc-accent) 4%, transparent)
+    );
+    box-shadow: 0 0 18px -8px var(--cc-accent-glow);
+}
+/* Marca lateral de la fila activa: la selección no depende solo del color de fondo. */
+.cc-record[aria-current='true']::before {
+    content: '';
+    position: absolute;
+    left: -1px;
+    top: 10px;
+    bottom: 10px;
+    width: 3px;
+    border-radius: 0 3px 3px 0;
+    background: var(--cc-accent);
+}
+.cc-record-title {
+    font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.cc-record-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 12px;
+    color: var(--cc-text-2);
+}
+
+/* Detalle */
+.cc-detail {
+    padding: 16px 18px;
+    border-radius: var(--cc-r-m);
+    border: 1px solid var(--cc-line);
+    background: var(--cc-card);
+    box-shadow: var(--cc-card-shadow);
+    animation: cc-fade-up var(--cc-base) var(--cc-ease);
+}
+.cc-detail h3 {
+    margin: 0 0 12px;
+    font-size: 19px;
+    font-weight: 600;
+}
+.cc-detail-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 8px 0;
+    font-size: 13px;
+    color: var(--cc-text-2);
+}
+.cc-detail-meta > svg {
+    color: var(--cc-text-3);
+}
+.cc-detail-meta strong {
+    color: var(--cc-text);
+    font-size: 15px;
+    font-weight: 600;
+}
+.cc-detail-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 16px;
+}
+.cc-primary {
+    flex: 1;
+    max-width: 220px;
+    height: 40px;
+    border: 1px solid color-mix(in srgb, var(--cc-accent-fill) 70%, #fff);
+    border-radius: var(--cc-r-s);
+    background: var(--cc-accent-gradient);
+    color: var(--cc-on-accent);
+    font-weight: 550;
+    font-size: 14px;
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.25),
+        0 10px 24px -10px var(--cc-accent-glow);
+    transition:
+        filter var(--cc-fast) var(--cc-ease),
+        translate var(--cc-fast) var(--cc-ease);
+}
+.cc-primary:hover {
+    filter: brightness(1.08);
+}
+.cc-primary:active {
+    translate: 0 1px;
+}
+.cc-primary:focus-visible {
+    outline-offset: 3px;
+}
+.cc-notice {
+    margin: 10px 0 0;
+    font-size: 12px;
+    color: var(--cc-text-3);
+}
+.cc-notice:empty {
+    display: none;
+}
+.cc-placeholder {
+    margin: 0;
+    padding: 14px 16px;
+    border: 1px dashed var(--cc-line-strong);
+    border-radius: var(--cc-r-m);
+    color: var(--cc-text-2);
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* Proceso de compra */
+.cc-process {
+    padding: 14px 18px 12px;
+    border-radius: var(--cc-r-m);
+    border: 1px solid var(--cc-line);
+    background: var(--cc-card);
+    box-shadow: var(--cc-card-shadow);
+}
+.cc-process h3 {
+    margin: 0 0 14px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--cc-text-2);
+}
+.cc-process ol {
+    --cc-progress: 0;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+/* Riel y progreso: de centro a centro de la primera y la última etapa. */
+.cc-process ol::before,
+.cc-process ol::after {
+    content: '';
+    position: absolute;
+    top: 9px;
+    left: 12.5%;
+    height: 2px;
+    border-radius: 2px;
+}
+.cc-process ol::before {
+    right: 12.5%;
+    background: var(--cc-line-strong);
+}
+.cc-process ol::after {
+    width: calc(75% * var(--cc-progress));
+    background: var(--cc-accent);
+    box-shadow: 0 0 8px var(--cc-accent-glow);
+    transition: width var(--cc-slow) var(--cc-ease);
+}
+.cc-process li {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    justify-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: var(--cc-text-3);
+}
+.cc-step {
+    display: grid;
+    place-items: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid var(--cc-line-strong);
+    background: var(--cc-surface-solid);
+    transition:
+        background var(--cc-base) var(--cc-ease),
+        border-color var(--cc-base) var(--cc-ease),
+        box-shadow var(--cc-base) var(--cc-ease);
+}
+.cc-process li[data-state='done'] {
+    color: var(--cc-accent-text);
+}
+.cc-process li[data-state='done'] .cc-step {
+    border-color: var(--cc-accent);
+    background: var(--cc-accent);
+    color: var(--cc-on-accent);
+}
+.cc-process li[data-state='current'] {
+    color: var(--cc-text);
+    font-weight: 550;
+}
+.cc-process li[data-state='current'] .cc-step {
+    border-color: var(--cc-accent);
+    background: radial-gradient(
+        circle,
+        var(--cc-accent) 0 4px,
+        var(--cc-surface-solid) 5px
+    );
+    box-shadow: 0 0 0 4px var(--cc-accent-soft);
+}
+
+/* ── Dock ── */
+.cc-dock {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px;
+    border-radius: var(--cc-r-l);
+}
+.cc-dock-item {
+    display: grid;
+    justify-items: center;
+    gap: 4px;
+    min-width: 76px;
+    padding: 8px 10px 7px;
+    border: 1px solid transparent;
+    border-radius: var(--cc-r-m);
+    background: none;
+    font-size: 12px;
+    color: var(--cc-text-2);
+    transition:
+        background var(--cc-fast) var(--cc-ease),
+        color var(--cc-fast) var(--cc-ease),
+        border-color var(--cc-fast) var(--cc-ease);
+}
+.cc-dock-item:not([data-prototype]):hover {
+    background: var(--cc-hover);
+    color: var(--cc-text);
+}
+.cc-dock-item[aria-pressed='true'] {
+    color: var(--cc-accent-text);
+}
+.cc-dock-item[aria-pressed='true'] svg {
+    filter: drop-shadow(0 0 6px var(--cc-accent-glow));
+}
+.cc-dock-item[data-active='true'] {
+    color: var(--cc-text);
+    background: var(--cc-accent-soft);
+    border-color: var(--cc-accent-line);
+    box-shadow: 0 0 18px -8px var(--cc-accent-glow);
+    cursor: default;
+}
+.cc-dock-sep {
+    width: 1px;
+    height: 34px;
+    margin: 0 6px;
+    background: var(--cc-line-strong);
+}
+
+/* ── Pie: frescura e indicadores ── */
+.cc-status {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    pointer-events: none;
+}
+.cc-updated {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin: 0;
+    font-size: 13px;
+    color: var(--cc-text-2);
+    text-shadow: var(--cc-halo-soft);
+}
+.cc-chips {
+    display: flex;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.cc-chip {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    height: 40px;
+    padding: 0 14px;
+    border-radius: var(--cc-r-s);
+    font-size: 13px;
+    white-space: nowrap;
+}
+.cc-chip svg {
+    color: var(--cc-text-2);
+}
+
+/* ── Etiquetas espaciales (dentro de <Html>, fuera del árbol del Shell) ──
+   Solo presentación: posición, colisiones y prioridades son de adaptive-labels.tsx y no se tocan aquí.
+   Usan tokens --cc-label-* porque su fondo es siempre la escena, nunca un panel. */
+.cc-tag-card,
+.cc-hotspot-card {
+    background: var(--cc-label-surface);
+    border: 1px solid var(--cc-label-line);
+    box-shadow:
+        inset 0 1px 0 var(--cc-highlight),
+        var(--cc-label-shadow);
+    backdrop-filter: blur(10px) saturate(var(--cc-saturate));
+    -webkit-backdrop-filter: blur(10px) saturate(var(--cc-saturate));
+}
+.cc-tag {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Figtree Variable', 'Figtree', system-ui, sans-serif;
+    color: var(--cc-label-text);
+    /* Se eleva sobre el ancla para que el tallo señale el edificio. */
+    translate: 0 -34px;
+    transition:
+        translate 260ms cubic-bezier(0.22, 0.8, 0.24, 1),
+        scale 260ms cubic-bezier(0.22, 0.8, 0.24, 1);
+}
+.cc-tag-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 7px 12px 7px 8px;
+    border-radius: 12px;
+    white-space: nowrap;
+    transition:
+        border-color 200ms ease,
+        box-shadow 200ms ease,
+        background 200ms ease;
+}
+.cc-tag-icon {
+    display: grid;
+    place-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 9px;
+    background: var(--cc-label-icon-bg);
+    color: var(--cc-label-icon);
+    transition:
+        background 200ms ease,
+        color 200ms ease;
+}
+.cc-tag-text {
+    display: grid;
+    gap: 1px;
+}
+.cc-tag-name {
+    font-size: 13px;
+    font-weight: 600;
+}
+.cc-tag-status {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    color: var(--cc-label-text-2);
+}
+.cc-tag-status .cc-dot {
+    width: 6px;
+    height: 6px;
+}
+.cc-tag-stem {
+    width: 1px;
+    height: 18px;
+    background: linear-gradient(var(--cc-stem-top), var(--cc-accent-line));
+    position: relative;
+}
+.cc-tag-stem::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: -2.5px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--cc-accent);
+    box-shadow:
+        0 0 0 2px var(--cc-label-surface),
+        0 0 8px 1px var(--cc-accent-glow);
+}
+.campus-label[data-hovered='true'] .cc-tag-card {
+    border-color: var(--cc-accent-line);
+    background: var(--cc-label-surface-hover);
+}
+.campus-label[data-hovered='true'] .cc-tag {
+    translate: 0 -37px;
+}
+.campus-label[data-selected='true'] .cc-tag-card {
+    border-color: var(--cc-accent-line);
+    background: var(--cc-label-surface-hover);
+    box-shadow:
+        inset 0 1px 0 var(--cc-highlight),
+        0 0 0 3px var(--cc-accent-soft),
+        0 0 22px -6px var(--cc-accent-glow),
+        var(--cc-label-shadow);
+}
+.campus-label[data-selected='true'] .cc-tag-icon,
+.campus-label[data-hovered='true'] .cc-tag-icon {
+    background: var(--cc-accent-soft);
+    color: var(--cc-accent-text);
+}
+/* Visores estrechos: el estado se oculta solo visualmente (el nombre accesible sigue siendo
+   «Compras 4 por aprobar») y en teléfonos la etiqueta se reduce a un pin con icono para no solaparse. */
+@container (width < 760px) {
+    .cc-tag-card {
+        gap: 6px;
+        padding: 4px 8px 4px 4px;
+    }
+    .cc-tag-icon {
+        width: 22px;
+        height: 22px;
+    }
+    .cc-tag-name {
+        font-size: 11px;
+    }
+    .cc-tag-status {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip-path: inset(50%);
+        white-space: nowrap;
+    }
+    .cc-tag {
+        translate: 0 -24px;
+    }
+    .cc-tag-stem {
+        height: 10px;
+    }
+}
+@container (width < 520px) {
+    .campus-label[data-selected='false'] .cc-tag-name {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip-path: inset(50%);
+        white-space: nowrap;
+    }
+    .campus-label[data-selected='false'] .cc-tag-card {
+        padding: 3px;
+        border-radius: 50%;
+    }
+    .campus-label[data-selected='false'] .cc-tag-icon {
+        border-radius: 50%;
+    }
+}
+
+/* Puntos del interior de Compras */
+.campus-annotation {
+    padding: 0;
+    border: 0;
+    background: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    animation: cc-fade-up 360ms cubic-bezier(0.22, 0.8, 0.24, 1) both;
+}
+.cc-hotspot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    translate: 0 -24px;
+    font-family: 'Figtree Variable', 'Figtree', system-ui, sans-serif;
+    color: var(--cc-label-text);
+}
+.cc-hotspot-card {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 6px 11px;
+    border-radius: 10px;
+    font-size: 12px;
+    white-space: nowrap;
+}
+.cc-hotspot-card strong {
+    color: var(--cc-accent-text);
+}
+.cc-hotspot-pin {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 2px solid var(--cc-accent-text);
+    background: color-mix(in srgb, var(--cc-accent) 35%, transparent);
+    box-shadow: 0 0 12px 2px var(--cc-accent-glow);
+    animation: cc-pulse 2.4s ease-in-out infinite;
+}
+.cc-hotspot[data-active='true'] .cc-hotspot-card {
+    border-color: var(--cc-accent-line);
+    background: var(--cc-label-surface-hover);
+    box-shadow:
+        0 0 0 3px var(--cc-accent-soft),
+        0 0 20px -6px var(--cc-accent-glow);
+}
+
+/* ── Entrada progresiva ── */
+.cc-root [data-enter] {
+    animation: var(--cc-slow) var(--cc-ease) both;
+}
+.cc-root [data-enter='top'] {
+    animation-name: cc-in-top;
+}
+.cc-root [data-enter='left'] {
+    animation-name: cc-in-left;
+    animation-delay: 80ms;
+}
+.cc-root [data-enter='bottom'] {
+    animation-name: cc-in-bottom;
+    animation-delay: 140ms;
+}
+.cc-root [data-enter='fade'] {
+    animation-name: cc-fade-up;
+    animation-delay: 60ms;
+}
+/* Listas: aparición escalonada, breve para no retrasar la lectura. */
+[data-stagger='true'] > li {
+    animation: cc-fade-up var(--cc-base) var(--cc-ease) both;
+}
+[data-stagger='true'] > li:nth-child(2) {
+    animation-delay: 40ms;
+}
+[data-stagger='true'] > li:nth-child(3) {
+    animation-delay: 80ms;
+}
+[data-stagger='true'] > li:nth-child(n + 4) {
+    animation-delay: 120ms;
+}
+
+@keyframes cc-in-top {
+    from {
+        opacity: 0;
+        translate: 0 -14px;
+    }
+}
+@keyframes cc-in-left {
+    from {
+        opacity: 0;
+        translate: -14px 0;
+    }
+}
+@keyframes cc-in-bottom {
+    from {
+        opacity: 0;
+        translate: 0 16px;
+    }
+}
+@keyframes cc-fade-up {
+    from {
+        opacity: 0;
+        translate: 0 6px;
+    }
+}
+@keyframes cc-panel-in {
+    from {
+        opacity: 0;
+        translate: 24px 0;
+        filter: blur(4px);
+    }
+}
+@keyframes cc-pop {
+    from {
+        opacity: 0;
+        scale: 0.97;
+    }
+}
+@keyframes cc-pulse {
+    50% {
+        box-shadow: 0 0 4px 1px var(--cc-accent-soft);
+    }
+}
+/* El dock conserva su centrado (translate) durante la entrada. */
+.cc-slot-dock .cc-dock[data-enter] {
+    animation-name: cc-in-bottom;
+}
+
+/* ── Movimiento reducido: sin desplazamientos ni pulsos, cambios inmediatos ── */
+@media (prefers-reduced-motion: reduce) {
+    .cc-root *,
+    .cc-root *::before,
+    .cc-root *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+html.reducido .cc-root *,
+html.reducido .cc-root *::before,
+html.reducido .cc-root *::after {
+    animation: none !important;
+    transition: none !important;
+}
+
+/* ── Responsive ── */
+@media (min-width: 1600px) {
+    .cc-root {
+        --cc-gutter: 18px;
+    }
+}
+/* Portátiles pequeños y tabletas horizontales */
+@media (max-width: 1280px) {
+    .cc-updated .cc-demo-tag {
+        display: none;
+    }
+}
+@media (max-width: 1180px) {
+    .cc-chips {
+        display: none;
+    }
+    .cc-dock-item {
+        min-width: 64px;
+        padding: 7px 6px 6px;
+        font-size: 11px;
+    }
+    .cc-slot-panel[data-view='procurement'],
+    .cc-slot-panel[data-view='department'] {
+        width: min(400px, 40vw);
+    }
+}
+@media (max-width: 960px) {
+    .campus-diagnostics-bar p {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip-path: inset(50%);
+        white-space: nowrap;
+    }
+    .cc-updated {
+        display: none;
+    }
+    .cc-search {
+        flex-basis: 240px;
+    }
+    .cc-kbd {
+        display: none;
+    }
+    .cc-slot-heading {
+        max-width: min(320px, 34vw);
+    }
+}
+/* Móvil: sin carril (sus destinos siguen en el perfil y el dock), panel en franja inferior plegable. */
+@media (max-width: 759px) {
+    .cc-root {
+        --cc-gutter: 10px;
+        --cc-bar-h: 42px;
+    }
+    .cc-slot-rail {
+        display: none;
+    }
+    .cc-brand-name,
+    .cc-brand {
+        border: 0;
+        padding-right: 0;
+    }
+    .cc-brand-name {
+        display: none;
+    }
+    .cc-brand-island {
+        padding-left: 10px;
+        gap: 2px;
+    }
+    .cc-company-name {
+        max-width: 11ch;
+    }
+    .cc-command {
+        gap: 6px;
+    }
+    .cc-search {
+        flex: 1 1 auto;
+        min-width: 40px;
+        padding: 0 10px;
+    }
+    .cc-actions {
+        padding: 0 3px;
+    }
+    .cc-icon-button {
+        min-width: 32px;
+    }
+    .cc-slot-heading {
+        left: var(--cc-gutter);
+        right: var(--cc-gutter);
+        max-width: none;
+    }
+    .cc-heading h1 {
+        font-size: 20px !important;
+    }
+    .cc-heading > p,
+    .cc-crumbs {
+        font-size: 12px;
+    }
+    .cc-heading-actions {
+        margin-top: 8px;
+    }
+    .cc-pill {
+        height: 30px;
+        padding: 0 11px;
+        font-size: 12px;
+    }
+    .cc-slot-dock {
+        left: var(--cc-gutter);
+        right: var(--cc-gutter);
+        translate: none;
+    }
+    .cc-dock {
+        justify-content: space-between;
+        gap: 0;
+        padding: 4px;
+    }
+    .cc-dock-item {
+        min-width: 0;
+        flex: 1;
+        padding: 6px 2px 5px;
+        font-size: 10px;
+    }
+    .cc-dock-sep {
+        margin: 0 2px;
+        height: 28px;
+    }
+    .cc-slot-status {
+        bottom: calc(max(var(--cc-gutter), env(safe-area-inset-bottom)) + 62px);
+    }
+    .cc-slot-panel,
+    .cc-slot-panel[data-view] {
+        top: auto;
+        left: var(--cc-gutter);
+        right: var(--cc-gutter);
+        width: auto;
+        bottom: calc(
+            max(var(--cc-gutter), env(safe-area-inset-bottom)) + 62px + 40px
+        );
+        max-height: min(38dvh, calc(100dvh - 230px));
+    }
+    .cc-panel {
+        border-radius: var(--cc-r-l) !important;
+        animation-name: cc-in-bottom;
+    }
+    .cc-panel[data-leaving='true'] {
+        translate: 0 18px;
+    }
+    .cc-panel-toggle {
+        display: grid;
+    }
+    .cc-panel[data-collapsed='true'] .cc-panel-body {
+        display: none;
+    }
+    .cc-panel-header,
+    .cc-panel-header[data-large='true'] {
+        padding: 10px 10px 10px 16px;
+        gap: 12px;
+    }
+    .cc-panel-header[data-large='true'] .cc-panel-icon {
+        width: 32px;
+        height: 32px;
+    }
+    .cc-panel-header[data-large='true'] .cc-panel-icon svg {
+        width: 24px;
+        height: 24px;
+    }
+    .cc-panel-header[data-large='true'] h2 {
+        font-size: 19px;
+    }
+    .cc-panel-titles p {
+        font-size: 12px;
+    }
+    .cc-panel[data-variant] .cc-panel-body {
+        padding: 2px 12px 14px;
+    }
+    .cc-detail,
+    .cc-process {
+        padding: 12px 14px;
+    }
+    .cc-detail h3 {
+        font-size: 16px;
+    }
+    .cc-vignette {
+        background: linear-gradient(
+            to bottom,
+            rgba(3, 4, 7, 0.5),
+            transparent 18%,
+            transparent 70%,
+            rgba(3, 4, 7, 0.6)
+        );
+    }
+}
+@media (max-width: 480px) {
+    .cc-search input::placeholder {
+        color: transparent;
+    }
+}
+@media (max-width: 380px) {
+    .cc-company {
+        display: none;
+    }
+    .cc-dock-item span {
+        font-size: 9px;
+    }
+}
+/* Pantallas bajas (móvil en horizontal): el panel se reduce a su cabecera si no cabe. */
+@media (max-width: 759px) and (max-height: 480px) {
+    .cc-slot-heading .cc-crumbs,
+    .cc-slot-heading .cc-heading > p {
+        display: none;
+    }
+    .cc-slot-panel,
+    .cc-slot-panel[data-view] {
+        left: auto;
+        width: min(340px, 55vw);
+        max-height: calc(100dvh - 190px);
+    }
+}
+
+/* ── Modo claro: lo que no es un token ── */
+.cc-root[data-tone='light'] {
+    --cc-avatar-bg: linear-gradient(160deg, #e6edfc, #c9d7f5);
+    --cc-avatar-text: #1d3f8f;
+}
+html.sin-vidrio .cc-root[data-tone='light'] {
+    --cc-surface: rgba(250, 251, 253, 0.97);
+    --cc-label-surface: rgba(250, 251, 253, 0.97);
+}
+/* La viñeta clara no oscurece: aclara arriba y abajo, donde el título y el pie van sobre la escena. */
+.cc-root[data-tone='light'] .cc-vignette {
+    background:
+        radial-gradient(
+            120% 90% at 50% 45%,
+            transparent 58%,
+            rgba(96, 108, 128, 0.14) 100%
+        ),
+        linear-gradient(
+            to bottom,
+            rgba(232, 236, 242, 0.55),
+            transparent 18%,
+            transparent 84%,
+            rgba(232, 236, 242, 0.5)
+        );
+}

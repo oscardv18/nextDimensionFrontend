@@ -1,0 +1,369 @@
+{
+  "sector": "industry",
+  "organizationName": "Metalúrgica Andina C.A.",
+  "branchName": "Planta Valencia",
+  "zones": [
+    {
+      "key": "ops",
+      "name": "Planta · Operaciones"
+    },
+    {
+      "key": "com",
+      "name": "Comercial y abastecimiento"
+    },
+    {
+      "key": "ges",
+      "name": "Gestión"
+    }
+  ],
+  "departments": [
+    {
+      "key": "production",
+      "publicId": "01a0f755-f200-7f62-ad71-d5c0ffec979e",
+      "name": "Producción",
+      "zoneKey": "ops",
+      "summary": "3 líneas activas · 9 órdenes",
+      "icon": "factory",
+      "hue": "violet",
+      "pending": {
+        "total": 4,
+        "worst": "blocked",
+        "byTone": [
+          {
+            "tone": "blocked",
+            "count": 1
+          },
+          {
+            "tone": "warning",
+            "count": 2
+          },
+          {
+            "tone": "waiting",
+            "count": 1
+          }
+        ]
+      },
+      "people": {
+        "assigned": 96,
+        "connected": 7
+      },
+      "trend": [
+        6,
+        6,
+        3,
+        7,
+        5,
+        2,
+        5,
+        4,
+        6,
+        3,
+        5,
+        7,
+        2,
+        4
+      ]
+    },
+    {
+      "key": "warehouse",
+      "publicId": "01a0f755-f200-73a8-9832-e2536fb88786",
+      "name": "Almacén",
+      "zoneKey": "ops",
+      "summary": "4 despachos · 2 recepciones",
+      "icon": "package",
+      "hue": "yellow",
+      "pending": {
+        "total": 7,
+        "worst": "blocked",
+        "byTone": [
+          {
+            "tone": "blocked",
+            "count": 2
+          },
+          {
+            "tone": "warning",
+            "count": 3
+          },
+          {
+            "tone": "waiting",
+            "count": 1
+          },
+          {
+            "tone": "ok",
+            "count": 1
+          }
+        ]
+      },
+      "people": {
+        "assigned": 14,
+        "connected": 5
+      },
+      "trend": [
+        9,
+        9,
+        6,
+        10,
+        8,
+        5,
+        8,
+        7,
+        9,
+        6,
+        8,
+        10,
+        5,
+        7
+      ]
+    },
+    {
+      "key": "sales",
+      "publicId": "01a0f755-f200-7a73-9e45-007eb1685419",
+      "name": "Ventas",
+      "zoneKey": "com",
+      "summary": "3 pedidos abiertos · 1 por aprobar",
+      "icon": "sales",
+      "hue": "green",
+      "pending": {
+        "total": 8,
+        "worst": "warning",
+        "byTone": [
+          {
+            "tone": "warning",
+            "count": 6
+          },
+          {
+            "tone": "approval",
+            "count": 1
+          },
+          {
+            "tone": "waiting",
+            "count": 1
+          }
+        ]
+      },
+      "people": {
+        "assigned": 12,
+        "connected": 6
+      },
+      "trend": [
+        10,
+        10,
+        7,
+        11,
+        9,
+        6,
+        9,
+        8,
+        10,
+        7,
+        9,
+        11,
+        6,
+        8
+      ]
+    },
+    {
+      "key": "purchasing",
+      "publicId": "01a0f755-f200-7905-93e3-b2997ccf1676",
+      "name": "Compras",
+      "zoneKey": "com",
+      "summary": "3 solicitudes · 6 órdenes",
+      "icon": "cart",
+      "hue": "teal",
+      "pending": {
+        "total": 1,
+        "worst": "approval",
+        "byTone": [
+          {
+            "tone": "approval",
+            "count": 1
+          }
+        ]
+      },
+      "people": {
+        "assigned": 4,
+        "connected": 3
+      },
+      "trend": [
+        3,
+        3,
+        0,
+        4,
+        2,
+        0,
+        2,
+        1,
+        3,
+        0,
+        2,
+        4,
+        0,
+        1
+      ]
+    },
+    {
+      "key": "administration",
+      "publicId": "01a0f755-f200-742f-8841-aa0ab45fd050",
+      "name": "Administración",
+      "zoneKey": "ges",
+      "summary": "3 aprobaciones · 6 por cobrar",
+      "icon": "landmark",
+      "hue": "blue",
+      "pending": {
+        "total": 2,
+        "worst": "approval",
+        "byTone": [
+          {
+            "tone": "approval",
+            "count": 2
+          }
+        ]
+      },
+      "people": {
+        "assigned": 9,
+        "connected": 8
+      },
+      "trend": [
+        4,
+        4,
+        1,
+        5,
+        3,
+        0,
+        3,
+        2,
+        4,
+        1,
+        3,
+        5,
+        0,
+        2
+      ]
+    },
+    {
+      "key": "human_resources",
+      "publicId": "01a0f755-f200-7dcb-a093-7c994735a234",
+      "name": "Recursos humanos",
+      "zoneKey": "ges",
+      "summary": "4 permisos por aprobar",
+      "icon": "people",
+      "hue": "pink",
+      "pending": {
+        "total": 1,
+        "worst": "warning",
+        "byTone": [
+          {
+            "tone": "warning",
+            "count": 1
+          }
+        ]
+      },
+      "people": {
+        "assigned": 5,
+        "connected": 4
+      },
+      "trend": [
+        3,
+        3,
+        0,
+        4,
+        2,
+        0,
+        2,
+        1,
+        3,
+        0,
+        2,
+        4,
+        0,
+        1
+      ]
+    }
+  ],
+  "links": [
+    {
+      "publicId": "01a0f755-f200-7c48-976b-3a20f3db8272",
+      "from": "01a0f755-f200-7a73-9e45-007eb1685419",
+      "to": "01a0f755-f200-7f62-ad71-d5c0ffec979e",
+      "name": "Pedidos → órdenes",
+      "openOperations": 2,
+      "operationRefs": [
+        "OP-1203",
+        "OP-1199"
+      ],
+      "color": "accent"
+    },
+    {
+      "publicId": "01a0f755-f200-7a5d-b20c-cb298ee32b63",
+      "from": "01a0f755-f200-7f62-ad71-d5c0ffec979e",
+      "to": "01a0f755-f200-73a8-9832-e2536fb88786",
+      "name": "Producto terminado",
+      "openOperations": 2,
+      "operationRefs": [
+        "PED-4406",
+        "REQ-218"
+      ],
+      "color": "accent"
+    },
+    {
+      "publicId": "01a0f755-f200-7bfa-9c85-76046611cf8f",
+      "from": "01a0f755-f200-73a8-9832-e2536fb88786",
+      "to": "01a0f755-f200-7f62-ad71-d5c0ffec979e",
+      "name": "Requisiciones",
+      "openOperations": 5,
+      "operationRefs": [],
+      "color": "orange"
+    },
+    {
+      "publicId": "01a0f755-f200-7d17-ba8e-10ba927b3747",
+      "from": "01a0f755-f200-7905-93e3-b2997ccf1676",
+      "to": "01a0f755-f200-73a8-9832-e2536fb88786",
+      "name": "Recepciones",
+      "openOperations": 1,
+      "operationRefs": [
+        "OC-7721"
+      ],
+      "color": "orange"
+    },
+    {
+      "publicId": "01a0f755-f200-717a-9d65-519ccb8774f7",
+      "from": "01a0f755-f200-73a8-9832-e2536fb88786",
+      "to": "01a0f755-f200-7a73-9e45-007eb1685419",
+      "name": "Despachos",
+      "openOperations": 1,
+      "operationRefs": [
+        "PED-4398"
+      ],
+      "color": "teal"
+    },
+    {
+      "publicId": "01a0f755-f200-78db-a525-5b0ca9f09495",
+      "from": "01a0f755-f200-7a73-9e45-007eb1685419",
+      "to": "01a0f755-f200-742f-8841-aa0ab45fd050",
+      "name": "Facturas y cobros",
+      "openOperations": 1,
+      "operationRefs": [
+        "PED-4415"
+      ],
+      "color": "teal"
+    },
+    {
+      "publicId": "01a0f755-f200-703f-9e3e-aeeb7588a10c",
+      "from": "01a0f755-f200-7905-93e3-b2997ccf1676",
+      "to": "01a0f755-f200-742f-8841-aa0ab45fd050",
+      "name": "Aprobación de compras",
+      "openOperations": 1,
+      "operationRefs": [],
+      "color": "orange"
+    },
+    {
+      "publicId": "01a0f755-f200-7f8a-ab1c-cd059ccee03a",
+      "from": "01a0f755-f200-7dcb-a093-7c994735a234",
+      "to": "01a0f755-f200-7f62-ad71-d5c0ffec979e",
+      "name": "Turnos y operarios",
+      "openOperations": 2,
+      "operationRefs": [],
+      "color": "slate"
+    }
+  ]
+}

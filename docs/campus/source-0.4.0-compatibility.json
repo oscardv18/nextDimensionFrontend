@@ -1,0 +1,144 @@
+{
+  "status": "passed",
+  "scope": "version-compatibility",
+  "errors": [],
+  "metrics": {
+    "oldVersion": "0.3.0",
+    "newVersion": "0.4.0",
+    "preservedNodes": 99,
+    "addedNodes": [
+      "site.vegetation-shrubs",
+      "site.planter-soil",
+      "site.detail",
+      "site.detail.vehicle-bodies",
+      "site.detail.vehicle-chassis",
+      "site.detail.vehicle-tyres",
+      "site.detail.vehicle-lights",
+      "procurement.metalwork",
+      "procurement.rack-beams",
+      "procurement.dock-doors",
+      "procurement.doors",
+      "procurement.dock-seals",
+      "procurement.lighting",
+      "procurement.detail",
+      "procurement.detail.seating",
+      "procurement.detail.screens",
+      "procurement.detail.equipment",
+      "procurement.detail.fit-out",
+      "procurement.detail.goods",
+      "procurement.detail.pallets",
+      "procurement.detail.machinery",
+      "procurement.detail.plants",
+      "procurement.detail.signage",
+      "warehouse.rack-beams",
+      "warehouse.guards",
+      "warehouse.metalwork",
+      "warehouse.dock-doors",
+      "warehouse.floor-lines",
+      "warehouse.dock-seals",
+      "warehouse.lighting",
+      "warehouse.detail",
+      "warehouse.detail.pallets",
+      "warehouse.detail.goods",
+      "warehouse.detail.packaging",
+      "warehouse.detail.shelving",
+      "warehouse.detail.machinery",
+      "warehouse.detail.equipment",
+      "warehouse.detail.tyres-seats",
+      "warehouse.detail.screens",
+      "warehouse.detail.signage"
+    ],
+    "addedMaterials": [
+      "mat_cardboard_kraft",
+      "mat_polymer_charcoal",
+      "mat_vegetation_shrub"
+    ],
+    "interactions": 6,
+    "departmentBounds": {
+      "procurement": [
+        [
+          -45.0,
+          0.95,
+          -25.07
+        ],
+        [
+          -14.93,
+          10.22,
+          -5.93
+        ]
+      ],
+      "warehouse": [
+        [
+          -10.9,
+          0.9,
+          -15.2
+        ],
+        [
+          17.0,
+          10.2,
+          9.4
+        ]
+      ],
+      "operations": [
+        [
+          -40.68,
+          0.9,
+          -0.18
+        ],
+        [
+          -16.32,
+          7.65,
+          18.18
+        ]
+      ],
+      "sales": [
+        [
+          -3.5,
+          1.5,
+          20.85
+        ],
+        [
+          22.65,
+          8.25,
+          42.55
+        ]
+      ],
+      "administration": [
+        [
+          25.05,
+          2.1,
+          -18.15
+        ],
+        [
+          43.62,
+          10.3,
+          0.12
+        ]
+      ],
+      "human-resources": [
+        [
+          -6.15,
+          2.1,
+          -39.15
+        ],
+        [
+          21.15,
+          6.8,
+          -23.0
+        ]
+      ]
+    },
+    "campusBounds": [
+      [
+        -51,
+        0,
+        -48.0
+      ],
+      [
+        51.0,
+        10.3,
+        48
+      ]
+    ]
+  }
+}

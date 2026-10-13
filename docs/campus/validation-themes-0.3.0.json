@@ -1,0 +1,13 @@
+{
+    "status": "passed",
+    "scope": "themes",
+    "errors": [],
+    "metrics": {
+        "materials": 23,
+        "themes": ["dark", "light"],
+        "localLights": 14,
+        "textures": 4,
+        "imageBytes": 275636,
+        "glbBytes": 1113320
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "copiedFiles": [
+        {
+            "file": "src/features/campus/assets/manifest.json",
+            "source": "/home/oddv/Renders/arxnet-3d/manifests/assets/arxnet.scene.campus-pilot.json",
+            "sha256": "0ca62fdf774e1b2c25afdfdf60bce32b43fbead88f331e01870fcaba44a1c401",
+            "bytes": 17604
+        },
+        {
+            "file": "src/features/campus/assets/build.json",
+            "source": "/home/oddv/Renders/arxnet-3d/exports/arxnet.scene.campus-pilot/0.3.0/build.json",
+            "sha256": "13598f0b8fc2214fc37463391e4f89f6b63efc772d5c4ce6dc2c0c164183d990",
+            "bytes": 12774
+        },
+        {
+            "file": "src/features/campus/assets/themes.json",
+            "source": "/home/oddv/Renders/arxnet-3d/manifests/themes/arxnet.campus-themes.json",
+            "sha256": "4eb347dad1500421332209a97df5671cc047f89c218bdce3bed5ec8ff298d6ff",
+            "bytes": 14027
+        },
+        {
+            "file": "public/assets/arxnet.scene.campus-pilot/0.3.0/asset.glb",
+            "source": "/home/oddv/Renders/arxnet-3d/exports/arxnet.scene.campus-pilot/0.3.0/asset.glb",
+            "sha256": "4ce11ad8dc6fd67264d77b35b2feefa87d2c49ac7c4085bb4f87d515eaaa5c47",
+            "bytes": 1113320
+        }
+    ]
+}

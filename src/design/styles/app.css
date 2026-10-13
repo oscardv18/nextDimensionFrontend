@@ -1,0 +1,12 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import '@fontsource-variable/figtree';
+
+@import './shadcn-variants.css';
+@import './arxnet/tokens.css';
+@import './arxnet/frame-map.css';
+@import './arxnet/components.css';
+@import './arxnet/integration.css';
+
+/* Un solo sistema de tema: data-theme en <html> (ver index.html y appearance/use-appearance.tsx) */
+@custom-variant dark (&:is([data-theme="dark"] *));

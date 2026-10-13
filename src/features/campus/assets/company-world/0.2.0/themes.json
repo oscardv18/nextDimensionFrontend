@@ -1,0 +1,425 @@
+{
+  "profileVersion": "1.0.0",
+  "status": "experimental",
+  "assetId": "arxnet.scene.company-world",
+  "assetVersion": "0.2.0",
+  "contractVersion": "1.0.0",
+  "notes": "Perfil experimental d2: dirección artística B con perfilería grafito (Fase D.2). Misma geometría y mismos albedos en ambos temas; por tema cambian luces, entorno, niebla, emisión y el color de ad_ground/ad_context. Sin texturas ni posprocesado. Intensidades derivadas de la previsualización de Blender (key ≈ π × sol, hemisferio ≈ π × mundo); las luces locales están por calibrar en el navegador. La niebla está pensada para la vista general con C15 (≈ 320 m); con C20 empieza más lejos. El color de mat_accent_* lo sustituye el frontend.",
+  "conventions": {
+    "colors": "Hex sRGB; el GLB lleva los valores del tema oscuro.",
+    "coordinates": "glTF / three.js: metros, Y arriba. localLights.position es local al nodo parentNodeId.",
+    "directions": "Vector desde el objetivo hacia la luz.",
+    "lightUnits": "three.js r155+ (luces físicas). Point: candela."
+  },
+  "renderer": {
+    "toneMapping": "Neutral",
+    "outputColorSpace": "srgb",
+    "shadowMapType": "PCFSoft",
+    "environment": "RoomEnvironment",
+    "invariants": [
+      "Cambiar de tema solo modifica uniforms (color, emissiveIntensity, intensidades de luz).",
+      "Mismo número y tipo de luces en ambos temas (el claro escala las locales, no las apaga).",
+      "Sin efectos de posprocesado en este perfil."
+    ]
+  },
+  "textures": {},
+  "materials": {
+    "mat_ad_stone": {
+      "class": "shared",
+      "use": "Piedra técnica del podio, terrazas, puentes y peldaños",
+      "color": "#979ba1",
+      "roughness": 0.8,
+      "metalness": 0.0
+    },
+    "mat_ad_stone_low": {
+      "class": "shared",
+      "use": "Piedra rebajada de patios y juntas de pavimento",
+      "color": "#74787e",
+      "roughness": 0.88,
+      "metalness": 0.0
+    },
+    "mat_ad_ground": {
+      "class": "substitutable",
+      "use": "Suelo exterior (entorno)",
+      "color": "#0b0c0f",
+      "roughness": 1.0,
+      "metalness": 0.0,
+      "themeKeys": [
+        "color"
+      ]
+    },
+    "mat_ad_context": {
+      "class": "substitutable",
+      "use": "Volúmenes de contexto (entorno)",
+      "color": "#16181c",
+      "roughness": 0.95,
+      "metalness": 0.0,
+      "themeKeys": [
+        "color"
+      ]
+    },
+    "mat_ad_concrete": {
+      "class": "shared",
+      "use": "Hormigón técnico: estructura, forjados, parapetos, jardineras, banda de recorrido",
+      "color": "#c8cbd0",
+      "roughness": 0.7,
+      "metalness": 0.0
+    },
+    "mat_ad_panel": {
+      "class": "shared",
+      "use": "Paños macizos grafito y chapa nervada",
+      "color": "#2a2d32",
+      "roughness": 0.5,
+      "metalness": 0.55
+    },
+    "mat_ad_metal": {
+      "class": "shared",
+      "use": "Perfilería grafito anodizado: montantes, marcos, barandillas, mobiliario",
+      "color": "#2b2e33",
+      "roughness": 0.36,
+      "metalness": 0.85
+    },
+    "mat_ad_roof": {
+      "class": "shared",
+      "use": "Cubierta (membrana técnica)",
+      "color": "#aeb2b8",
+      "roughness": 0.86,
+      "metalness": 0.0
+    },
+    "mat_ad_equipment": {
+      "class": "shared",
+      "use": "Equipos de cubierta",
+      "color": "#a2a6ad",
+      "roughness": 0.45,
+      "metalness": 0.6
+    },
+    "mat_ad_sign": {
+      "class": "shared",
+      "use": "Paño de rótulo y pantallas",
+      "color": "#17191d",
+      "roughness": 0.4,
+      "metalness": 0.4
+    },
+    "mat_ad_glass": {
+      "class": "shared",
+      "use": "Muro cortina, lucernarios y mamparas (alfa, una cara)",
+      "color": "#26323f",
+      "roughness": 0.04,
+      "metalness": 0.0,
+      "opacity": 0.34,
+      "doubleSided": false
+    },
+    "mat_ad_glass_rail": {
+      "class": "shared",
+      "use": "Barandillas de vidrio (alfa, una cara)",
+      "color": "#a8b4c0",
+      "roughness": 0.04,
+      "metalness": 0.0,
+      "opacity": 0.2,
+      "doubleSided": false
+    },
+    "mat_ad_floor": {
+      "class": "adaptable",
+      "use": "Suelo interior; emisión cálida = luz interior",
+      "color": "#c9bba6",
+      "roughness": 0.65,
+      "metalness": 0.0,
+      "emissive": "#ffcf9e",
+      "emissiveIntensity": 0.38,
+      "themeKeys": [
+        "emissiveIntensity"
+      ]
+    },
+    "mat_ad_interior": {
+      "class": "adaptable",
+      "use": "Tabiques interiores; emisión cálida débil",
+      "color": "#ddd7cd",
+      "roughness": 0.8,
+      "metalness": 0.0,
+      "emissive": "#ffd8ae",
+      "emissiveIntensity": 0.14,
+      "themeKeys": [
+        "emissiveIntensity"
+      ]
+    },
+    "mat_ad_fitout": {
+      "class": "shared",
+      "use": "Mobiliario y volúmenes interiores (roble claro)",
+      "color": "#b59c7c",
+      "roughness": 0.6,
+      "metalness": 0.0
+    },
+    "mat_ad_fixture": {
+      "class": "adaptable",
+      "use": "Luminarias (emisivas)",
+      "color": "#f4efe6",
+      "roughness": 0.5,
+      "metalness": 0.0,
+      "emissive": "#fff0da",
+      "emissiveIntensity": 1.6,
+      "themeKeys": [
+        "emissiveIntensity"
+      ]
+    },
+    "mat_ad_goods": {
+      "class": "shared",
+      "use": "Mercancía, cajas y palés cargados",
+      "color": "#b8996f",
+      "roughness": 0.85,
+      "metalness": 0.0
+    },
+    "mat_ad_marking": {
+      "class": "shared",
+      "use": "Señalización de suelo y largueros de estantería",
+      "color": "#c9a54e",
+      "roughness": 0.6,
+      "metalness": 0.0
+    },
+    "mat_ad_planting": {
+      "class": "shared",
+      "use": "Vegetación estilizada",
+      "color": "#56664d",
+      "roughness": 0.9,
+      "metalness": 0.0
+    },
+    "mat_accent_led": {
+      "class": "adaptable",
+      "use": "LED de acento (el frontend sustituye el color por --acento)",
+      "color": "#4f8cff",
+      "roughness": 0.4,
+      "metalness": 0.0,
+      "emissive": "#4f8cff",
+      "emissiveIntensity": 2.2,
+      "themeKeys": [
+        "emissiveIntensity"
+      ]
+    },
+    "mat_accent_outline": {
+      "class": "adaptable",
+      "use": "Contorno de estado (el frontend sustituye el color por --acento)",
+      "color": "#4f8cff",
+      "roughness": 0.4,
+      "metalness": 0.0,
+      "emissive": "#4f8cff",
+      "emissiveIntensity": 2.5,
+      "themeKeys": [
+        "emissiveIntensity"
+      ]
+    }
+  },
+  "themes": {
+    "dark": {
+      "label": "Oscuro",
+      "background": "#08080a",
+      "fog": {
+        "color": "#08080a",
+        "near": 340.0,
+        "far": 520.0
+      },
+      "exposure": 1.0,
+      "environmentIntensity": 0.11,
+      "lights": {
+        "hemisphere": {
+          "skyColor": "#8d9ab3",
+          "groundColor": "#141619",
+          "intensity": 1.382
+        },
+        "key": {
+          "color": "#b9c6de",
+          "intensity": 1.414,
+          "direction": [
+            -0.62,
+            0.72,
+            -0.3
+          ],
+          "distance": 150,
+          "castShadow": true,
+          "shadow": {
+            "mapSize": 2048,
+            "intensity": 1.0,
+            "bias": -0.0004,
+            "normalBias": 0.03,
+            "cameraHalfExtent": 75,
+            "near": 1,
+            "far": 400
+          }
+        },
+        "fill": {
+          "color": "#ffffff",
+          "intensity": 0.0,
+          "direction": [
+            0.6,
+            0.4,
+            -0.6
+          ],
+          "castShadow": false
+        }
+      },
+      "localLightIntensityScale": 1.0,
+      "materials": {
+        "mat_ad_ground": {
+          "color": "#0b0c0f"
+        },
+        "mat_ad_context": {
+          "color": "#16181c"
+        },
+        "mat_ad_floor": {
+          "emissiveIntensity": 0.38
+        },
+        "mat_ad_interior": {
+          "emissiveIntensity": 0.14
+        },
+        "mat_ad_fixture": {
+          "emissiveIntensity": 1.6
+        },
+        "mat_accent_led": {
+          "emissiveIntensity": 2.2
+        },
+        "mat_accent_outline": {
+          "emissiveIntensity": 2.5
+        }
+      },
+      "effects": {}
+    },
+    "light": {
+      "label": "Claro",
+      "background": "#e6e9f0",
+      "fog": {
+        "color": "#e6e9f0",
+        "near": 360.0,
+        "far": 560.0
+      },
+      "exposure": 1.0,
+      "environmentIntensity": 0.325,
+      "lights": {
+        "hemisphere": {
+          "skyColor": "#e3e9f2",
+          "groundColor": "#c9ccd3",
+          "intensity": 4.084
+        },
+        "key": {
+          "color": "#fff4e6",
+          "intensity": 10.681,
+          "direction": [
+            -0.62,
+            0.72,
+            -0.3
+          ],
+          "distance": 150,
+          "castShadow": true,
+          "shadow": {
+            "mapSize": 2048,
+            "intensity": 1.0,
+            "bias": -0.0004,
+            "normalBias": 0.03,
+            "cameraHalfExtent": 75,
+            "near": 1,
+            "far": 400
+          }
+        },
+        "fill": {
+          "color": "#ffffff",
+          "intensity": 0.0,
+          "direction": [
+            0.6,
+            0.4,
+            -0.6
+          ],
+          "castShadow": false
+        }
+      },
+      "localLightIntensityScale": 0.35,
+      "materials": {
+        "mat_ad_ground": {
+          "color": "#dcdfe6"
+        },
+        "mat_ad_context": {
+          "color": "#cfd3da"
+        },
+        "mat_ad_floor": {
+          "emissiveIntensity": 0.1
+        },
+        "mat_ad_interior": {
+          "emissiveIntensity": 0.03
+        },
+        "mat_ad_fixture": {
+          "emissiveIntensity": 0.7
+        },
+        "mat_accent_led": {
+          "emissiveIntensity": 0.9
+        },
+        "mat_accent_outline": {
+          "emissiveIntensity": 1.6
+        }
+      },
+      "effects": {}
+    }
+  },
+  "localLights": [
+    {
+      "id": "procurement.light-office",
+      "parentNodeId": "procurement",
+      "position": [
+        -4.5,
+        2.6,
+        1.5
+      ],
+      "color": "#ffcf9e",
+      "intensity": 71.6,
+      "distance": 9.0,
+      "decay": 2,
+      "castShadow": false
+    },
+    {
+      "id": "procurement.light-reception",
+      "parentNodeId": "procurement",
+      "position": [
+        6.5,
+        2.6,
+        4.5
+      ],
+      "color": "#ffcf9e",
+      "intensity": 55.7,
+      "distance": 8.0,
+      "decay": 2,
+      "castShadow": false
+    },
+    {
+      "id": "warehouse.light-racks",
+      "parentNodeId": "warehouse",
+      "position": [
+        -1.0,
+        3.2,
+        -2.5
+      ],
+      "color": "#ffe2bd",
+      "intensity": 103.5,
+      "distance": 10.0,
+      "decay": 2,
+      "castShadow": false
+    },
+    {
+      "id": "warehouse.light-dispatch",
+      "parentNodeId": "warehouse",
+      "position": [
+        -5.5,
+        2.8,
+        7.5
+      ],
+      "color": "#ffe2bd",
+      "intensity": 71.6,
+      "distance": 9.0,
+      "decay": 2,
+      "castShadow": false
+    }
+  ],
+  "environmentNodeIds": [
+    "site.context",
+    "site.ground"
+  ],
+  "transition": {
+    "durationMs": 320,
+    "easing": "easeInOutCubic",
+    "reducedMotion": "instant"
+  }
+}

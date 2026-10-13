@@ -1,0 +1,61 @@
+{
+ "status": "candidates (D6 open)",
+ "owner": "frontend (Codex)",
+ "rule": "Acimut y elevación constantes en todos los estados; solo cambian objetivo y distancia (fitCamera + panelInsets).",
+ "candidates": {
+  "C20": {
+   "verticalFovDeg": 20.0,
+   "azimuthDeg": 45,
+   "elevationDeg": 25,
+   "from": "-X -Y Blender (suroeste)",
+   "directionTargetToCameraGltf": [
+    -0.6409,
+    0.4226,
+    0.6409
+   ],
+   "referenceOverviewDistanceM": 243.24,
+   "referenceTargetGltf": [
+    14.59,
+    0.0,
+    4.92
+   ],
+   "referenceViewport": [
+    1672,
+    941
+   ],
+   "suggestedNearFar": [
+    4.9,
+    1459.0
+   ],
+   "mockupDeviationPx": 8.26
+  },
+  "C15": {
+   "verticalFovDeg": 15.0,
+   "azimuthDeg": 45,
+   "elevationDeg": 25,
+   "from": "-X -Y Blender (suroeste)",
+   "directionTargetToCameraGltf": [
+    -0.6409,
+    0.4226,
+    0.6409
+   ],
+   "referenceOverviewDistanceM": 319.71,
+   "referenceTargetGltf": [
+    18.35,
+    0.0,
+    7.02
+   ],
+   "referenceViewport": [
+    1672,
+    941
+   ],
+   "suggestedNearFar": [
+    6.4,
+    1918.0
+   ],
+   "mockupDeviationPx": 6.81
+  }
+ },
+ "recommendedFirst": "C20",
+ "note": "La distancia y el objetivo de referencia reproducen el encuadre del mockup a 1672×941 con desplazamiento de lente; en la aplicación los sustituye fitCamera con los márgenes del Shell. No es una cámara del GLB."
+}

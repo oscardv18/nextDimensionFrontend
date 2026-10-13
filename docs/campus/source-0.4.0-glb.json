@@ -1,0 +1,571 @@
+{
+  "status": "passed",
+  "scope": "glb",
+  "errors": [],
+  "metrics": {
+    "bytes": 3159924,
+    "sha256": "0350de6f984e8a19a2bc0a9bbca3586314c0c05c961878b7e92f8fda06b279ac",
+    "nodes": 139,
+    "meshes": 116,
+    "trianglesUniqueMeshes": 60470,
+    "trianglesNodeInstances": 60470,
+    "hierarchy": [
+      {
+        "name": "anchor_campus_pilot_administration",
+        "parent": "group_campus_pilot_administration"
+      },
+      {
+        "name": "focus_campus_pilot_administration",
+        "parent": "group_campus_pilot_administration"
+      },
+      {
+        "name": "geo_campus_pilot_administration_fixtures",
+        "parent": "group_campus_pilot_administration"
+      },
+      {
+        "name": "geo_campus_pilot_administration_floor",
+        "parent": "group_campus_pilot_administration"
+      },
+      {
+        "name": "geo_campus_pilot_administration_glazing",
+        "parent": "group_campus_pilot_administration"
+      },
+      {
+        "name": "geo_campus_pilot_administration_partitions",
+        "parent": "group_campus_pilot_administration"
+      },
+      {
+        "name": "geo_campus_pilot_administration_slab_l1",
+        "parent": "group_campus_pilot_administration"
+      },
+      {
+        "name": "geo_campus_pilot_administration_terrace_planters",
+        "parent": "group_campus_pilot_administration"
+      },
+      {
+        "name": "geo_campus_pilot_administration_trim",
+        "parent": "group_campus_pilot_administration"
+      },
+      {
+        "name": "geo_campus_pilot_administration_walls",
+        "parent": "group_campus_pilot_administration"
+      },
+      {
+        "name": "hit_campus_pilot_administration",
+        "parent": "group_campus_pilot_administration"
+      },
+      {
+        "name": "group_campus_pilot_administration",
+        "parent": "root_campus_pilot"
+      },
+      {
+        "name": "anchor_campus_pilot_human_resources",
+        "parent": "group_campus_pilot_human_resources"
+      },
+      {
+        "name": "focus_campus_pilot_human_resources",
+        "parent": "group_campus_pilot_human_resources"
+      },
+      {
+        "name": "geo_campus_pilot_human_resources_fixtures",
+        "parent": "group_campus_pilot_human_resources"
+      },
+      {
+        "name": "geo_campus_pilot_human_resources_floor",
+        "parent": "group_campus_pilot_human_resources"
+      },
+      {
+        "name": "geo_campus_pilot_human_resources_glazing",
+        "parent": "group_campus_pilot_human_resources"
+      },
+      {
+        "name": "geo_campus_pilot_human_resources_partitions",
+        "parent": "group_campus_pilot_human_resources"
+      },
+      {
+        "name": "geo_campus_pilot_human_resources_patio",
+        "parent": "group_campus_pilot_human_resources"
+      },
+      {
+        "name": "geo_campus_pilot_human_resources_trim",
+        "parent": "group_campus_pilot_human_resources"
+      },
+      {
+        "name": "geo_campus_pilot_human_resources_walls",
+        "parent": "group_campus_pilot_human_resources"
+      },
+      {
+        "name": "hit_campus_pilot_human_resources",
+        "parent": "group_campus_pilot_human_resources"
+      },
+      {
+        "name": "group_campus_pilot_human_resources",
+        "parent": "root_campus_pilot"
+      },
+      {
+        "name": "anchor_campus_pilot_operations",
+        "parent": "group_campus_pilot_operations"
+      },
+      {
+        "name": "focus_campus_pilot_operations",
+        "parent": "group_campus_pilot_operations"
+      },
+      {
+        "name": "geo_campus_pilot_operations_fixtures",
+        "parent": "group_campus_pilot_operations"
+      },
+      {
+        "name": "geo_campus_pilot_operations_floor",
+        "parent": "group_campus_pilot_operations"
+      },
+      {
+        "name": "geo_campus_pilot_operations_glazing",
+        "parent": "group_campus_pilot_operations"
+      },
+      {
+        "name": "geo_campus_pilot_operations_partitions",
+        "parent": "group_campus_pilot_operations"
+      },
+      {
+        "name": "geo_campus_pilot_operations_screen",
+        "parent": "group_campus_pilot_operations"
+      },
+      {
+        "name": "geo_campus_pilot_operations_trim",
+        "parent": "group_campus_pilot_operations"
+      },
+      {
+        "name": "geo_campus_pilot_operations_walls",
+        "parent": "group_campus_pilot_operations"
+      },
+      {
+        "name": "geo_campus_pilot_operations_yard_canopy",
+        "parent": "group_campus_pilot_operations"
+      },
+      {
+        "name": "hit_campus_pilot_operations",
+        "parent": "group_campus_pilot_operations"
+      },
+      {
+        "name": "group_campus_pilot_operations",
+        "parent": "root_campus_pilot"
+      },
+      {
+        "name": "anchor_campus_pilot_procurement",
+        "parent": "group_campus_pilot_procurement"
+      },
+      {
+        "name": "focus_campus_pilot_procurement",
+        "parent": "group_campus_pilot_procurement"
+      },
+      {
+        "name": "geo_campus_pilot_procurement_dock",
+        "parent": "group_campus_pilot_procurement"
+      },
+      {
+        "name": "geo_campus_pilot_procurement_dock_doors",
+        "parent": "group_campus_pilot_procurement"
+      },
+      {
+        "name": "geo_campus_pilot_procurement_dock_seals",
+        "parent": "group_campus_pilot_procurement"
+      },
+      {
+        "name": "geo_campus_pilot_procurement_doors",
+        "parent": "group_campus_pilot_procurement"
+      },
+      {
+        "name": "geo_campus_pilot_procurement_floor_l0_reception",
+        "parent": "group_campus_pilot_procurement"
+      },
+      {
+        "name": "geo_campus_pilot_procurement_floor_l0_storage",
+        "parent": "group_campus_pilot_procurement"
+      },
+      {
+        "name": "geo_campus_pilot_procurement_glazing",
+        "parent": "group_campus_pilot_procurement"
+      },
+      {
+        "name": "geo_campus_pilot_procurement_glazing_interior",
+        "parent": "group_campus_pilot_procurement"
+      },
+      {
+        "name": "geo_campus_pilot_procurement_lighting",
+        "parent": "group_campus_pilot_procurement"
+      },
+      {
+        "name": "geo_campus_pilot_procurement_logistics_walls",
+        "parent": "group_campus_pilot_procurement"
+      },
+      {
+        "name": "geo_campus_pilot_procurement_metalwork",
+        "parent": "group_campus_pilot_procurement"
+      },
+      {
+        "name": "geo_campus_pilot_procurement_office_furniture",
+        "parent": "group_campus_pilot_procurement"
+      },
+      {
+        "name": "geo_campus_pilot_procurement_outline",
+        "parent": "group_campus_pilot_procurement"
+      },
+      {
+        "name": "geo_campus_pilot_procurement_partitions",
+        "parent": "group_campus_pilot_procurement"
+      },
+      {
+        "name": "geo_campus_pilot_procurement_rack_beams",
+        "parent": "group_campus_pilot_procurement"
+      },
+      {
+        "name": "geo_campus_pilot_procurement_reception_desk",
+        "parent": "group_campus_pilot_procurement"
+      },
+      {
+        "name": "geo_campus_pilot_procurement_roof",
+        "parent": "group_campus_pilot_procurement"
+      },
+      {
+        "name": "geo_campus_pilot_procurement_slab_l1",
+        "parent": "group_campus_pilot_procurement"
+      },
+      {
+        "name": "geo_campus_pilot_procurement_stair",
+        "parent": "group_campus_pilot_procurement"
+      },
+      {
+        "name": "geo_campus_pilot_procurement_storage_racks",
+        "parent": "group_campus_pilot_procurement"
+      },
+      {
+        "name": "geo_campus_pilot_procurement_trim",
+        "parent": "group_campus_pilot_procurement"
+      },
+      {
+        "name": "geo_campus_pilot_procurement_walls",
+        "parent": "group_campus_pilot_procurement"
+      },
+      {
+        "name": "geo_campus_pilot_procurement_detail_equipment",
+        "parent": "group_campus_pilot_procurement_detail"
+      },
+      {
+        "name": "geo_campus_pilot_procurement_detail_fit_out",
+        "parent": "group_campus_pilot_procurement_detail"
+      },
+      {
+        "name": "geo_campus_pilot_procurement_detail_goods",
+        "parent": "group_campus_pilot_procurement_detail"
+      },
+      {
+        "name": "geo_campus_pilot_procurement_detail_machinery",
+        "parent": "group_campus_pilot_procurement_detail"
+      },
+      {
+        "name": "geo_campus_pilot_procurement_detail_pallets",
+        "parent": "group_campus_pilot_procurement_detail"
+      },
+      {
+        "name": "geo_campus_pilot_procurement_detail_plants",
+        "parent": "group_campus_pilot_procurement_detail"
+      },
+      {
+        "name": "geo_campus_pilot_procurement_detail_screens",
+        "parent": "group_campus_pilot_procurement_detail"
+      },
+      {
+        "name": "geo_campus_pilot_procurement_detail_seating",
+        "parent": "group_campus_pilot_procurement_detail"
+      },
+      {
+        "name": "geo_campus_pilot_procurement_detail_signage",
+        "parent": "group_campus_pilot_procurement_detail"
+      },
+      {
+        "name": "group_campus_pilot_procurement_detail",
+        "parent": "group_campus_pilot_procurement"
+      },
+      {
+        "name": "hit_campus_pilot_procurement",
+        "parent": "group_campus_pilot_procurement"
+      },
+      {
+        "name": "group_campus_pilot_procurement",
+        "parent": "root_campus_pilot"
+      },
+      {
+        "name": "anchor_campus_pilot_sales",
+        "parent": "group_campus_pilot_sales"
+      },
+      {
+        "name": "focus_campus_pilot_sales",
+        "parent": "group_campus_pilot_sales"
+      },
+      {
+        "name": "geo_campus_pilot_sales_canopy",
+        "parent": "group_campus_pilot_sales"
+      },
+      {
+        "name": "geo_campus_pilot_sales_fixtures",
+        "parent": "group_campus_pilot_sales"
+      },
+      {
+        "name": "geo_campus_pilot_sales_floor",
+        "parent": "group_campus_pilot_sales"
+      },
+      {
+        "name": "geo_campus_pilot_sales_glazing",
+        "parent": "group_campus_pilot_sales"
+      },
+      {
+        "name": "geo_campus_pilot_sales_partitions",
+        "parent": "group_campus_pilot_sales"
+      },
+      {
+        "name": "geo_campus_pilot_sales_trim",
+        "parent": "group_campus_pilot_sales"
+      },
+      {
+        "name": "geo_campus_pilot_sales_walls",
+        "parent": "group_campus_pilot_sales"
+      },
+      {
+        "name": "hit_campus_pilot_sales",
+        "parent": "group_campus_pilot_sales"
+      },
+      {
+        "name": "group_campus_pilot_sales",
+        "parent": "root_campus_pilot"
+      },
+      {
+        "name": "geo_campus_pilot_site_canopies",
+        "parent": "group_campus_pilot_site"
+      },
+      {
+        "name": "geo_campus_pilot_site_deck",
+        "parent": "group_campus_pilot_site"
+      },
+      {
+        "name": "geo_campus_pilot_site_deck_lights",
+        "parent": "group_campus_pilot_site"
+      },
+      {
+        "name": "geo_campus_pilot_site_environment_ground",
+        "parent": "group_campus_pilot_site"
+      },
+      {
+        "name": "geo_campus_pilot_site_environment_landscape",
+        "parent": "group_campus_pilot_site"
+      },
+      {
+        "name": "geo_campus_pilot_site_environment_paths",
+        "parent": "group_campus_pilot_site"
+      },
+      {
+        "name": "geo_campus_pilot_site_planter_soil",
+        "parent": "group_campus_pilot_site"
+      },
+      {
+        "name": "geo_campus_pilot_site_planters",
+        "parent": "group_campus_pilot_site"
+      },
+      {
+        "name": "geo_campus_pilot_site_plinths",
+        "parent": "group_campus_pilot_site"
+      },
+      {
+        "name": "geo_campus_pilot_site_skybridge",
+        "parent": "group_campus_pilot_site"
+      },
+      {
+        "name": "geo_campus_pilot_site_skybridge_glass",
+        "parent": "group_campus_pilot_site"
+      },
+      {
+        "name": "geo_campus_pilot_site_stairs",
+        "parent": "group_campus_pilot_site"
+      },
+      {
+        "name": "geo_campus_pilot_site_terrace",
+        "parent": "group_campus_pilot_site"
+      },
+      {
+        "name": "geo_campus_pilot_site_upper_terrace",
+        "parent": "group_campus_pilot_site"
+      },
+      {
+        "name": "geo_campus_pilot_site_vegetation_canopy",
+        "parent": "group_campus_pilot_site"
+      },
+      {
+        "name": "geo_campus_pilot_site_vegetation_shrubs",
+        "parent": "group_campus_pilot_site"
+      },
+      {
+        "name": "geo_campus_pilot_site_vegetation_trunks",
+        "parent": "group_campus_pilot_site"
+      },
+      {
+        "name": "geo_campus_pilot_site_walkway_edges",
+        "parent": "group_campus_pilot_site"
+      },
+      {
+        "name": "geo_campus_pilot_site_walkways",
+        "parent": "group_campus_pilot_site"
+      },
+      {
+        "name": "geo_campus_pilot_site_detail_vehicle_bodies",
+        "parent": "group_campus_pilot_site_detail"
+      },
+      {
+        "name": "geo_campus_pilot_site_detail_vehicle_chassis",
+        "parent": "group_campus_pilot_site_detail"
+      },
+      {
+        "name": "geo_campus_pilot_site_detail_vehicle_lights",
+        "parent": "group_campus_pilot_site_detail"
+      },
+      {
+        "name": "geo_campus_pilot_site_detail_vehicle_tyres",
+        "parent": "group_campus_pilot_site_detail"
+      },
+      {
+        "name": "group_campus_pilot_site_detail",
+        "parent": "group_campus_pilot_site"
+      },
+      {
+        "name": "group_campus_pilot_site",
+        "parent": "root_campus_pilot"
+      },
+      {
+        "name": "anchor_campus_pilot_warehouse",
+        "parent": "group_campus_pilot_warehouse"
+      },
+      {
+        "name": "focus_campus_pilot_warehouse",
+        "parent": "group_campus_pilot_warehouse"
+      },
+      {
+        "name": "geo_campus_pilot_warehouse_dock",
+        "parent": "group_campus_pilot_warehouse"
+      },
+      {
+        "name": "geo_campus_pilot_warehouse_dock_doors",
+        "parent": "group_campus_pilot_warehouse"
+      },
+      {
+        "name": "geo_campus_pilot_warehouse_dock_seals",
+        "parent": "group_campus_pilot_warehouse"
+      },
+      {
+        "name": "geo_campus_pilot_warehouse_floor",
+        "parent": "group_campus_pilot_warehouse"
+      },
+      {
+        "name": "geo_campus_pilot_warehouse_floor_lines",
+        "parent": "group_campus_pilot_warehouse"
+      },
+      {
+        "name": "geo_campus_pilot_warehouse_floor_markings",
+        "parent": "group_campus_pilot_warehouse"
+      },
+      {
+        "name": "geo_campus_pilot_warehouse_glazing",
+        "parent": "group_campus_pilot_warehouse"
+      },
+      {
+        "name": "geo_campus_pilot_warehouse_guards",
+        "parent": "group_campus_pilot_warehouse"
+      },
+      {
+        "name": "geo_campus_pilot_warehouse_lighting",
+        "parent": "group_campus_pilot_warehouse"
+      },
+      {
+        "name": "geo_campus_pilot_warehouse_metalwork",
+        "parent": "group_campus_pilot_warehouse"
+      },
+      {
+        "name": "geo_campus_pilot_warehouse_mezzanine",
+        "parent": "group_campus_pilot_warehouse"
+      },
+      {
+        "name": "geo_campus_pilot_warehouse_partitions",
+        "parent": "group_campus_pilot_warehouse"
+      },
+      {
+        "name": "geo_campus_pilot_warehouse_rack_beams",
+        "parent": "group_campus_pilot_warehouse"
+      },
+      {
+        "name": "geo_campus_pilot_warehouse_racks",
+        "parent": "group_campus_pilot_warehouse"
+      },
+      {
+        "name": "geo_campus_pilot_warehouse_roof_trusses",
+        "parent": "group_campus_pilot_warehouse"
+      },
+      {
+        "name": "geo_campus_pilot_warehouse_trim",
+        "parent": "group_campus_pilot_warehouse"
+      },
+      {
+        "name": "geo_campus_pilot_warehouse_walls",
+        "parent": "group_campus_pilot_warehouse"
+      },
+      {
+        "name": "geo_campus_pilot_warehouse_detail_equipment",
+        "parent": "group_campus_pilot_warehouse_detail"
+      },
+      {
+        "name": "geo_campus_pilot_warehouse_detail_goods",
+        "parent": "group_campus_pilot_warehouse_detail"
+      },
+      {
+        "name": "geo_campus_pilot_warehouse_detail_machinery",
+        "parent": "group_campus_pilot_warehouse_detail"
+      },
+      {
+        "name": "geo_campus_pilot_warehouse_detail_packaging",
+        "parent": "group_campus_pilot_warehouse_detail"
+      },
+      {
+        "name": "geo_campus_pilot_warehouse_detail_pallets",
+        "parent": "group_campus_pilot_warehouse_detail"
+      },
+      {
+        "name": "geo_campus_pilot_warehouse_detail_screens",
+        "parent": "group_campus_pilot_warehouse_detail"
+      },
+      {
+        "name": "geo_campus_pilot_warehouse_detail_shelving",
+        "parent": "group_campus_pilot_warehouse_detail"
+      },
+      {
+        "name": "geo_campus_pilot_warehouse_detail_signage",
+        "parent": "group_campus_pilot_warehouse_detail"
+      },
+      {
+        "name": "geo_campus_pilot_warehouse_detail_tyres_seats",
+        "parent": "group_campus_pilot_warehouse_detail"
+      },
+      {
+        "name": "group_campus_pilot_warehouse_detail",
+        "parent": "group_campus_pilot_warehouse"
+      },
+      {
+        "name": "hit_campus_pilot_warehouse",
+        "parent": "group_campus_pilot_warehouse"
+      },
+      {
+        "name": "group_campus_pilot_warehouse",
+        "parent": "root_campus_pilot"
+      },
+      {
+        "name": "root_campus_pilot",
+        "parent": null
+      }
+    ]
+  }
+}

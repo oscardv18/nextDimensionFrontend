@@ -1,0 +1,62 @@
+{
+    "assetId": "arxnet.scene.company-world",
+    "assetVersion": "0.1.0",
+    "variant": "b",
+    "candidate": "c1",
+    "files": [
+        {
+            "source": "/home/oddv/Renders/arxnet-3d/validation/reports/phase-4c/handoff-c1/manifest.json",
+            "copy": "src/features/campus/assets/company-world/0.1.0/manifest.json",
+            "bytes": 40728,
+            "sha256": "7a2a3888a2767631fb4562e665ae51425f61080b77f8fecc17af0c859947a466"
+        },
+        {
+            "source": "/home/oddv/Renders/arxnet-3d/validation/reports/phase-4c/handoff-c1/build.json",
+            "copy": "src/features/campus/assets/company-world/0.1.0/build.json",
+            "bytes": 26331,
+            "sha256": "89a3099c568f97f6ea5aa716ac5d16f7aad6122c4972f438a8e938710ae5f1f2"
+        },
+        {
+            "source": "/home/oddv/Renders/arxnet-3d/validation/reports/phase-4c/handoff-c1/themes.json",
+            "copy": "src/features/campus/assets/company-world/0.1.0/themes.json",
+            "bytes": 10686,
+            "sha256": "0f864f46fc0eeafe8c83c9a7382e09d462e66b5a22206e97d0afe4ccc2f9ea29"
+        },
+        {
+            "source": "/home/oddv/Renders/arxnet-3d/validation/reports/phase-4c/handoff-c1/camera-candidates.json",
+            "copy": "src/features/campus/assets/company-world/0.1.0/camera-candidates.json",
+            "bytes": 1344,
+            "sha256": "0e9198bc075c7604a7ea4b3afd4638ef4b62b7a5410cca753639d06ebc386dd5"
+        },
+        {
+            "source": "/home/oddv/Renders/arxnet-3d/validation/reports/phase-4c/handoff-c1/acceptance.json",
+            "copy": "src/features/campus/assets/company-world/0.1.0/acceptance.json",
+            "bytes": 3266,
+            "sha256": "a2b3e0e159ebd345e3fef75fccc83612dcd3449e2b6add28855dcd25dbc02e1f"
+        },
+        {
+            "source": "/home/oddv/Renders/arxnet-3d/validation/reports/phase-4c/handoff-c1/validation-summary.json",
+            "copy": "src/features/campus/assets/company-world/0.1.0/validation-summary.json",
+            "bytes": 499,
+            "sha256": "4e6938091767b56c90ec0ca1efba5c7950b90f3be28cf19e91ad999634d2d418"
+        },
+        {
+            "source": "/home/oddv/Renders/arxnet-3d/validation/reports/phase-4c/handoff-c1/SHA256SUMS",
+            "copy": "src/features/campus/assets/company-world/0.1.0/SHA256SUMS",
+            "bytes": 648,
+            "sha256": "5ea785dbe57498b589f059bf6f694ec94113fc09ed82bb408b8fc873d0cf146b"
+        },
+        {
+            "source": "/home/oddv/Renders/arxnet-3d/validation/reports/phase-4c/handoff-c1/README.md",
+            "copy": "src/features/campus/assets/company-world/0.1.0/README.md",
+            "bytes": 501,
+            "sha256": "6da28110a7cd9ccb36e9bd6ed92711a8960174a5535f7a5d65573f2a635091df"
+        },
+        {
+            "source": "/home/oddv/Renders/arxnet-3d/validation/reports/phase-4c/handoff-c1/asset.glb",
+            "copy": "public/assets/arxnet.scene.company-world/0.1.0/asset.glb",
+            "bytes": 691784,
+            "sha256": "960b51fd24a8eb56fcdc835f3bd744276e52f79d1920553589ff8b7a343e467f"
+        }
+    ]
+}

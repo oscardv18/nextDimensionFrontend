@@ -1,0 +1,23 @@
+dist
+node_modules
+pnpm-lock.yaml
+# CSS portado del prototipo aprobado: se conserva con su formato original para compararlo línea a línea
+src/design/styles/arxnet/**
+# Generadas por la CLI de shadcn
+src/design/ui/**
+# Copia del contrato generado desde los DTO PHP
+src/data/contracts/**
+src/data/sources/mock/fixtures/**
+src/i18n/catalogs/**
+playwright-report
+test-results
+
+# Copia literal del contrato externo; se conserva como evidencia de origen.
+docs/campus/glb-contract-1.0.0.md
+# Metadatos y especificación del exportador: copias literales verificables.
+src/features/campus/assets/**
+docs/campus/themes-source-1.0.0.md
+docs/campus/themes-source-0.4.0.md
+docs/campus/source-0.4.0-*.json
+
+archives/**

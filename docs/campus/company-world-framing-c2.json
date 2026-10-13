@@ -1,0 +1,635 @@
+{
+    "kind": "Analytical projections; not browser screenshots",
+    "results": [
+        {
+            "fov": 20,
+            "viewport": {
+                "width": 1440,
+                "height": 900
+            },
+            "selected": "overview",
+            "distance": 200.01765067068717,
+            "screenBounds": {
+                "left": -0.8152386709531727,
+                "right": 0.9120828900772954,
+                "top": 0.8156813574981009,
+                "bottom": -0.748045404636054
+            }
+        },
+        {
+            "fov": 20,
+            "viewport": {
+                "width": 1440,
+                "height": 900
+            },
+            "selected": "shared.warehouse",
+            "distance": 102.73785007011628,
+            "screenBounds": {
+                "left": -0.7609634082688269,
+                "right": 0.40044842166151245,
+                "top": 0.6032170515055177,
+                "bottom": -0.6311429415654829
+            }
+        },
+        {
+            "fov": 20,
+            "viewport": {
+                "width": 1440,
+                "height": 900
+            },
+            "selected": "shared.procurement",
+            "distance": 95.88931831158402,
+            "screenBounds": {
+                "left": -0.7610241812083377,
+                "right": 0.4008350456351829,
+                "top": 0.5814920003131842,
+                "bottom": -0.6125166282277364
+            }
+        },
+        {
+            "fov": 20,
+            "viewport": {
+                "width": 1440,
+                "height": 900
+            },
+            "selected": "shared.human-resources",
+            "distance": 98.9772034502852,
+            "screenBounds": {
+                "left": -0.7610825615116817,
+                "right": 0.4055884973582552,
+                "top": 0.6211123181441054,
+                "bottom": -0.6076859651316837
+            }
+        },
+        {
+            "fov": 20,
+            "viewport": {
+                "width": 1440,
+                "height": 900
+            },
+            "selected": "shared.administration",
+            "distance": 82.4700874838534,
+            "screenBounds": {
+                "left": -0.7480009768248864,
+                "right": 0.41319001855703447,
+                "top": 0.6245875903318492,
+                "bottom": -0.6451639120005
+            }
+        },
+        {
+            "fov": 20,
+            "viewport": {
+                "width": 1440,
+                "height": 900
+            },
+            "selected": "shared.operations",
+            "distance": 116.75739225645806,
+            "screenBounds": {
+                "left": -0.7233966016194525,
+                "right": 0.4126410409402375,
+                "top": 0.559509186894764,
+                "bottom": -0.5875967913089981
+            }
+        },
+        {
+            "fov": 20,
+            "viewport": {
+                "width": 1440,
+                "height": 900
+            },
+            "selected": "shared.sales",
+            "distance": 79.14740469126546,
+            "screenBounds": {
+                "left": -0.7610940371604209,
+                "right": 0.40571285522362394,
+                "top": 0.6176936816880931,
+                "bottom": -0.6547078251329779
+            }
+        },
+        {
+            "fov": 20,
+            "viewport": {
+                "width": 1920,
+                "height": 1080
+            },
+            "selected": "overview",
+            "distance": 192.2240469461423,
+            "screenBounds": {
+                "left": -0.778095621574436,
+                "right": 0.8506403134274239,
+                "top": 0.843313820521257,
+                "bottom": -0.7844682388753502
+            }
+        },
+        {
+            "fov": 20,
+            "viewport": {
+                "width": 1920,
+                "height": 1080
+            },
+            "selected": "shared.warehouse",
+            "distance": 93.30821287619845,
+            "screenBounds": {
+                "left": -0.713069135171669,
+                "right": 0.4401613246622416,
+                "top": 0.6500841187910696,
+                "bottom": -0.7144985541159024
+            }
+        },
+        {
+            "fov": 20,
+            "viewport": {
+                "width": 1920,
+                "height": 1080
+            },
+            "selected": "shared.procurement",
+            "distance": 85.03914365188298,
+            "screenBounds": {
+                "left": -0.7275270464207805,
+                "right": 0.4543211140425391,
+                "top": 0.6390383280809856,
+                "bottom": -0.714162737757274
+            }
+        },
+        {
+            "fov": 20,
+            "viewport": {
+                "width": 1920,
+                "height": 1080
+            },
+            "selected": "shared.human-resources",
+            "distance": 87.2368823191913,
+            "screenBounds": {
+                "left": -0.7313115496721485,
+                "right": 0.4638334449610901,
+                "top": 0.6868661345190138,
+                "bottom": -0.7140520468382195
+            }
+        },
+        {
+            "fov": 20,
+            "viewport": {
+                "width": 1920,
+                "height": 1080
+            },
+            "selected": "shared.administration",
+            "distance": 76.24819667878965,
+            "screenBounds": {
+                "left": -0.6894496203849225,
+                "right": 0.4442203112233845,
+                "top": 0.6632718708762954,
+                "bottom": -0.7146634262967284
+            }
+        },
+        {
+            "fov": 20,
+            "viewport": {
+                "width": 1920,
+                "height": 1080
+            },
+            "selected": "shared.operations",
+            "distance": 100.16236313482835,
+            "screenBounds": {
+                "left": -0.7057863441271401,
+                "right": 0.4926311297354807,
+                "top": 0.6319670168840429,
+                "bottom": -0.7138371351392302
+            }
+        },
+        {
+            "fov": 20,
+            "viewport": {
+                "width": 1920,
+                "height": 1080
+            },
+            "selected": "shared.sales",
+            "distance": 74.05045647225339,
+            "screenBounds": {
+                "left": -0.6955965681837675,
+                "right": 0.42862889585436953,
+                "top": 0.6492634515372938,
+                "bottom": -0.714805413184126
+            }
+        },
+        {
+            "fov": 20,
+            "viewport": {
+                "width": 390,
+                "height": 844
+            },
+            "selected": "overview",
+            "distance": 648.6073560667065,
+            "screenBounds": {
+                "left": -0.8959987271045795,
+                "right": 0.89642689537363,
+                "top": 0.27665324949050407,
+                "bottom": -0.21410151871531452
+            }
+        },
+        {
+            "fov": 20,
+            "viewport": {
+                "width": 390,
+                "height": 844
+            },
+            "selected": "shared.warehouse",
+            "distance": 284.30635696982705,
+            "screenBounds": {
+                "left": -0.7165655388427196,
+                "right": 0.7141275859879062,
+                "top": 0.4353935983043955,
+                "bottom": 0.011838738084101269
+            }
+        },
+        {
+            "fov": 20,
+            "viewport": {
+                "width": 390,
+                "height": 844
+            },
+            "selected": "shared.procurement",
+            "distance": 265.7916991084464,
+            "screenBounds": {
+                "left": -0.7165920718285227,
+                "right": 0.7139864030381832,
+                "top": 0.42674910393035387,
+                "bottom": 0.01877476179907483
+            }
+        },
+        {
+            "fov": 20,
+            "viewport": {
+                "width": 390,
+                "height": 844
+            },
+            "selected": "shared.human-resources",
+            "distance": 274.7859009441653,
+            "screenBounds": {
+                "left": -0.7166175312427273,
+                "right": 0.7166175312427309,
+                "top": 0.44161152916408714,
+                "bottom": 0.020880963641898308
+            }
+        },
+        {
+            "fov": 20,
+            "viewport": {
+                "width": 390,
+                "height": 844
+            },
+            "selected": "shared.administration",
+            "distance": 230.54285316746757,
+            "screenBounds": {
+                "left": -0.7073595230207564,
+                "right": 0.7163399270905689,
+                "top": 0.44147352010897445,
+                "bottom": 0.009414445678035272
+            }
+        },
+        {
+            "fov": 20,
+            "viewport": {
+                "width": 390,
+                "height": 844
+            },
+            "selected": "shared.operations",
+            "distance": 324.560525702354,
+            "screenBounds": {
+                "left": -0.6971505219435723,
+                "right": 0.7161104328274074,
+                "top": 0.417691993658712,
+                "bottom": 0.027608703431680672
+            }
+        },
+        {
+            "fov": 20,
+            "viewport": {
+                "width": 390,
+                "height": 844
+            },
+            "selected": "shared.sales",
+            "distance": 219.8018448442447,
+            "screenBounds": {
+                "left": -0.7166225323928702,
+                "right": 0.716622532392869,
+                "top": 0.4402449793599544,
+                "bottom": 0.0046471052009108916
+            }
+        },
+        {
+            "fov": 15,
+            "viewport": {
+                "width": 1440,
+                "height": 900
+            },
+            "selected": "overview",
+            "distance": 270.21493005854825,
+            "screenBounds": {
+                "left": -0.7899222748149046,
+                "right": 0.8835358800702742,
+                "top": 0.8148408220493994,
+                "bottom": -0.7498307724611649
+            }
+        },
+        {
+            "fov": 15,
+            "viewport": {
+                "width": 1440,
+                "height": 900
+            },
+            "selected": "shared.warehouse",
+            "distance": 136.3496415264918,
+            "screenBounds": {
+                "left": -0.761204895198317,
+                "right": 0.40400783280764196,
+                "top": 0.6254300044380536,
+                "bottom": -0.6147934980309661
+            }
+        },
+        {
+            "fov": 15,
+            "viewport": {
+                "width": 1440,
+                "height": 900
+            },
+            "selected": "shared.procurement",
+            "distance": 127.33260709335468,
+            "screenBounds": {
+                "left": -0.7612504864165291,
+                "right": 0.40429778568925284,
+                "top": 0.6028779865890906,
+                "bottom": -0.595923321917588
+            }
+        },
+        {
+            "fov": 15,
+            "viewport": {
+                "width": 1440,
+                "height": 900
+            },
+            "selected": "shared.human-resources",
+            "distance": 131.50474356935828,
+            "screenBounds": {
+                "left": -0.7612942693750219,
+                "right": 0.40788270647568375,
+                "top": 0.6432603374227417,
+                "bottom": -0.5907063164885258
+            }
+        },
+        {
+            "fov": 15,
+            "viewport": {
+                "width": 1440,
+                "height": 900
+            },
+            "selected": "shared.administration",
+            "distance": 109.57637091641432,
+            "screenBounds": {
+                "left": -0.7514608822778489,
+                "right": 0.4135757786954466,
+                "top": 0.6468052387842647,
+                "bottom": -0.6276505098579681
+            }
+        },
+        {
+            "fov": 15,
+            "viewport": {
+                "width": 1440,
+                "height": 900
+            },
+            "selected": "shared.operations",
+            "distance": 154.7061890620433,
+            "screenBounds": {
+                "left": -0.7327138112470057,
+                "right": 0.41316834998185914,
+                "top": 0.5812287439720696,
+                "bottom": -0.5731014035895127
+            }
+        },
+        {
+            "fov": 15,
+            "viewport": {
+                "width": 1440,
+                "height": 900
+            },
+            "selected": "shared.sales",
+            "distance": 105.1694367865239,
+            "screenBounds": {
+                "left": -0.7613028741299884,
+                "right": 0.40797595340087944,
+                "top": 0.6397068560741166,
+                "bottom": -0.6370096371638797
+            }
+        },
+        {
+            "fov": 15,
+            "viewport": {
+                "width": 1920,
+                "height": 1080
+            },
+            "selected": "overview",
+            "distance": 259.64851046884104,
+            "screenBounds": {
+                "left": -0.7494315659592643,
+                "right": 0.8188186028915434,
+                "top": 0.8424315585898057,
+                "bottom": -0.786440874418915
+            }
+        },
+        {
+            "fov": 15,
+            "viewport": {
+                "width": 1920,
+                "height": 1080
+            },
+            "selected": "shared.warehouse",
+            "distance": 120.34945685561652,
+            "screenBounds": {
+                "left": -0.7303737619236033,
+                "right": 0.4601739359342687,
+                "top": 0.69283326894482,
+                "bottom": -0.7163693205889198
+            }
+        },
+        {
+            "fov": 15,
+            "viewport": {
+                "width": 1920,
+                "height": 1080
+            },
+            "selected": "shared.procurement",
+            "distance": 109.52121829008559,
+            "screenBounds": {
+                "left": -0.7464279846208557,
+                "right": 0.47595042876835497,
+                "top": 0.6826438405326987,
+                "bottom": -0.7161179897382666
+            }
+        },
+        {
+            "fov": 15,
+            "viewport": {
+                "width": 1920,
+                "height": 1080
+            },
+            "selected": "shared.human-resources",
+            "distance": 112.29710447110197,
+            "screenBounds": {
+                "left": -0.750939326955257,
+                "right": 0.4850700475696605,
+                "top": 0.7337643919042466,
+                "bottom": -0.7160351409006387
+            }
+        },
+        {
+            "fov": 15,
+            "viewport": {
+                "width": 1920,
+                "height": 1080
+            },
+            "selected": "shared.administration",
+            "distance": 98.41768404942228,
+            "screenBounds": {
+                "left": -0.7094073138434792,
+                "right": 0.4612406770157637,
+                "top": 0.7059928634961289,
+                "bottom": -0.7164927041115603
+            }
+        },
+        {
+            "fov": 15,
+            "viewport": {
+                "width": 1920,
+                "height": 1080
+            },
+            "selected": "shared.operations",
+            "distance": 128.81475694619053,
+            "screenBounds": {
+                "left": -0.7332727715701226,
+                "right": 0.5109952735458722,
+                "top": 0.6765478998154225,
+                "bottom": -0.7158742776996243
+            }
+        },
+        {
+            "fov": 15,
+            "viewport": {
+                "width": 1920,
+                "height": 1080
+            },
+            "selected": "shared.sales",
+            "distance": 95.64179577172541,
+            "screenBounds": {
+                "left": -0.7123372105053585,
+                "right": 0.4468770834290799,
+                "top": 0.6905718818218616,
+                "bottom": -0.7165989561034112
+            }
+        },
+        {
+            "fov": 15,
+            "viewport": {
+                "width": 390,
+                "height": 844
+            },
+            "selected": "overview",
+            "distance": 875.5045014264915,
+            "screenBounds": {
+                "left": -0.8958866157110251,
+                "right": 0.8962086817781445,
+                "top": 0.27571231652729294,
+                "bottom": -0.21340575396089015
+            }
+        },
+        {
+            "fov": 15,
+            "viewport": {
+                "width": 390,
+                "height": 844
+            },
+            "selected": "shared.warehouse",
+            "distance": 379.8033583429134,
+            "screenBounds": {
+                "left": -0.7166707886256117,
+                "right": 0.7148484143857567,
+                "top": 0.4406957907955066,
+                "bottom": 0.011136808924041761
+            }
+        },
+        {
+            "fov": 15,
+            "viewport": {
+                "width": 390,
+                "height": 844
+            },
+            "selected": "shared.procurement",
+            "distance": 355.12760361875286,
+            "screenBounds": {
+                "left": -0.7166906048062898,
+                "right": 0.714742783585691,
+                "top": 0.4319782945717,
+                "bottom": 0.018037210293633456
+            }
+        },
+        {
+            "fov": 15,
+            "viewport": {
+                "width": 390,
+                "height": 844
+            },
+            "selected": "shared.human-resources",
+            "distance": 367.20235388586156,
+            "screenBounds": {
+                "left": -0.7167096188398107,
+                "right": 0.716709618839812,
+                "top": 0.4468814631482667,
+                "bottom": 0.02015376873682845
+            }
+        },
+        {
+            "fov": 15,
+            "viewport": {
+                "width": 390,
+                "height": 844
+            },
+            "selected": "shared.administration",
+            "distance": 307.55656395221456,
+            "screenBounds": {
+                "left": -0.7097727605644677,
+                "right": 0.7165022752997118,
+                "top": 0.4470718589052253,
+                "bottom": 0.008434902996910573
+            }
+        },
+        {
+            "fov": 15,
+            "viewport": {
+                "width": 390,
+                "height": 844
+            },
+            "selected": "shared.operations",
+            "distance": 432.3797208009997,
+            "screenBounds": {
+                "left": -0.7020703479716108,
+                "right": 0.7163308344835628,
+                "top": 0.42337750301854365,
+                "bottom": 0.02619455340232054
+            }
+        },
+        {
+            "fov": 15,
+            "viewport": {
+                "width": 390,
+                "height": 844
+            },
+            "selected": "shared.sales",
+            "distance": 293.7350071976017,
+            "screenBounds": {
+                "left": -0.716713353843767,
+                "right": 0.7167133538437634,
+                "top": 0.4455030170633518,
+                "bottom": 0.004093515119628478
+            }
+        }
+    ]
+}

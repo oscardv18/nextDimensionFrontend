@@ -1,0 +1,161 @@
+{
+    "source": "GLB 0.4.0 JSON/accessors; static inventory, not measured draw calls",
+    "nodes": [
+        {
+            "id": "procurement.detail.equipment",
+            "group": "procurement.detail",
+            "material": ["mat_metal_graphite"],
+            "triangles": 3216,
+            "consumerPriority": "essential"
+        },
+        {
+            "id": "procurement.detail.fit-out",
+            "group": "procurement.detail",
+            "material": ["mat_interior_white"],
+            "triangles": 516,
+            "consumerPriority": "essential"
+        },
+        {
+            "id": "procurement.detail.goods",
+            "group": "procurement.detail",
+            "material": ["mat_cardboard_kraft"],
+            "triangles": 1704,
+            "consumerPriority": "essential"
+        },
+        {
+            "id": "procurement.detail.machinery",
+            "group": "procurement.detail",
+            "material": ["mat_safety_yellow"],
+            "triangles": 36,
+            "consumerPriority": "essential"
+        },
+        {
+            "id": "procurement.detail.pallets",
+            "group": "procurement.detail",
+            "material": ["mat_wood_oak"],
+            "triangles": 1068,
+            "consumerPriority": "essential"
+        },
+        {
+            "id": "procurement.detail.plants",
+            "group": "procurement.detail",
+            "material": ["mat_vegetation_shrub"],
+            "triangles": 480,
+            "consumerPriority": "secondary"
+        },
+        {
+            "id": "procurement.detail.screens",
+            "group": "procurement.detail",
+            "material": ["mat_screen"],
+            "triangles": 372,
+            "consumerPriority": "secondary"
+        },
+        {
+            "id": "procurement.detail.seating",
+            "group": "procurement.detail",
+            "material": ["mat_polymer_charcoal"],
+            "triangles": 1332,
+            "consumerPriority": "essential"
+        },
+        {
+            "id": "procurement.detail.signage",
+            "group": "procurement.detail",
+            "material": ["mat_emissive_blue"],
+            "triangles": 72,
+            "consumerPriority": "essential"
+        },
+        {
+            "id": "site.detail.vehicle-bodies",
+            "group": "site.detail",
+            "material": ["mat_interior_white"],
+            "triangles": 48,
+            "consumerPriority": "secondary"
+        },
+        {
+            "id": "site.detail.vehicle-chassis",
+            "group": "site.detail",
+            "material": ["mat_metal_graphite"],
+            "triangles": 144,
+            "consumerPriority": "secondary"
+        },
+        {
+            "id": "site.detail.vehicle-lights",
+            "group": "site.detail",
+            "material": ["mat_emissive_warm"],
+            "triangles": 48,
+            "consumerPriority": "secondary"
+        },
+        {
+            "id": "site.detail.vehicle-tyres",
+            "group": "site.detail",
+            "material": ["mat_polymer_charcoal"],
+            "triangles": 440,
+            "consumerPriority": "secondary"
+        },
+        {
+            "id": "warehouse.detail.equipment",
+            "group": "warehouse.detail",
+            "material": ["mat_metal_graphite"],
+            "triangles": 540,
+            "consumerPriority": "essential"
+        },
+        {
+            "id": "warehouse.detail.goods",
+            "group": "warehouse.detail",
+            "material": ["mat_cardboard_kraft"],
+            "triangles": 5928,
+            "consumerPriority": "essential"
+        },
+        {
+            "id": "warehouse.detail.machinery",
+            "group": "warehouse.detail",
+            "material": ["mat_safety_yellow"],
+            "triangles": 72,
+            "consumerPriority": "essential"
+        },
+        {
+            "id": "warehouse.detail.packaging",
+            "group": "warehouse.detail",
+            "material": ["mat_interior_white"],
+            "triangles": 624,
+            "consumerPriority": "essential"
+        },
+        {
+            "id": "warehouse.detail.pallets",
+            "group": "warehouse.detail",
+            "material": ["mat_wood_oak"],
+            "triangles": 4764,
+            "consumerPriority": "essential"
+        },
+        {
+            "id": "warehouse.detail.screens",
+            "group": "warehouse.detail",
+            "material": ["mat_screen"],
+            "triangles": 36,
+            "consumerPriority": "secondary"
+        },
+        {
+            "id": "warehouse.detail.shelving",
+            "group": "warehouse.detail",
+            "material": ["mat_metal_rack"],
+            "triangles": 144,
+            "consumerPriority": "essential"
+        },
+        {
+            "id": "warehouse.detail.signage",
+            "group": "warehouse.detail",
+            "material": ["mat_emissive_blue"],
+            "triangles": 144,
+            "consumerPriority": "essential"
+        },
+        {
+            "id": "warehouse.detail.tyres-seats",
+            "group": "warehouse.detail",
+            "material": ["mat_polymer_charcoal"],
+            "triangles": 432,
+            "consumerPriority": "essential"
+        }
+    ],
+    "essentialTriangles": 20592,
+    "secondaryTriangles": 1568
+}

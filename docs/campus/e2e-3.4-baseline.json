@@ -1,0 +1,50 @@
+{
+    "reportedPassed": 28,
+    "reportedFailed": 19,
+    "lastRun": {
+        "status": "failed",
+        "failedTests": [
+            "908b0a273b53a7bc24ac-2fa16ef8d698d7c5b649",
+            "908b0a273b53a7bc24ac-c620b194e36d201b014a",
+            "908b0a273b53a7bc24ac-373e46b2d1a8617ea6a2",
+            "908b0a273b53a7bc24ac-1e345a1a41663dcf536d",
+            "908b0a273b53a7bc24ac-2a887607ae96ea41f3fb",
+            "908b0a273b53a7bc24ac-02357b2ed78addd0de59",
+            "908b0a273b53a7bc24ac-45d71b2fde411c82d1f8",
+            "908b0a273b53a7bc24ac-b3e93f9d3b47f021345e",
+            "908b0a273b53a7bc24ac-8e0bad280db9f99e7d0c",
+            "908b0a273b53a7bc24ac-a2545ef1661c1f83228d",
+            "908b0a273b53a7bc24ac-4e69cad629aa2d0cd6e5",
+            "908b0a273b53a7bc24ac-a80575e265f6ac87303a",
+            "908b0a273b53a7bc24ac-a49e5227f8eef5c6bbab",
+            "908b0a273b53a7bc24ac-6af49e3e6fa517c37b18",
+            "908b0a273b53a7bc24ac-40baecdf8cab5dee4f0c",
+            "908b0a273b53a7bc24ac-9d7c282b46ff99e692e2",
+            "908b0a273b53a7bc24ac-8df873853e6dc4c096dd",
+            "908b0a273b53a7bc24ac-504aaf5b4a74fa8dc5aa",
+            "908b0a273b53a7bc24ac-12491ba4900589e482eb"
+        ]
+    },
+    "errorContexts": [
+        "campus-Fase-3-3-GLB-único-y-temas-coherentes-a-1920×1080-chromium",
+        "campus-exploración-desplaz-4bb5c-olo-se-activa-en-depuración-chromium",
+        "campus-selección-por-proxies-en-vista-general-y-retorno-chromium",
+        "campus-encuadres-completos-con-reserva-de-panel-a-1366px-chromium",
+        "campus-canvas-inmersivo-19-2766f--panel-flotan-sin-reducirlo-chromium",
+        "campus-Fase-3-1-etiquetas--de9b8-cción-por-teclado-a-640×360-chromium",
+        "campus-Fase-3-1-etiquetas--0fad1-ción-por-teclado-a-1440×900-chromium",
+        "campus-Fase-3-2-táctil-des-7805e-e-pinch-en-pantalla-pequeña-chromium",
+        "campus-Shell-«Atención-aho-66272--la-vista-general-lo-cierra-chromium",
+        "campus-revisión-visual-provisional-del-encuadre-1440×900-chromium",
+        "campus-Fase-3-1-etiquetas--64093-cción-por-teclado-a-390×844-chromium",
+        "campus-última-selección-ga-4f6db-escena-descansa-al-terminar-chromium",
+        "campus-revisión-visual-provisional-del-encuadre-1920×1080-chromium",
+        "campus-carga-campus-cambia-63c9c--cubierta-y-regreso-general-chromium",
+        "campus-encuadres-completos-con-reserva-de-panel-a-390px-chromium",
+        "campus-encuadres-completos-con-reserva-de-panel-a-768px-chromium",
+        "campus-Fase-3-3-GLB-único-y-temas-coherentes-a-390×844-chromium",
+        "campus-Fase-3-2-arrastre-z-7b40d-y-retorno-desde-exploración-chromium",
+        "campus-Fase-3-3-GLB-único-y-temas-coherentes-a-1440×900-chromium"
+    ],
+    "limitation": "Los contextos guardan snapshots DOM, no stacks ni tiempos; la clasificación de timeout procede del informe 3.4."
+}

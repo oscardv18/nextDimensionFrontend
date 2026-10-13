@@ -1,0 +1,118 @@
+/* Portado del prototipo aprobado (UI-Design, etiqueta v1.0-prototipo-visual-aprobado): tokens, temas, acentos y base (src/index.css).
+   Valores sin cambios; solo se adaptan los atributos de estado a Radix (data-state) y el acento a data-accent. */
+/* ════════ Tokens de Arxnet (dirección aprobada: referencias clara y oscura) ════════
+   Marca neutra (tinta), acento configurable (púrpura, rojo, azul) y estados semánticos fijos e independientes del acento. */
+:root {
+  --r1: 6px; --r2: 8px; --r3: 12px; --r4: 16px;
+  --barra: 60px;        /* barra superior: ~15 % más compacta que la referencia (72 px) */
+  --carril: 64px;       /* barra lateral colapsada (referencia: 72 px) */
+  --hueco: 8px;         /* margen del marco respecto a la ventana */
+  --radio-marco: 18px;  /* contorno exterior de la L */
+  --radio-lienzo: 16px; /* esquina interior donde se encuentran barra y carril */
+  --margen-lienzo: 10px;
+  --ease: cubic-bezier(.22, .8, .24, 1);
+  --t: 180ms;
+  --t-func: 13px;   /* texto funcional en datos, filas y controles densos */
+  --t-meta: 12px;   /* información secundaria: fechas, unidades, notas */
+  --t-marca: 11.5px; /* marcas de procedencia y etiquetas en mayúsculas */
+  --blur: 18px;
+  font-family: "Figtree Variable", "Figtree", system-ui, sans-serif;
+}
+:root[data-theme="light"] {
+  color-scheme: light;
+  --fondo: #dde0e9; --ambiente-1: rgba(124, 108, 255, .12); --ambiente-2: rgba(64, 140, 255, .08);
+  --marco: rgba(251, 251, 253, .9); --marco-borde: rgba(255, 255, 255, 1); --marco-linea: rgba(22, 26, 44, .11);
+  --sombra-marco: 0 1px 2px rgba(22, 26, 44, .06), 0 18px 50px -24px rgba(22, 26, 44, .30);
+  --lienzo: #e6e9f0; --lienzo-borde: rgba(22, 26, 44, .12); --lienzo-luz: rgba(255, 255, 255, .55);
+  --carril-panel: transparent;
+  --s1: #ffffff; --s2: #f6f7fa; --s3: #eceef3; --hover: rgba(22, 26, 44, .055); --borde: #dfe2ea; --borde-2: #ccd1db;
+  --t1: #14161c; --t2: #474d5e; --t3: #5b6274; --tinta: #14161c; --tinta-t: #ffffff;
+  --vidrio: rgba(255, 255, 255, .8); --vidrio-fuerte: rgba(255, 255, 255, .93); --vidrio-borde: rgba(255, 255, 255, .9); --vidrio-linea: rgba(20, 24, 40, .08);
+  --sombra-1: 0 1px 2px rgba(20, 24, 40, .05), 0 4px 14px -6px rgba(20, 24, 40, .12);
+  --sombra-2: 0 2px 6px rgba(20, 24, 40, .05), 0 22px 48px -20px rgba(20, 24, 40, .28);
+  /* Mapa */
+  --suelo: #e6e9f0; --suelo-2: #dfe3eb; --halo: rgba(206, 211, 224, .55); --losa: #f9fafc; --losa-c: #cdd2dd; --sombra-iso: rgba(52, 58, 84, .12);
+  --muro-l: #f3f4f8; --muro-r: #dfe2ea; --muro-t: #c9cdd8; --techo: #9ea3b4; --techo-borde: #d9dce5;
+  --ventana: color-mix(in srgb, var(--acento) 38%, #c9d5f2); --cristal: color-mix(in srgb, #5b86d8 55%, #dce6f8); --puerta: #474b58; --calido: #f4c97a; --ventana-calida: #f8dca4;
+  --equipo: #e4e6ed; --claraboya: #cfdcf6; --cil: #7d8191; --caja-c: #d9a25d; --alero: #e8eaf0;
+  --ruta-pizarra: #93a0bd; --ruta-naranja: #f0a13a; --ruta-turquesa: #22b3a0; --ruta-borde: rgba(255, 255, 255, .95);
+  --etq: rgba(255, 255, 255, .95);
+  --ok: #1b7d47; --ok-f: #e3f4ea; --ok-solido: #1b8048; --alerta: #8f5c00; --alerta-f: #fff1d2; --alerta-solido: #f0a20b;
+  --bloqueo: #b3302a; --bloqueo-f: #fde6e3; --bloqueo-solido: #cf3338; --espera: #2759a8; --espera-f: #e6eefc; --aprob: #6440c4; --aprob-f: #efe9fd;
+  --serie-1: #2a78d6; --serie-2: #eb6834;
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --fondo: #000000; --ambiente-1: rgba(124, 92, 255, .07); --ambiente-2: rgba(64, 120, 255, .03);
+  --marco: rgba(15, 15, 18, .86); --marco-borde: rgba(255, 255, 255, .075); --marco-linea: rgba(0, 0, 0, .7);
+  --sombra-marco: 0 1px 2px rgba(0, 0, 0, .6), 0 24px 60px -24px rgba(0, 0, 0, .95);
+  --lienzo: #08080a; --lienzo-borde: rgba(255, 255, 255, .07); --lienzo-luz: rgba(255, 255, 255, .04);
+  --carril-panel: transparent;
+  --s1: #131316; --s2: #17171b; --s3: #1f1f25; --hover: #1c1c21; --borde: #26262d; --borde-2: #34343c;
+  --t1: #f3f1f6; --t2: #bdb8c6; --t3: #958fa0; --tinta: #f3f1f6; --tinta-t: #0b0b0d;
+  --vidrio: rgba(20, 20, 24, .66); --vidrio-fuerte: rgba(22, 22, 27, .84); --vidrio-borde: rgba(255, 255, 255, .08); --vidrio-linea: rgba(0, 0, 0, .55);
+  --sombra-1: 0 1px 2px rgba(0, 0, 0, .6), 0 8px 20px -10px rgba(0, 0, 0, .85);
+  --sombra-2: 0 2px 6px rgba(0, 0, 0, .5), 0 26px 60px -22px rgba(0, 0, 0, .95);
+  --suelo: #08080a; --suelo-2: #0c0c0f; --halo: rgba(255, 255, 255, .025); --losa: #1a1a1f; --losa-c: #0f0f12; --sombra-iso: rgba(0, 0, 0, .55);
+  --muro-l: #34343c; --muro-r: #222228; --muro-t: #2c2c33; --techo: #2a2a31; --techo-borde: #3b3b44;
+  --ventana: color-mix(in srgb, var(--acento) 78%, #ffffff 0%); --cristal: color-mix(in srgb, var(--acento) 40%, #232a44); --puerta: #0b0b0e; --calido: #3b3026; --ventana-calida: #f0b45c;
+  --equipo: #44444d; --claraboya: color-mix(in srgb, var(--acento) 25%, #3a3d4c); --cil: #3e3e46; --caja-c: #a8763c; --alero: #3a3a42;
+  --ruta-pizarra: #a6b0c8; --ruta-naranja: #f5a742; --ruta-turquesa: #2fcfb5; --ruta-borde: rgba(10, 10, 12, .95);
+  --etq: rgba(22, 22, 27, .93);
+  --ok: #80d3a3; --ok-f: rgba(128, 211, 163, .12); --ok-solido: #1a7c46; --alerta: #efc062; --alerta-f: rgba(239, 192, 98, .12); --alerta-solido: #f2a516;
+  --bloqueo: #f59a90; --bloqueo-f: rgba(245, 154, 144, .12); --bloqueo-solido: #d0383d; --espera: #a9c2ec; --espera-f: rgba(169, 194, 236, .11); --aprob: #c9b4f6; --aprob-f: rgba(201, 180, 246, .12);
+  --serie-1: #3987e5; --serie-2: #d95926;
+}
+:root[data-theme="light"][data-accent="purple"] { --acento: #6d28d9; --acento-t: #fff; --acento-suave: #f0e9fe; --acento-txt: #5b21b6; --acento-borde: #c9b5f6 }
+:root[data-theme="dark"][data-accent="purple"] { --acento: #8b3dff; --acento-t: #fff; --acento-suave: rgba(139, 61, 255, .16); --acento-txt: #c9a8ff; --acento-borde: rgba(162, 90, 223, .55) }
+:root[data-theme="light"][data-accent="red"] { --acento: #c81e4a; --acento-t: #fff; --acento-suave: #fde9ef; --acento-txt: #a3163b; --acento-borde: #f2abbd }
+:root[data-theme="dark"][data-accent="red"] { --acento: #f0476c; --acento-t: #1a060c; --acento-suave: rgba(240, 71, 108, .15); --acento-txt: #ff9fb4; --acento-borde: rgba(240, 71, 108, .5) }
+:root[data-theme="light"][data-accent="blue"] { --acento: #2563eb; --acento-t: #fff; --acento-suave: #e8f0fe; --acento-txt: #1d4ed8; --acento-borde: #a9c3f7 }
+:root[data-theme="dark"][data-accent="blue"] { --acento: #4f8cff; --acento-t: #061024; --acento-suave: rgba(79, 140, 255, .16); --acento-txt: #a3c3ff; --acento-borde: rgba(79, 140, 255, .5) }
+:root[data-theme="light"] { --violeta: #6a4ff0; --amarillo: #d49400; --verde: #1c9652; --turquesa: #0d9a90; --azul: #2f6be0; --rosa: #d2437b; --indigo: #4b52d4; --naranja: #e0661f }
+:root[data-theme="dark"] { --violeta: #a48cff; --amarillo: #efbf4d; --verde: #54c98a; --turquesa: #43c7ba; --azul: #7ea4ff; --rosa: #f283b0; --indigo: #9197ff; --naranja: #f59a5c }
+:root.sin-vidrio { --vidrio: var(--s1); --vidrio-fuerte: var(--s1); --marco: var(--s2); --carril-panel: var(--s1); --etq: var(--s1); --blur: 0px }
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) { :root { --vidrio: var(--s1); --vidrio-fuerte: var(--s1); --marco: var(--s2); --etq: var(--s1) } }
+
+/* shadcn/ui hereda el sistema de Arxnet */
+:root {
+  --background: var(--s1); --foreground: var(--t1); --card: var(--s1); --card-foreground: var(--t1);
+  --popover: var(--vidrio-fuerte); --popover-foreground: var(--t1); --primary: var(--acento); --primary-foreground: var(--acento-t);
+  --secondary: var(--s3); --secondary-foreground: var(--t1); --muted: var(--s3); --muted-foreground: var(--t3); --accent: var(--hover); --accent-foreground: var(--t1);
+  --destructive: var(--bloqueo-solido); --border: var(--borde); --input: var(--borde-2); --ring: var(--acento); --radius: 0.625rem;
+}
+@theme inline {
+  --font-sans: "Figtree Variable", "Figtree", system-ui, sans-serif; --font-heading: var(--font-sans);
+  --color-background: var(--background); --color-foreground: var(--foreground); --color-card: var(--card); --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover); --color-popover-foreground: var(--popover-foreground); --color-primary: var(--primary); --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary); --color-secondary-foreground: var(--secondary-foreground); --color-muted: var(--muted); --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent); --color-accent-foreground: var(--accent-foreground); --color-destructive: var(--destructive); --color-border: var(--border);
+  --color-input: var(--input); --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) * 0.6); --radius-md: calc(var(--radius) * 0.8); --radius-lg: var(--radius); --radius-xl: calc(var(--radius) * 1.4);
+}
+
+/* ════════ Base ════════
+   Reglas de elemento en @layer base: así las utilidades de los componentes shadcn (texto, foco, anillos)
+   prevalecen sobre ellas, igual que sobre el preflight de Tailwind. Las clases del diseño siguen fuera de capas. */
+@layer base {
+    * { box-sizing: border-box }
+    html, body, #app { min-height: 100% }
+    body { margin: 0; background: var(--fondo); color: var(--t1); font-size: 14px; line-height: 1.45; -webkit-font-smoothing: antialiased }
+    * { scrollbar-width: thin; scrollbar-color: var(--borde-2) transparent }
+    ::selection { background: var(--acento); color: var(--acento-t) }
+    :focus-visible { outline: 2px solid var(--acento); outline-offset: 2px }
+    button, input, select, textarea { font: inherit; color: inherit }
+    button { cursor: pointer }
+    kbd { font-family: inherit; font-size: 11px; font-weight: 600; min-width: 20px; height: 20px; padding: 0 5px; display: inline-grid; place-items: center; border-radius: 5px; border: 1px solid var(--borde-2); color: var(--t2); background: var(--s2) }
+    h1, h2, h3 { font-weight: 700 } /* el reinicio de Tailwind hereda el peso; Arxnet los quiere en negrita */
+}
+/* Con el marco en L el documento no se desplaza: el único desplazamiento ocurre dentro del área de trabajo */
+html:has(.app) body { overflow: hidden; height: 100dvh }
+.desplaza { overflow-y: auto; overscroll-behavior: contain }
+body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none; background: radial-gradient(60% 50% at 12% 0%, var(--ambiente-1), transparent 70%), radial-gradient(50% 50% at 100% 100%, var(--ambiente-2), transparent 70%) }
+.num, td.num { font-variant-numeric: tabular-nums }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap }
+.vidrio { background: var(--vidrio); -webkit-backdrop-filter: blur(var(--blur)) saturate(140%); backdrop-filter: blur(var(--blur)) saturate(140%); border: 1px solid var(--vidrio-borde); box-shadow: 0 0 0 1px var(--vidrio-linea), var(--sombra-2) }
+[data-theme="dark"] .vidrio { box-shadow: 0 0 0 1px var(--vidrio-linea), inset 0 1px 0 rgba(255, 255, 255, .05), var(--sombra-2) }
+:root.transicion-tema, :root.transicion-tema * { transition: background-color 260ms var(--ease), color 260ms var(--ease), border-color 260ms var(--ease), fill 260ms var(--ease), stroke 260ms var(--ease) !important }
+:root.reducido *, :root.reducido *::before, :root.reducido *::after { animation-duration: 1ms !important; animation-iteration-count: 1 !important; transition-duration: 1ms !important }

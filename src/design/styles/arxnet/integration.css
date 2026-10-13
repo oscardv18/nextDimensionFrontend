@@ -1,0 +1,29 @@
+/* ════════ Añadidos de la integración (no estaban en el prototipo) ════════
+   Mismos tokens y lenguaje visual que el diseño aprobado. */
+
+/* Controles visibles aún no integrados: se anuncian, no actúan */
+.buscar[aria-disabled='true'], .boton-b[aria-disabled='true'], .item[aria-disabled='true'] { cursor: not-allowed }
+.buscar[aria-disabled='true'] { opacity: .78 }
+.boton-b[aria-disabled='true'], .item[aria-disabled='true'] { opacity: .55 }
+.boton-b[aria-disabled='true']:hover, .item[aria-disabled='true']:hover { background: none; color: inherit }
+
+/* Acceso: tarjeta de cristal centrada sobre el fondo de Arxnet */
+.acceso { min-height: 100dvh; display: grid; place-items: center; padding: 24px 16px }
+.acceso-tarjeta { width: min(420px, 100%); border-radius: var(--r4); padding: 28px 28px 24px; display: grid; gap: 22px; background: var(--s1); border: 1px solid var(--borde); box-shadow: 0 0 0 1px var(--vidrio-linea), var(--sombra-2) }
+.acceso-marca { display: inline-flex; align-items: center; gap: 10px; color: var(--tinta); font-weight: 700; font-size: 23px; letter-spacing: -.035em; width: max-content }
+.acceso-marca svg { width: 30px; height: 30px }
+.acceso-cab h1 { margin: 0; font-size: 21px; letter-spacing: -.02em }
+.acceso-cab p { margin: 4px 0 0; color: var(--t3); font-size: var(--t-func) }
+@media (max-width: 640px) { .acceso { padding: 0; place-items: stretch } .acceso-tarjeta { border-radius: 0; width: 100%; padding: 24px 16px } }
+
+/* Ajustes de cuenta dentro del área de trabajo */
+.ajustes { padding: 22px 26px 40px; display: grid; gap: 18px; max-width: 980px }
+.ajustes-cab h1 { margin: 0; font-size: 25px; letter-spacing: -.025em }
+.ajustes-cab p { margin: 2px 0 0; color: var(--t3); font-size: 12.5px }
+.ajustes-cuerpo { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 24px; align-items: start }
+.ajustes-nav { display: grid; gap: 4px }
+.ajustes-nav a { display: flex; align-items: center; height: 36px; padding: 0 10px; border-radius: var(--r2); font-weight: 600; font-size: 13.5px; color: var(--t2) }
+.ajustes-nav a:hover { background: var(--hover); color: var(--t1) }
+.ajustes-nav a[aria-current='page'] { background: var(--acento-suave); color: var(--acento-txt) }
+.ajustes-panel { background: var(--s1); border: 1px solid var(--borde); border-radius: var(--r3); padding: 20px; display: grid; gap: 32px; min-width: 0 }
+@media (max-width: 760px) { .ajustes { padding: 16px 14px 32px } .ajustes-cuerpo { grid-template-columns: 1fr } .ajustes-nav { grid-auto-flow: column; overflow-x: auto } }

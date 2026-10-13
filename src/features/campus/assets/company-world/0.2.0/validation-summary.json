@@ -1,0 +1,79 @@
+{
+ "candidate": "d2",
+ "passed": true,
+ "checks": [
+  "todos los IDs de c1 existen en d2 con el mismo rol, nombre y padre",
+  "interacciones idénticas a c1",
+  "anotación revealLayers idéntica a c1",
+  "anotación visibilityStates idéntica a c1",
+  "anotación overviewFramingNodeIds idéntica a c1",
+  "anotación defaultHiddenNodeIds idéntica a c1",
+  "anotación accentMaterials idéntica a c1",
+  "anotación signs idéntica a c1",
+  "anotación landmarks idéntica a c1",
+  "anotación environmentNodeIds idéntica a c1",
+  "anotación detailNodeIds idéntica a c1",
+  "anotación departmentIds idéntica a c1",
+  "cada nodo visual de c1 conserva su material (renombrado a mat_ad_*)",
+  "Operaciones, RR. HH., Administración, Ventas, pabellón, podio, patios, LED del podio y entorno: geometría idéntica a c1 (triángulos y caja por nodo)",
+  "un nodo visual por material (una primitiva por malla: Mesh en three)",
+  "anclas de zona con los IDs de los hotspots de 0.4.0",
+  "campus-pilot 0.4.0: archivos exportados intactos",
+  "paquete handoff-c1 intacto",
+  "c1: GLB intacto y su .blend reexporta un GLB idéntico (validation/c1-reexport.json)",
+  "invariantes del generador (25/25)",
+  "validation/glb.json",
+  "validation/themes.json",
+  "validation/three-load.json"
+ ],
+ "validators": {
+  "validate.py": "passed",
+  "check_themes.py": "passed",
+  "three_load_check.mjs (three 0.180)": "passed"
+ },
+ "metrics": {
+  "glbBytes": 1792432,
+  "glbGzipBytes": 224699,
+  "nodes": 246,
+  "meshes": 178,
+  "materials": 21,
+  "textures": 0,
+  "triangles": 31304,
+  "states": {
+   "overview": {
+    "primitives": 166,
+    "triangles": 30656
+   },
+   "focused:procurement": {
+    "primitives": 155,
+    "triangles": 29796
+   },
+   "focused:warehouse": {
+    "primitives": 154,
+    "triangles": 29572
+   },
+   "lowQuality": {
+    "primitives": 124,
+    "triangles": 19968
+   }
+  },
+  "statesC1": {
+   "overview": {
+    "primitives": 128,
+    "triangles": 10728
+   },
+   "focused:procurement": {
+    "primitives": 121,
+    "triangles": 10386
+   },
+   "focused:warehouse": {
+    "primitives": 120,
+    "triangles": 10344
+   },
+   "lowQuality": {
+    "primitives": 108,
+    "triangles": 9864
+   }
+  }
+ }
+}

@@ -1,0 +1,352 @@
+{
+  "sector": "education",
+  "organizationName": "U.E. Los Samanes",
+  "branchName": "Sede Norte",
+  "zones": [
+    {
+      "key": "aca",
+      "name": "Zona académica"
+    },
+    {
+      "key": "ges",
+      "name": "Gestión y servicios"
+    }
+  ],
+  "departments": [
+    {
+      "key": "preschool",
+      "publicId": "01a0f755-f200-7b41-97e2-a0533acc2033",
+      "name": "Preescolar",
+      "zoneKey": "aca",
+      "summary": "3 secciones · 68 estudiantes",
+      "icon": "blocks",
+      "hue": "yellow",
+      "pending": {
+        "total": 0,
+        "worst": "ok",
+        "byTone": []
+      },
+      "people": {
+        "assigned": 8,
+        "connected": 3
+      },
+      "trend": [
+        2,
+        2,
+        0,
+        3,
+        1,
+        0,
+        1,
+        0,
+        2,
+        0,
+        1,
+        3,
+        0,
+        0
+      ]
+    },
+    {
+      "key": "primary",
+      "publicId": "01a0f755-f200-7e7c-935b-7bc18633a1b6",
+      "name": "Primaria",
+      "zoneKey": "aca",
+      "summary": "12 secciones · 372 estudiantes",
+      "icon": "book",
+      "hue": "green",
+      "pending": {
+        "total": 0,
+        "worst": "ok",
+        "byTone": []
+      },
+      "people": {
+        "assigned": 24,
+        "connected": 9
+      },
+      "trend": [
+        2,
+        2,
+        0,
+        3,
+        1,
+        0,
+        1,
+        0,
+        2,
+        0,
+        1,
+        3,
+        0,
+        0
+      ]
+    },
+    {
+      "key": "secondary",
+      "publicId": "01a0f755-f200-7adb-9b8c-5614fe1fe9c1",
+      "name": "Media general",
+      "zoneKey": "aca",
+      "summary": "10 secciones · 318 estudiantes",
+      "icon": "graduation",
+      "hue": "violet",
+      "pending": {
+        "total": 0,
+        "worst": "ok",
+        "byTone": []
+      },
+      "people": {
+        "assigned": 31,
+        "connected": 12
+      },
+      "trend": [
+        2,
+        2,
+        0,
+        3,
+        1,
+        0,
+        1,
+        0,
+        2,
+        0,
+        1,
+        3,
+        0,
+        0
+      ]
+    },
+    {
+      "key": "facilities",
+      "publicId": "01a0f755-f200-7d9a-a0ad-3f2885446ad8",
+      "name": "Aulas y espacios",
+      "zoneKey": "aca",
+      "summary": "34 espacios · 2 sin sección",
+      "icon": "door",
+      "hue": "teal",
+      "pending": {
+        "total": 1,
+        "worst": "warning",
+        "byTone": [
+          {
+            "tone": "warning",
+            "count": 1
+          }
+        ]
+      },
+      "people": {
+        "assigned": 6,
+        "connected": 1
+      },
+      "trend": [
+        3,
+        3,
+        0,
+        4,
+        2,
+        0,
+        2,
+        1,
+        3,
+        0,
+        2,
+        4,
+        0,
+        1
+      ]
+    },
+    {
+      "key": "academic_records",
+      "publicId": "01a0f755-f200-7abb-af8c-89b25716a110",
+      "name": "Control de estudios",
+      "zoneKey": "ges",
+      "summary": "4 reservas por vencer",
+      "icon": "clipboard",
+      "hue": "blue",
+      "pending": {
+        "total": 4,
+        "worst": "warning",
+        "byTone": [
+          {
+            "tone": "warning",
+            "count": 4
+          }
+        ]
+      },
+      "people": {
+        "assigned": 4,
+        "connected": 3
+      },
+      "trend": [
+        6,
+        6,
+        3,
+        7,
+        5,
+        2,
+        5,
+        4,
+        6,
+        3,
+        5,
+        7,
+        2,
+        4
+      ]
+    },
+    {
+      "key": "billing",
+      "publicId": "01a0f755-f200-7a88-a278-d1e9abc6e2ac",
+      "name": "Administración y cobranza",
+      "zoneKey": "ges",
+      "summary": "14 pagos por verificar",
+      "icon": "wallet",
+      "hue": "indigo",
+      "pending": {
+        "total": 10,
+        "worst": "blocked",
+        "byTone": [
+          {
+            "tone": "blocked",
+            "count": 3
+          },
+          {
+            "tone": "waiting",
+            "count": 7
+          }
+        ]
+      },
+      "people": {
+        "assigned": 5,
+        "connected": 4
+      },
+      "trend": [
+        12,
+        12,
+        9,
+        13,
+        11,
+        8,
+        11,
+        10,
+        12,
+        9,
+        11,
+        13,
+        8,
+        10
+      ]
+    },
+    {
+      "key": "principal",
+      "publicId": "01a0f755-f200-72d4-8424-06419a84ca6f",
+      "name": "Dirección",
+      "zoneKey": "ges",
+      "summary": "3 aprobaciones",
+      "icon": "shield",
+      "hue": "pink",
+      "pending": {
+        "total": 3,
+        "worst": "approval",
+        "byTone": [
+          {
+            "tone": "approval",
+            "count": 3
+          }
+        ]
+      },
+      "people": {
+        "assigned": 3,
+        "connected": 2
+      },
+      "trend": [
+        5,
+        5,
+        2,
+        6,
+        4,
+        1,
+        4,
+        3,
+        5,
+        2,
+        4,
+        6,
+        1,
+        3
+      ]
+    }
+  ],
+  "links": [
+    {
+      "publicId": "01a0f755-f200-743f-99db-88e8dc79c2f2",
+      "from": "01a0f755-f200-7abb-af8c-89b25716a110",
+      "to": "01a0f755-f200-7a88-a278-d1e9abc6e2ac",
+      "name": "Matrícula → plan de cobro",
+      "openOperations": 4,
+      "operationRefs": [
+        "PAG-58213",
+        "PAG-0091734",
+        "PAG-44120",
+        "PAG-44187"
+      ],
+      "color": "accent"
+    },
+    {
+      "publicId": "01a0f755-f200-72e4-b6a7-821c338d751f",
+      "from": "01a0f755-f200-7abb-af8c-89b25716a110",
+      "to": "01a0f755-f200-7e7c-935b-7bc18633a1b6",
+      "name": "Asignación a secciones",
+      "openOperations": 6,
+      "operationRefs": [],
+      "color": "teal"
+    },
+    {
+      "publicId": "01a0f755-f200-753e-9aad-3a849c23291f",
+      "from": "01a0f755-f200-7abb-af8c-89b25716a110",
+      "to": "01a0f755-f200-7adb-9b8c-5614fe1fe9c1",
+      "name": "Asignación a secciones",
+      "openOperations": 3,
+      "operationRefs": [],
+      "color": "teal"
+    },
+    {
+      "publicId": "01a0f755-f200-7967-a77c-4a402b4d2aa6",
+      "from": "01a0f755-f200-7a88-a278-d1e9abc6e2ac",
+      "to": "01a0f755-f200-72d4-8424-06419a84ca6f",
+      "name": "Convenios por aprobar",
+      "openOperations": 2,
+      "operationRefs": [
+        "CON-ZL-7Q2",
+        "CNV-0077-v2"
+      ],
+      "color": "accent"
+    },
+    {
+      "publicId": "01a0f755-f200-7a05-82b7-d63dda4f989b",
+      "from": "01a0f755-f200-7e7c-935b-7bc18633a1b6",
+      "to": "01a0f755-f200-7abb-af8c-89b25716a110",
+      "name": "Retiros y cambios",
+      "openOperations": 1,
+      "operationRefs": [],
+      "color": "slate"
+    },
+    {
+      "publicId": "01a0f755-f200-7aa4-a7e4-d4f94d053c4d",
+      "from": "01a0f755-f200-7d9a-a0ad-3f2885446ad8",
+      "to": "01a0f755-f200-7e7c-935b-7bc18633a1b6",
+      "name": "Asignación de aulas",
+      "openOperations": 12,
+      "operationRefs": [],
+      "color": "teal"
+    },
+    {
+      "publicId": "01a0f755-f200-71b3-8aa8-1c3e1aa48477",
+      "from": "01a0f755-f200-7d9a-a0ad-3f2885446ad8",
+      "to": "01a0f755-f200-7adb-9b8c-5614fe1fe9c1",
+      "name": "Asignación de aulas",
+      "openOperations": 10,
+      "operationRefs": [],
+      "color": "orange"
+    }
+  ]
+}

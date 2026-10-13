@@ -1,0 +1,653 @@
+{
+    "asset": "arxnet.scene.campus-pilot@0.3.0",
+    "nodes": 99,
+    "meshInstances": 79,
+    "uniqueMeshes": 79,
+    "reusedMeshReferences": {},
+    "materialCount": 23,
+    "trianglesTotal": 19454,
+    "visualTriangles": 19382,
+    "proxyTriangles": 72,
+    "meshes": [
+        {
+            "id": "administration.fixtures",
+            "role": "visual",
+            "mesh": 0,
+            "triangles": 84,
+            "primitives": 1,
+            "materials": ["mat_wood_oak"]
+        },
+        {
+            "id": "administration.floor",
+            "role": "visual",
+            "mesh": 1,
+            "triangles": 12,
+            "primitives": 1,
+            "materials": ["mat_interior_floor"]
+        },
+        {
+            "id": "administration.glazing",
+            "role": "visual",
+            "mesh": 2,
+            "triangles": 288,
+            "primitives": 1,
+            "materials": ["mat_glass_clear"]
+        },
+        {
+            "id": "administration.partitions",
+            "role": "visual",
+            "mesh": 3,
+            "triangles": 96,
+            "primitives": 1,
+            "materials": ["mat_interior_white"]
+        },
+        {
+            "id": "administration.slab-l1",
+            "role": "visual",
+            "mesh": 4,
+            "triangles": 12,
+            "primitives": 1,
+            "materials": ["mat_concrete_platform"]
+        },
+        {
+            "id": "administration.terrace-planters",
+            "role": "visual",
+            "mesh": 5,
+            "triangles": 24,
+            "primitives": 1,
+            "materials": ["mat_vegetation_leaf"]
+        },
+        {
+            "id": "administration.trim",
+            "role": "visual",
+            "mesh": 6,
+            "triangles": 288,
+            "primitives": 1,
+            "materials": ["mat_metal_graphite"]
+        },
+        {
+            "id": "administration.walls",
+            "role": "visual",
+            "mesh": 7,
+            "triangles": 444,
+            "primitives": 1,
+            "materials": ["mat_stone_limestone"]
+        },
+        {
+            "id": "administration.hit",
+            "role": "hit",
+            "mesh": 8,
+            "triangles": 12,
+            "primitives": 1,
+            "materials": [null]
+        },
+        {
+            "id": "human-resources.fixtures",
+            "role": "visual",
+            "mesh": 9,
+            "triangles": 84,
+            "primitives": 1,
+            "materials": ["mat_wood_oak"]
+        },
+        {
+            "id": "human-resources.floor",
+            "role": "visual",
+            "mesh": 10,
+            "triangles": 12,
+            "primitives": 1,
+            "materials": ["mat_interior_floor"]
+        },
+        {
+            "id": "human-resources.glazing",
+            "role": "visual",
+            "mesh": 11,
+            "triangles": 204,
+            "primitives": 1,
+            "materials": ["mat_glass_clear"]
+        },
+        {
+            "id": "human-resources.partitions",
+            "role": "visual",
+            "mesh": 12,
+            "triangles": 144,
+            "primitives": 1,
+            "materials": ["mat_interior_white"]
+        },
+        {
+            "id": "human-resources.patio",
+            "role": "visual",
+            "mesh": 13,
+            "triangles": 24,
+            "primitives": 1,
+            "materials": ["mat_vegetation_leaf"]
+        },
+        {
+            "id": "human-resources.trim",
+            "role": "visual",
+            "mesh": 14,
+            "triangles": 384,
+            "primitives": 1,
+            "materials": ["mat_metal_graphite"]
+        },
+        {
+            "id": "human-resources.walls",
+            "role": "visual",
+            "mesh": 15,
+            "triangles": 300,
+            "primitives": 1,
+            "materials": ["mat_stone_limestone"]
+        },
+        {
+            "id": "human-resources.hit",
+            "role": "hit",
+            "mesh": 16,
+            "triangles": 12,
+            "primitives": 1,
+            "materials": [null]
+        },
+        {
+            "id": "operations.fixtures",
+            "role": "visual",
+            "mesh": 17,
+            "triangles": 144,
+            "primitives": 1,
+            "materials": ["mat_wood_oak"]
+        },
+        {
+            "id": "operations.floor",
+            "role": "visual",
+            "mesh": 18,
+            "triangles": 36,
+            "primitives": 1,
+            "materials": ["mat_interior_floor"]
+        },
+        {
+            "id": "operations.glazing",
+            "role": "visual",
+            "mesh": 19,
+            "triangles": 108,
+            "primitives": 1,
+            "materials": ["mat_glass_clear"]
+        },
+        {
+            "id": "operations.partitions",
+            "role": "visual",
+            "mesh": 20,
+            "triangles": 48,
+            "primitives": 1,
+            "materials": ["mat_interior_white"]
+        },
+        {
+            "id": "operations.screen",
+            "role": "visual",
+            "mesh": 21,
+            "triangles": 12,
+            "primitives": 1,
+            "materials": ["mat_screen"]
+        },
+        {
+            "id": "operations.trim",
+            "role": "visual",
+            "mesh": 22,
+            "triangles": 96,
+            "primitives": 1,
+            "materials": ["mat_metal_graphite"]
+        },
+        {
+            "id": "operations.walls",
+            "role": "visual",
+            "mesh": 23,
+            "triangles": 336,
+            "primitives": 1,
+            "materials": ["mat_stone_limestone"]
+        },
+        {
+            "id": "operations.yard-canopy",
+            "role": "visual",
+            "mesh": 24,
+            "triangles": 132,
+            "primitives": 1,
+            "materials": ["mat_metal_graphite"]
+        },
+        {
+            "id": "operations.hit",
+            "role": "hit",
+            "mesh": 25,
+            "triangles": 12,
+            "primitives": 1,
+            "materials": [null]
+        },
+        {
+            "id": "procurement.dock",
+            "role": "visual",
+            "mesh": 26,
+            "triangles": 108,
+            "primitives": 1,
+            "materials": ["mat_safety_yellow"]
+        },
+        {
+            "id": "procurement.floor-l0-reception",
+            "role": "visual",
+            "mesh": 27,
+            "triangles": 24,
+            "primitives": 1,
+            "materials": ["mat_interior_stone"]
+        },
+        {
+            "id": "procurement.floor-l0-storage",
+            "role": "visual",
+            "mesh": 28,
+            "triangles": 12,
+            "primitives": 1,
+            "materials": ["mat_interior_epoxy"]
+        },
+        {
+            "id": "procurement.glazing",
+            "role": "visual",
+            "mesh": 29,
+            "triangles": 156,
+            "primitives": 1,
+            "materials": ["mat_glass_clear"]
+        },
+        {
+            "id": "procurement.glazing-interior",
+            "role": "visual",
+            "mesh": 30,
+            "triangles": 36,
+            "primitives": 1,
+            "materials": ["mat_glass_clear"]
+        },
+        {
+            "id": "procurement.logistics-walls",
+            "role": "visual",
+            "mesh": 31,
+            "triangles": 204,
+            "primitives": 1,
+            "materials": ["mat_metal_cladding"]
+        },
+        {
+            "id": "procurement.office-furniture",
+            "role": "visual",
+            "mesh": 32,
+            "triangles": 84,
+            "primitives": 1,
+            "materials": ["mat_wood_oak"]
+        },
+        {
+            "id": "procurement.outline",
+            "role": "visual",
+            "mesh": 33,
+            "triangles": 180,
+            "primitives": 1,
+            "materials": ["mat_emissive_blue"]
+        },
+        {
+            "id": "procurement.partitions",
+            "role": "visual",
+            "mesh": 34,
+            "triangles": 48,
+            "primitives": 1,
+            "materials": ["mat_interior_white"]
+        },
+        {
+            "id": "procurement.reception-desk",
+            "role": "visual",
+            "mesh": 35,
+            "triangles": 36,
+            "primitives": 1,
+            "materials": ["mat_wood_oak"]
+        },
+        {
+            "id": "procurement.roof",
+            "role": "visual",
+            "mesh": 36,
+            "triangles": 24,
+            "primitives": 1,
+            "materials": ["mat_concrete_platform"]
+        },
+        {
+            "id": "procurement.slab-l1",
+            "role": "visual",
+            "mesh": 37,
+            "triangles": 36,
+            "primitives": 1,
+            "materials": ["mat_interior_floor"]
+        },
+        {
+            "id": "procurement.stair",
+            "role": "visual",
+            "mesh": 38,
+            "triangles": 192,
+            "primitives": 1,
+            "materials": ["mat_interior_white"]
+        },
+        {
+            "id": "procurement.storage-racks",
+            "role": "visual",
+            "mesh": 39,
+            "triangles": 108,
+            "primitives": 1,
+            "materials": ["mat_metal_rack"]
+        },
+        {
+            "id": "procurement.trim",
+            "role": "visual",
+            "mesh": 40,
+            "triangles": 144,
+            "primitives": 1,
+            "materials": ["mat_metal_graphite"]
+        },
+        {
+            "id": "procurement.walls",
+            "role": "visual",
+            "mesh": 41,
+            "triangles": 300,
+            "primitives": 1,
+            "materials": ["mat_stone_limestone"]
+        },
+        {
+            "id": "procurement.hit",
+            "role": "hit",
+            "mesh": 42,
+            "triangles": 12,
+            "primitives": 1,
+            "materials": [null]
+        },
+        {
+            "id": "sales.canopy",
+            "role": "visual",
+            "mesh": 43,
+            "triangles": 36,
+            "primitives": 1,
+            "materials": ["mat_metal_graphite"]
+        },
+        {
+            "id": "sales.fixtures",
+            "role": "visual",
+            "mesh": 44,
+            "triangles": 132,
+            "primitives": 1,
+            "materials": ["mat_wood_oak"]
+        },
+        {
+            "id": "sales.floor",
+            "role": "visual",
+            "mesh": 45,
+            "triangles": 12,
+            "primitives": 1,
+            "materials": ["mat_interior_stone"]
+        },
+        {
+            "id": "sales.glazing",
+            "role": "visual",
+            "mesh": 46,
+            "triangles": 132,
+            "primitives": 1,
+            "materials": ["mat_glass_clear"]
+        },
+        {
+            "id": "sales.partitions",
+            "role": "visual",
+            "mesh": 47,
+            "triangles": 144,
+            "primitives": 1,
+            "materials": ["mat_interior_white"]
+        },
+        {
+            "id": "sales.trim",
+            "role": "visual",
+            "mesh": 48,
+            "triangles": 132,
+            "primitives": 1,
+            "materials": ["mat_metal_graphite"]
+        },
+        {
+            "id": "sales.walls",
+            "role": "visual",
+            "mesh": 49,
+            "triangles": 384,
+            "primitives": 1,
+            "materials": ["mat_stone_limestone"]
+        },
+        {
+            "id": "sales.hit",
+            "role": "hit",
+            "mesh": 50,
+            "triangles": 12,
+            "primitives": 1,
+            "materials": [null]
+        },
+        {
+            "id": "site.canopies",
+            "role": "visual",
+            "mesh": 51,
+            "triangles": 456,
+            "primitives": 1,
+            "materials": ["mat_metal_graphite"]
+        },
+        {
+            "id": "site.deck",
+            "role": "visual",
+            "mesh": 52,
+            "triangles": 52,
+            "primitives": 1,
+            "materials": ["mat_paving_stone"]
+        },
+        {
+            "id": "site.deck-lights",
+            "role": "visual",
+            "mesh": 53,
+            "triangles": 360,
+            "primitives": 1,
+            "materials": ["mat_emissive_warm"]
+        },
+        {
+            "id": "site.environment-ground",
+            "role": "visual",
+            "mesh": 54,
+            "triangles": 62,
+            "primitives": 1,
+            "materials": ["mat_ground_surround"]
+        },
+        {
+            "id": "site.environment-landscape",
+            "role": "visual",
+            "mesh": 55,
+            "triangles": 56,
+            "primitives": 1,
+            "materials": ["mat_landscape_planting"]
+        },
+        {
+            "id": "site.environment-paths",
+            "role": "visual",
+            "mesh": 56,
+            "triangles": 48,
+            "primitives": 1,
+            "materials": ["mat_paving_light"]
+        },
+        {
+            "id": "site.planters",
+            "role": "visual",
+            "mesh": 57,
+            "triangles": 108,
+            "primitives": 1,
+            "materials": ["mat_stone_plinth"]
+        },
+        {
+            "id": "site.plinths",
+            "role": "visual",
+            "mesh": 58,
+            "triangles": 72,
+            "primitives": 1,
+            "materials": ["mat_stone_plinth"]
+        },
+        {
+            "id": "site.skybridge",
+            "role": "visual",
+            "mesh": 59,
+            "triangles": 48,
+            "primitives": 1,
+            "materials": ["mat_metal_graphite"]
+        },
+        {
+            "id": "site.skybridge-glass",
+            "role": "visual",
+            "mesh": 60,
+            "triangles": 24,
+            "primitives": 1,
+            "materials": ["mat_glass_clear"]
+        },
+        {
+            "id": "site.stairs",
+            "role": "visual",
+            "mesh": 61,
+            "triangles": 504,
+            "primitives": 1,
+            "materials": ["mat_stone_plinth"]
+        },
+        {
+            "id": "site.terrace",
+            "role": "visual",
+            "mesh": 62,
+            "triangles": 52,
+            "primitives": 1,
+            "materials": ["mat_concrete_platform"]
+        },
+        {
+            "id": "site.upper-terrace",
+            "role": "visual",
+            "mesh": 63,
+            "triangles": 28,
+            "primitives": 1,
+            "materials": ["mat_wood_deck"]
+        },
+        {
+            "id": "site.vegetation-canopy",
+            "role": "visual",
+            "mesh": 64,
+            "triangles": 8740,
+            "primitives": 1,
+            "materials": ["mat_vegetation_leaf"]
+        },
+        {
+            "id": "site.vegetation-trunks",
+            "role": "visual",
+            "mesh": 65,
+            "triangles": 1056,
+            "primitives": 1,
+            "materials": ["mat_wood_bark"]
+        },
+        {
+            "id": "site.walkway-edges",
+            "role": "visual",
+            "mesh": 66,
+            "triangles": 276,
+            "primitives": 1,
+            "materials": ["mat_emissive_blue"]
+        },
+        {
+            "id": "site.walkways",
+            "role": "visual",
+            "mesh": 67,
+            "triangles": 72,
+            "primitives": 1,
+            "materials": ["mat_paving_light"]
+        },
+        {
+            "id": "warehouse.dock",
+            "role": "visual",
+            "mesh": 68,
+            "triangles": 108,
+            "primitives": 1,
+            "materials": ["mat_safety_yellow"]
+        },
+        {
+            "id": "warehouse.floor",
+            "role": "visual",
+            "mesh": 69,
+            "triangles": 12,
+            "primitives": 1,
+            "materials": ["mat_interior_epoxy"]
+        },
+        {
+            "id": "warehouse.floor-markings",
+            "role": "visual",
+            "mesh": 70,
+            "triangles": 96,
+            "primitives": 1,
+            "materials": ["mat_safety_yellow"]
+        },
+        {
+            "id": "warehouse.glazing",
+            "role": "visual",
+            "mesh": 71,
+            "triangles": 72,
+            "primitives": 1,
+            "materials": ["mat_glass_clear"]
+        },
+        {
+            "id": "warehouse.mezzanine",
+            "role": "visual",
+            "mesh": 72,
+            "triangles": 180,
+            "primitives": 1,
+            "materials": ["mat_interior_epoxy"]
+        },
+        {
+            "id": "warehouse.partitions",
+            "role": "visual",
+            "mesh": 73,
+            "triangles": 48,
+            "primitives": 1,
+            "materials": ["mat_interior_white"]
+        },
+        {
+            "id": "warehouse.racks",
+            "role": "visual",
+            "mesh": 74,
+            "triangles": 168,
+            "primitives": 1,
+            "materials": ["mat_metal_rack"]
+        },
+        {
+            "id": "warehouse.roof-trusses",
+            "role": "visual",
+            "mesh": 75,
+            "triangles": 96,
+            "primitives": 1,
+            "materials": ["mat_metal_graphite"]
+        },
+        {
+            "id": "warehouse.trim",
+            "role": "visual",
+            "mesh": 76,
+            "triangles": 240,
+            "primitives": 1,
+            "materials": ["mat_metal_graphite"]
+        },
+        {
+            "id": "warehouse.walls",
+            "role": "visual",
+            "mesh": 77,
+            "triangles": 372,
+            "primitives": 1,
+            "materials": ["mat_metal_cladding"]
+        },
+        {
+            "id": "warehouse.hit",
+            "role": "hit",
+            "mesh": 78,
+            "triangles": 12,
+            "primitives": 1,
+            "materials": [null]
+        }
+    ],
+    "textureDescriptors": 9,
+    "embeddedImages": 4,
+    "visualMeshInstances": 73,
+    "transparentVisualMeshes": 8,
+    "highShadowCasters": 64,
+    "highShadowCasterTriangles": 18300,
+    "lowShadowCasters": 62,
+    "lowShadowCasterTriangles": 8504
+}
